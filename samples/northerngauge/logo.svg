@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <!-- Technical grid texture -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M0 30 L60 30 M30 0 L30 60" stroke="#1A2332" stroke-width="0.5" opacity="0.06"/>
+      <circle cx="30" cy="30" r="1.4" fill="none" stroke="#1A2332" stroke-width="0.5" opacity="0.06"/>
+      <circle cx="0"  cy="0"  r="1.4" fill="none" stroke="#1A2332" stroke-width="0.5" opacity="0.06"/>
+      <circle cx="60" cy="0"  r="1.4" fill="none" stroke="#1A2332" stroke-width="0.5" opacity="0.06"/>
+      <circle cx="0"  cy="60" r="1.4" fill="none" stroke="#1A2332" stroke-width="0.5" opacity="0.06"/>
+      <circle cx="60" cy="60" r="1.4" fill="none" stroke="#1A2332" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Ground -->
+  <rect width="1280" height="720" fill="#F4F1EC"/>
+  <!-- Technical texture -->
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  <!-- Left accent band -->
+  <rect x="0" y="0" width="6" height="720" fill="#C9882A"/>
+
+  <!-- Navy nav bar -->
+  <rect x="0" y="0" width="1280" height="64" fill="#1A2332"/>
+
+  <!-- Nav bar content -->
+  <!-- Logo mark: circle with needle -->
+  <circle cx="40" cy="32" r="14" fill="none" stroke="#C9882A" stroke-width="1.5"/>
+  <line x1="40" y1="32" x2="48" y2="22" stroke="#C9882A" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="40" cy="32" r="2" fill="#C9882A"/>
+  <text x="62" y="37" font-family="monospace" font-size="13" font-weight="600" fill="rgba(255,255,255,0.6)" letter-spacing="2">NORTHERN GAUGE</text>
+  <!-- Nav items -->
+  <text x="840" y="37" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.4)" letter-spacing="1">Products</text>
+  <text x="930" y="37" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.4)" letter-spacing="1">Calibration</text>
+  <text x="1040" y="37" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.4)" letter-spacing="1">Tech Tips</text>
+  <!-- CTA -->
+  <text x="1156" y="37" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.85)" letter-spacing="1">Request a Quote</text>
+  <line x1="1156" y1="40" x2="1270" y2="40" stroke="rgba(201,136,42,0.5)" stroke-width="0.8"/>
+
+  <!-- Main content area — center composition -->
+  <!-- Large gauge illustration (schematic circle) -->
+  <circle cx="640" cy="390" r="180" fill="none" stroke="#1A2332" stroke-width="0.8" opacity="0.12"/>
+  <circle cx="640" cy="390" r="160" fill="none" stroke="#1A2332" stroke-width="0.5" opacity="0.08"/>
+  <circle cx="640" cy="390" r="140" fill="none" stroke="#C9882A" stroke-width="1.2" opacity="0.25"/>
+  <!-- Tick marks around gauge -->
+  <g opacity="0.2">
+    <line x1="640" y1="230" x2="640" y2="250" stroke="#1A2332" stroke-width="1.5"/>
+    <line x1="640" y1="510" x2="640" y2="530" stroke="#1A2332" stroke-width="1.5"/>
+    <line x1="460" y1="390" x2="480" y2="390" stroke="#1A2332" stroke-width="1.5"/>
+    <line x1="800" y1="390" x2="820" y2="390" stroke="#1A2332" stroke-width="1.5"/>
+    <!-- Diagonal ticks -->
+    <line x1="513" y1="263" x2="527" y2="277" stroke="#1A2332" stroke-width="1"/>
+    <line x1="753" y1="263" x2="767" y2="277" stroke="#1A2332" stroke-width="1"/>
+    <line x1="513" y1="503" x2="527" y2="517" stroke="#1A2332" stroke-width="1"/>
+    <line x1="753" y1="503" x2="767" y2="517" stroke="#1A2332" stroke-width="1"/>
+  </g>
+  <!-- Gauge needle -->
+  <line x1="640" y1="390" x2="710" y2="280" stroke="#C9882A" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="640" cy="390" r="8" fill="#1A2332"/>
+  <circle cx="640" cy="390" r="4" fill="#C9882A"/>
+
+  <!-- Crosshair center mark -->
+  <line x1="632" y1="390" x2="648" y2="390" stroke="#1A2332" stroke-width="0.8" opacity="0.3"/>
+  <line x1="640" y1="382" x2="640" y2="398" stroke="#1A2332" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Left text column -->
+  <text x="80" y="160" font-family="Georgia, serif" font-size="11" fill="#8A9BAE" letter-spacing="3">ISO 17025 ACCREDITED</text>
+  <text x="80" y="200" font-family="Georgia, serif" font-size="52" fill="#1A2332" font-style="italic">Precision API</text>
+  <text x="80" y="258" font-family="Georgia, serif" font-size="52" fill="#1A2332" font-style="italic">Thread Gauges.</text>
+  <!-- Rule -->
+  <line x1="80" y1="280" x2="360" y2="280" stroke="#D5CFC4" stroke-width="1"/>
+  <text x="80" y="310" font-family="monospace" font-size="11" fill="#8A9BAE" letter-spacing="1">Canada · USA · India</text>
+  <text x="80" y="335" font-family="monospace" font-size="11" fill="#8A9BAE" letter-spacing="1">Est. 2001</text>
+
+  <!-- Right text column -->
+  <text x="850" y="160" font-family="monospace" font-size="10" fill="#8A9BAE" letter-spacing="2">STARDUST SAMPLE · 4 VARIANTS</text>
+  <line x1="850" y1="172" x2="1200" y2="172" stroke="#D5CFC4" stroke-width="0.8"/>
+  <!-- Variant labels -->
+  <text x="850" y="210" font-family="monospace" font-size="11" fill="#1A2332">A — Credential-first dark</text>
+  <text x="850" y="235" font-family="monospace" font-size="11" fill="#1A2332">B — Light catalogue</text>
+  <text x="850" y="260" font-family="monospace" font-size="11" fill="#C9882A" font-weight="bold">C — Technical document  ★</text>
+  <text x="850" y="285" font-family="monospace" font-size="11" fill="#1A2332">D — Image-first editorial</text>
+
+  <!-- Palette swatches -->
+  <text x="850" y="340" font-family="monospace" font-size="10" fill="#8A9BAE" letter-spacing="2">PALETTE</text>
+  <rect x="850" y="352" width="32" height="20" fill="#1A2332" rx="2"/>
+  <rect x="890" y="352" width="32" height="20" fill="#F4F1EC" rx="2" stroke="#D5CFC4" stroke-width="0.8"/>
+  <rect x="930" y="352" width="32" height="20" fill="#C9882A" rx="2"/>
+  <rect x="970" y="352" width="32" height="20" fill="#8A9BAE" rx="2"/>
+  <rect x="1010" y="352" width="32" height="20" fill="#1A1A1A" rx="2"/>
+
+  <!-- Bottom rule -->
+  <line x1="40" y1="660" x2="1240" y2="660" stroke="#D5CFC4" stroke-width="0.8"/>
+  <!-- Bottom meta -->
+  <text x="40" y="685" font-family="monospace" font-size="10" fill="#8A9BAE" letter-spacing="1">northerngauge.com</text>
+  <text x="40" y="703" font-family="monospace" font-size="10" fill="#D5CFC4" letter-spacing="1">API 5B · API 7-2 · NIST TRACEABLE · FIRST IN ALBERTA</text>
+  <text x="1100" y="685" font-family="monospace" font-size="10" fill="#C9882A" letter-spacing="1">stardust 0.2.0</text>
+</svg>

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 2,
+  "slug": "northerngauge",
+  "title": "Northern Gauge — API Thread Gauges",
+  "tagline": "25-year ISO 17025 manufacturer undersold by Bootstrap defaults. Four variants push dark industrial, light catalogue, technical document, and image-first editorial against the same precision-manufacturing brief.",
+
+  "source": {
+    "url": "https://northerngauge.com/",
+    "register": "brand",
+    "category": "industrial · manufacturing · precision measurement",
+    "extractedAt": "2026-05-17"
+  },
+
+  "direction": {
+    "phrase": "the gauges are precision instruments — design like you know that. dark industrial ground, the product photography earns it. ISO 17025 credential and three-continent lab presence as structural hero elements, not footnotes. Monda at display scale for technical callouts, Manrope for body authority. orange-red sole accent — on specs, on credentials, on the single inquiry CTA. every section earns the inquiry. this is a 25-year manufacturer trusted by oil & gas and aerospace — design for that trust, not for a generic catalogue.",
+    "movements": [
+      "ground: white Bootstrap corporate → dark industrial or warm editorial",
+      "palette: Bootstrap-blue contamination → brand-faithful orange-red / amber sole accent on purposeful ground",
+      "typography: Manrope+Monda at default weight → DM Serif Display + IBM Plex at editorial scale",
+      "hero: generic CNC copy → product photography credential-first",
+      "credentials: ISO cert buried mid-page → structural hero element, first visual anchor",
+      "labs: three tiny cards → full-width three-continent section as trust anchor",
+      "cta-hierarchy: no clear path → single inquiry goal, every section earns the scroll"
+    ],
+    "seed": {
+      "input": "Northern Gauge|2026-05-17",
+      "decade": "2020s",
+      "craft": "precision-industrial editorial",
+      "register": "B2B technical authority",
+      "groundFamily": "stark-black or warm-editorial",
+      "pickedBy": "direction"
+    },
+    "fontDeck": {
+      "name": "technical-editorial",
+      "value": "DM Serif Display + IBM Plex Sans + IBM Plex Mono",
+      "pickedBy": "user-brief"
+    },
+    "palette": {
+      "name": "Northern Gauge brief",
+      "source": "user-brief: navy #1A2332, warm #F4F1EC, steel #8A9BAE, amber #C9882A",
+      "anchor": "#C9882A",
+      "pickedBy": "user-constraint",
+      "brandFaithfulInversions": [
+        "amber replaces extracted orange-red #E4492E per v2 brief",
+        "IBM Plex replaces brand Manrope per v2 brief",
+        "DM Serif Display added per v2 brief"
+      ]
+    },
+    "antiToolbox": {
+      "hits": 3,
+      "justified": 3
+    }
+  },
+
+  "originalCritique": "Northern Gauge is the only Canadian manufacturer combining ISO 17025 + NIST + API 5B/7-2 + 20-year client relationships + three-continent presence. None of that reads on the current site. The hero is centered generic copy on white. The ISO certificate — the most powerful credential in the industry — is buried mid-page. The three lab locations are footnotes. The product photos (real precision hardware) are rendered as Bootstrap 5 card thumbnails on white backgrounds. <strong>A 25-year manufacturer trusted by oil &amp; gas and aerospace is designed like a stock template.</strong>",
+
+  "variants": [
+    {
+      "id": "A",
+      "name": "Credential-first dark",
+      "dominantDimension": "palette",
+      "thesis": "Near-black #0A0807 industrial ground. The product photography earns the darkness. ISO 17025 and the three-continent presence as structural hero elements on first paint. Orange-red #E4492E sole accent. Monda at display scale. Derived from extraction before the brief arrived.",
+      "fix": "<strong>Dark industrial ground makes the precision hardware pop</strong> — the gauges read as objects of real authority. ISO 17025 lands as the first thing after the headline. Orange-red accent appears only on specs, credentials, and the single inquiry CTA. Nothing competes with the product.",
+      "proposedFile": "proposed-A.html",
+      "isPrimary": false
+    },
+    {
+      "id": "B",
+      "name": "Light catalogue",
+      "dominantDimension": "typography",
+      "thesis": "Warm off-white ground. IBM Plex Sans + IBM Plex Mono type system from the v1 brief. Navy #1A2332 / warm #F4F1EC / amber #C9882A palette. Mitutoyo-catalogue aesthetic — clean white paper, precision objects, mono specs. The credential strip is the first thing below the hero.",
+      "fix": "The <strong>Mitutoyo-catalogue visual register</strong> is exactly right for a precision manufacturer. IBM Plex Mono signals technical authority without aggression. Warm ground reads as quality paper. Amber accent on credentials and CTAs. The solid ring comparison section puts Northern Gauge's advantages in structured relief.",
+      "proposedFile": "proposed-B.html",
+      "isPrimary": false
+    },
+    {
+      "id": "C",
+      "name": "Technical document",
+      "dominantDimension": "craft",
+      "thesis": "Same warm palette as B, but DM Serif Display for section titles and hero H1. Technical drawing SVG texture (cross-section grid at 7% opacity) across off-white sections. ISO cert as physical design element — shown angled with amber border. Credential strip as 1px navy border lines, plain ✓ marks in amber — no badge chips.",
+      "fix": "The <strong>technical document aesthetic</strong> — engineering cross-section texture, DM Serif at display scale, mono credential annotations — positions Northern Gauge as a laboratory instrument supplier, not a commodity gauge vendor. Every visual decision traces to the precision-instrument craft.",
+      "proposedFile": "proposed-C.html",
+      "isPrimary": true
+    },
+    {
+      "id": "D",
+      "name": "Image-first editorial",
+      "dominantDimension": "layout",
+      "thesis": "Photography leads before typography. Real product photography as hero background — 62% of the hero is a photograph, 38% is the caption column. Text reads as a caption to the image, not a headline fighting it. Product panels are photo-dominant (60/40 split). Lab locations use gallery-below-photo caption treatment.",
+      "fix": "The <strong>brand's physical presence comes first</strong> — you see the gauge before you read anything. Editorial asymmetry: photos span 60-65% of every panel, text in a narrow caption column. Section numbers, mono labels, and DM Serif pull-quotes keep the typographic register precise without competing with the photography.",
+      "proposedFile": "proposed-D.html",
+      "isPrimary": false
+    }
+  ],
+
+  "createdAt": "2026-05-17",
+  "stardustVersion": "0.2.0",
+  "submittedBy": "Remekie",
+  "license": "Apache-2.0",
+  "thumbnail": "logo.svg"
+}

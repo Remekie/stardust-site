@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<!-- stardust:provenance
+  writtenBy: stardust:prototype
+  variant: C — Light palette, Mitutoyo-catalogue aesthetic, technical document ground
+  brief: northerngauge-stardust-v2.md
+  writtenAt: 2026-05-17T08:30:00.000Z
+  palette-rule: max 15% dark per section; nav bar only dark element
+  stardustVersion: 0.2.0
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Thread Gauges Manufacturer | ISO 17025 Accredited | Northern Gauge</title>
+<meta name="description" content="Northern Gauge manufactures ISO 17025-accredited API thread gauges — API 5B, API 7-2, NPT, Metric, ACME. NIST traceable. Every gauge ships with a calibration certificate. Canada · USA · India. Est. 2001.">
+<link rel="canonical" href="https://northerngauge.com/">
+<meta property="og:title" content="API Thread Gauges Manufacturer | ISO 17025 Accredited | Northern Gauge">
+<meta property="og:description" content="Northern Gauge: ISO 17025-accredited API thread gauge manufacturer. NIST traceable. Calibration certificate included. Canada · USA · India. Est. 2001.">
+<meta property="og:image" content="https://northerngauge.com/assets/images/og-image.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://northerngauge.com/">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Northern Gauge",
+  "url": "https://northerngauge.com",
+  "logo": "https://northerngauge.com/logo.png",
+  "foundingDate": "2001",
+  "founder": { "@type": "Person", "name": "Peter Laurensse" },
+  "telephone": "1-855-449-4935",
+  "hasCredential": "ISO 17025 Accredited Calibration Laboratory — First in Alberta",
+  "description": "ISO 17025-accredited manufacturer and worldwide distributor of precision API thread gauges and calibration services. NIST and NIM traceable. Three global locations.",
+  "location": [
+    { "@type": "LocalBusiness", "name": "Northern Gauge — Sherwood Park",
+      "address": { "@type": "PostalAddress", "streetAddress": "400-280 Portage Close",
+        "addressLocality": "Sherwood Park", "addressRegion": "AB", "postalCode": "T8H 2R6", "addressCountry": "CA" },
+      "telephone": "+17806280844" },
+    { "@type": "LocalBusiness", "name": "Northern Gauge — Broussard",
+      "address": { "@type": "PostalAddress", "streetAddress": "202 Tideland Rd",
+        "addressLocality": "Broussard", "addressRegion": "LA", "addressCountry": "US" },
+      "telephone": "+13374261992" },
+    { "@type": "LocalBusiness", "name": "NAB Gauge — Ahmednagar",
+      "address": { "@type": "PostalAddress", "addressLocality": "Ahmednagar",
+        "addressRegion": "Maharashtra", "addressCountry": "IN" } }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ─── Reset ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img { display: block; max-width: 100%; height: auto; }
+
+/* ─── Tokens ──────────────────────────────────────────── */
+:root {
+  --warm:      #F4F1EC;
+  --warm-2:    #EAE6DF;
+  --warm-3:    #E0DCD4;
+  --white:     #FFFFFF;
+  --navy:      #1A2332;
+  --navy-2:    #2E3D52;
+  --charcoal:  #1A1A1A;
+  --steel:     #8A9BAE;
+  --amber:     #C9882A;
+  --amber-lt:  rgba(201,136,42,0.12);
+  --muted:     #6B7280;
+  --rule:      #D5CFC4;
+  --rule-navy: rgba(26,35,50,0.12);
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-body:  'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:  'IBM Plex Mono', 'JetBrains Mono', monospace;
+  --max-w: 1200px;
+
+  /* Technical drawing texture — thread cross-section grid at 7% */
+  --texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 30 L60 30 M30 0 L30 60' stroke='%231A2332' stroke-width='0.4' opacity='0.07'/%3E%3Ccircle cx='30' cy='30' r='1.2' fill='none' stroke='%231A2332' stroke-width='0.4' opacity='0.07'/%3E%3Ccircle cx='0' cy='0' r='1.2' fill='none' stroke='%231A2332' stroke-width='0.4' opacity='0.07'/%3E%3Ccircle cx='60' cy='0' r='1.2' fill='none' stroke='%231A2332' stroke-width='0.4' opacity='0.07'/%3E%3Ccircle cx='0' cy='60' r='1.2' fill='none' stroke='%231A2332' stroke-width='0.4' opacity='0.07'/%3E%3Ccircle cx='60' cy='60' r='1.2' fill='none' stroke='%231A2332' stroke-width='0.4' opacity='0.07'/%3E%3C/svg%3E");
+}
+
+/* ─── Base ──────────────────────────────────────────── */
+body {
+  background: var(--warm);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── NAV — only dark element ──────────────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--navy);
+}
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.nav-logo img {
+  height: 28px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+.nav-wordmark {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: rgba(255,255,255,0.9); }
+.nav-quote {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: rgba(255,255,255,0.85) !important;
+  border-bottom: 1px solid rgba(201,136,42,0.6) !important;
+  padding-bottom: 1px !important;
+}
+.nav-quote:hover { color: #fff !important; border-color: var(--amber) !important; }
+
+/* ─── HERO — warm off-white ground ──────────────────────────────────────────── */
+.hero {
+  background: var(--warm);
+  background-image: var(--texture);
+  padding: 80px 0 0;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 80px;
+  align-items: center;
+  padding-bottom: 64px;
+}
+.hero-left {}
+.hero-overline {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.6;
+}
+.hero-overline::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule-navy);
+  max-width: 60px;
+}
+.hero-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--charcoal);
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+}
+.hero-h1 .amber { color: var(--amber); }
+.hero-lede {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 16px;
+}
+.hero-guarantee {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.5;
+  padding: 14px 16px;
+  border-left: 3px solid var(--amber);
+  background: var(--warm-2);
+  margin-bottom: 36px;
+  max-width: 460px;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.btn-primary {
+  display: inline-block;
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  padding: 12px 28px;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--navy-2); }
+.btn-text {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.btn-text:hover { color: var(--charcoal); border-color: var(--charcoal); }
+
+/* Hero product image — tight crop, clipped to warm-white */
+.hero-product {
+  position: relative;
+  align-self: end;
+}
+.hero-img-wrap {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  position: relative;
+}
+.hero-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 50%, var(--white) 100%);
+  pointer-events: none;
+}
+.hero-img-wrap img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center 30%;
+  mix-blend-mode: multiply;
+  display: block;
+}
+.hero-img-caption {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  padding: 10px 16px;
+  background: var(--warm-2);
+  border-top: 1px solid var(--rule);
+}
+
+/* ─── CREDENTIAL STRIP ──────────────────────────────────────────── */
+.cred-strip {
+  background: var(--white);
+  border-top: 1px solid var(--navy);
+  border-bottom: 1px solid var(--navy);
+}
+.cred-strip-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+}
+.cred-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 24px;
+  border-right: 1px solid var(--rule-navy);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cred-item:first-child { padding-left: 0; }
+.cred-mark {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--amber);
+}
+.cred-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+/* ─── Section base ──────────────────────────────────────────── */
+.section { padding: 88px 0; }
+.section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.section-overline {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+.section-sub {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 580px;
+}
+
+/* ─── PRODUCTS ──────────────────────────────────────────── */
+.products-section {
+  background: var(--warm);
+  background-image: var(--texture);
+  border-bottom: 1px solid var(--rule);
+}
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--rule-navy);
+}
+.product-card {
+  padding: 28px;
+  border-right: 1px solid var(--rule-navy);
+  border-bottom: 1px solid var(--rule-navy);
+  text-decoration: none;
+  background: var(--white);
+  transition: background 0.15s;
+  display: block;
+}
+.product-card:nth-child(3n) { border-right: none; }
+.product-card:nth-child(n+4) { border-bottom: none; }
+.product-card:hover { background: var(--warm); }
+.product-img-wrap {
+  background: var(--warm);
+  border: 1px solid var(--rule);
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.product-img-wrap img {
+  width: 100%;
+  height: 110px;
+  object-fit: contain;
+  padding: 8px;
+  mix-blend-mode: multiply;
+}
+.product-cat {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+.product-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--charcoal);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.product-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.product-link {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+}
+.product-link::after { content: ' →'; }
+.view-all {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-navy);
+  padding-bottom: 1px;
+}
+.view-all:hover { border-color: var(--navy); }
+
+/* ─── PHOTO TEXTURE BAND ──────────────────────────────────────────── */
+.photo-band {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.photo-band img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center 40%;
+  opacity: 0.55;
+  filter: grayscale(15%);
+}
+.photo-band-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--warm) 0%, transparent 20%, transparent 80%, var(--warm) 100%);
+}
+
+/* ─── SOLID RING — light grey background, navy comparison col ──────────────────────────────────────────── */
+.solidring-section {
+  background: var(--warm-2);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.solidring-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 88px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.solidring-body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.solidring-body strong { color: var(--charcoal); font-weight: 600; }
+.solidring-footnote {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--steel);
+  line-height: 1.6;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  margin-top: 24px;
+}
+/* Comparison: navy col on warm-grey */
+.compare-table {
+  border: 1px solid var(--rule-navy);
+  overflow: hidden;
+}
+.compare-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.compare-head-col {
+  padding: 16px 20px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: var(--warm-3);
+  color: var(--steel);
+  border-right: 1px solid var(--rule-navy);
+}
+.compare-head-col.preferred-col {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  border-right: none;
+}
+.compare-head-col.preferred-col span { color: var(--amber); }
+.compare-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.compare-cell {
+  padding: 14px 20px;
+  border-right: 1px solid var(--rule-navy);
+  border-bottom: 1px solid var(--rule-navy);
+  font-size: 13px;
+  color: var(--muted);
+  background: var(--white);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+.compare-cell:nth-child(even) {
+  background: rgba(26,35,50,0.03);
+  border-right: none;
+  color: rgba(255,255,255,0.75);
+  background: var(--navy);
+}
+.compare-cell:last-child,
+.compare-cell:nth-last-child(2) {
+  border-bottom: none;
+}
+.compare-cell-icon {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.compare-cell:nth-child(even) .compare-cell-icon { color: var(--amber); }
+.compare-cell:nth-child(odd) .compare-cell-icon { color: var(--muted); opacity: 0.5; }
+
+/* ─── TESTIMONIALS — editorial, amber left border ──────────────────────────────────────────── */
+.tenure-section {
+  background: var(--warm);
+  background-image: var(--texture);
+  border-bottom: 1px solid var(--rule);
+}
+.tenure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+.tenure-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--amber);
+  padding: 40px 36px;
+}
+/* Primary: name/title/company/tenure — secondary: quote */
+.tenure-meta {
+  margin-bottom: 28px;
+}
+.tenure-years {
+  font-family: var(--font-mono);
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--amber);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.tenure-years-unit {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+.tenure-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin-bottom: 16px;
+}
+.tenure-name {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 2px;
+}
+.tenure-title {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--steel);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.tenure-company {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+}
+.tenure-quote {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.75;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+
+/* ─── LOCATIONS ──────────────────────────────────────────── */
+.locations-section {
+  background: var(--warm-2);
+  border-bottom: 1px solid var(--rule);
+}
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--rule-navy);
+  margin-top: 40px;
+}
+.location-card {
+  background: var(--white);
+  padding: 32px 28px;
+  border-right: 1px solid var(--rule-navy);
+}
+.location-card:last-child { border-right: none; }
+.location-country {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+.location-city {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--charcoal);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+.location-region {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--steel);
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+.location-rule { border: none; border-top: 1px solid var(--rule); margin-bottom: 16px; }
+.location-address {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-style: normal;
+  margin-bottom: 14px;
+}
+.location-phone {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--charcoal);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+.location-phone:hover { color: var(--amber); }
+.iso-badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  background: var(--amber-lt);
+  border: 1px solid rgba(201,136,42,0.25);
+  padding: 4px 10px;
+  display: inline-block;
+}
+
+/* ─── ISO CERT + CALIBRATION ──────────────────────────────────────────── */
+.cal-section {
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+}
+.cal-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 88px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.cal-cert-wrap {
+  position: relative;
+}
+.cal-cert-frame {
+  background: var(--warm-2);
+  border: 1px solid var(--rule);
+  padding: 16px;
+  position: relative;
+  transform: rotate(-1.5deg);
+  box-shadow: 4px 4px 0 var(--rule);
+}
+.cal-cert-frame::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 2px solid var(--amber);
+  opacity: 0.4;
+  pointer-events: none;
+}
+.cal-cert-frame img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: sepia(8%) contrast(0.95);
+}
+.cal-cert-stamp {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  background: var(--amber);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+}
+.cal-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--rule-navy);
+  margin-top: 28px;
+}
+.cal-spec {
+  padding: 16px 20px;
+  border-right: 1px solid var(--rule-navy);
+  border-bottom: 1px solid var(--rule-navy);
+  background: var(--warm);
+}
+.cal-spec:nth-child(even) { border-right: none; background: var(--warm-2); }
+.cal-spec:nth-last-child(-n+2) { border-bottom: none; }
+.cal-spec-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--steel);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.cal-spec-value {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--amber);
+}
+
+/* ─── GAGE CALCULATOR ──────────────────────────────────────────── */
+.calc-section {
+  background: var(--warm-2);
+  border-bottom: 1px solid var(--rule);
+  background-image: var(--texture);
+}
+.calc-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 80px;
+  align-items: center;
+}
+.calc-demo {
+  background: var(--white);
+  border: 1px solid var(--rule-navy);
+  overflow: hidden;
+}
+.calc-demo-head {
+  background: var(--navy);
+  padding: 12px 20px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.calc-demo-head span { color: var(--amber); }
+.calc-demo-body { padding: 24px 20px; }
+.calc-input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.calc-input-group {}
+.calc-input-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--steel);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.calc-input-val {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--charcoal);
+  border: 1px solid var(--rule);
+  background: var(--warm);
+  padding: 8px 12px;
+  display: block;
+}
+.calc-divider { border: none; border-top: 1px solid var(--rule); margin-bottom: 16px; }
+.calc-result-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.calc-result-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--steel);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.calc-result-val {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--amber);
+}
+.calc-demo-foot {
+  padding: 10px 20px;
+  background: var(--warm);
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--steel);
+  letter-spacing: 0.08em;
+}
+
+/* ─── TECH TIPS ──────────────────────────────────────────── */
+.tips-section {
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+}
+.tips-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--rule-navy);
+}
+.tip-card {
+  padding: 32px 28px;
+  border-right: 1px solid var(--rule-navy);
+  text-decoration: none;
+  display: block;
+  background: var(--white);
+  transition: background 0.15s;
+}
+.tip-card:last-child { border-right: none; }
+.tip-card:hover { background: var(--warm); }
+.tip-date {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--steel);
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+.tip-title {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+.tip-excerpt {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.tip-rule { border: none; border-top: 1px solid var(--rule); margin-bottom: 14px; }
+.tip-link {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+}
+.tip-link::after { content: ' →'; }
+
+/* ─── CTA ──────────────────────────────────────────── */
+.cta-section {
+  background: var(--warm-2);
+  background-image: var(--texture);
+  border-bottom: 1px solid var(--rule);
+  padding: 88px 0;
+}
+.cta-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 80px;
+  align-items: center;
+}
+.cta-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.cta-title .amber { color: var(--amber); }
+.cta-body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 500px;
+}
+.cta-card {
+  background: var(--white);
+  border: 1px solid var(--rule-navy);
+  padding: 32px;
+}
+.cta-card-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+.cta-checklist {
+  list-style: none;
+  margin-bottom: 24px;
+  border-top: 1px solid var(--rule);
+}
+.cta-checklist li {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--charcoal);
+  letter-spacing: 0.03em;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cta-checklist li::before { content: '✓'; color: var(--amber); font-weight: 700; }
+.btn-primary-full {
+  display: block;
+  width: 100%;
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  padding: 14px 24px;
+  text-align: center;
+  transition: background 0.15s;
+}
+.btn-primary-full:hover { background: var(--navy-2); }
+
+/* ─── FOOTER ──────────────────────────────────────────── */
+footer {
+  background: var(--navy);
+  padding: 56px 0 32px;
+}
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 28px;
+}
+.footer-logo {
+  height: 32px;
+  filter: brightness(0) invert(1);
+  display: block;
+  margin-bottom: 14px;
+}
+.footer-tagline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 240px;
+  margin-bottom: 20px;
+}
+.footer-cta {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201,136,42,0.4);
+  padding-bottom: 2px;
+}
+.footer-col-title {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.38);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-col ul li a:hover { color: rgba(255,255,255,0.7); }
+.footer-col address {
+  font-style: normal;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.85;
+}
+.footer-col address strong {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 2px;
+}
+.footer-col address strong:first-child { margin-top: 0; }
+.footer-col address a { color: rgba(255,255,255,0.35); text-decoration: none; }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(255,255,255,0.2);
+  letter-spacing: 0.04em;
+}
+.footer-iso {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--amber);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-product { display: none; }
+  .products-grid { grid-template-columns: 1fr 1fr; }
+  .product-card:nth-child(3n) { border-right: 1px solid var(--rule-navy); }
+  .product-card:nth-child(2n) { border-right: none; }
+  .solidring-inner { grid-template-columns: 1fr; padding: 64px 40px; }
+  .tenure-grid { grid-template-columns: 1fr; }
+  .locations-grid { grid-template-columns: 1fr; }
+  .location-card { border-right: none; border-bottom: 1px solid var(--rule-navy); }
+  .location-card:last-child { border-bottom: none; }
+  .cal-inner { grid-template-columns: 1fr; }
+  .calc-inner { grid-template-columns: 1fr; }
+  .tips-grid { grid-template-columns: 1fr; }
+  .tip-card { border-right: none; border-bottom: 1px solid var(--rule-navy); }
+  .tip-card:last-child { border-bottom: none; }
+  .cta-inner { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+}
+@media (max-width: 600px) {
+  .section-inner, .nav-inner, .footer-inner { padding-left: 24px; padding-right: 24px; }
+  .hero-inner, .solidring-inner, .cal-inner, .calc-inner, .cta-inner { padding-left: 24px; padding-right: 24px; }
+  .cred-strip-inner { padding: 0 24px; }
+  .products-grid { grid-template-columns: 1fr; }
+  .product-card { border-right: none !important; }
+  .footer-top { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAV — only dark element on the page ───────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://northerngauge.com/">
+      <img src="https://northerngauge.com/logo.png" alt="Northern Gauge" width="28" height="28">
+      <span class="nav-wordmark">Northern Gauge</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://northerngauge.com/products.php">Products</a></li>
+      <li><a href="https://northerngauge.com/calibration.php">Calibration</a></li>
+      <li><a href="https://northerngauge.com/rentals.php">Rentals</a></li>
+      <li><a href="https://northerngauge.com/gage_calculator.php">Gage Calculator</a></li>
+      <li><a href="https://northerngauge.com/techtips.php">Tech Tips</a></li>
+      <li><a href="https://northerngauge.com/location.php">Locations</a></li>
+      <li><a class="nav-quote" href="https://northerngauge.com/contact.php">Request a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ─── HERO — warm off-white, charcoal headline ───────────── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-overline">Est. 2001 · Sherwood Park AB · Broussard LA · Ahmednagar IN</p>
+      <h1 class="hero-h1">
+        API Thread Gauge<br>
+        Manufacturer.<br>
+        Canada&nbsp;·&nbsp;USA&nbsp;·&nbsp;<span class="amber">India.</span>
+      </h1>
+      <p class="hero-lede">
+        ISO 17025-accredited at all three facilities. Every gauge manufactured to API 5B, API 7-2, NPT, Metric, and ACME standards — with full NIST or NIM traceability.
+      </p>
+      <div class="hero-guarantee">
+        Every gauge ships with a full calibration certificate<br>and NIST traceability. No extra charge.
+      </div>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://northerngauge.com/contact.php">Request a Quote</a>
+        <a class="btn-text" href="https://northerngauge.com/products.php">View Products →</a>
+      </div>
+    </div>
+    <div class="hero-product">
+      <div class="hero-img-wrap">
+        <img src="https://northerngauge.com/DSC_4658-ok-log.png"
+             alt="Precision API thread gauges — Northern Gauge ISO 17025 lab"
+             width="460" height="420"
+             loading="eager">
+        <p class="hero-img-caption">API ring and plug gauges — ISO 17025 accredited · NIST traceable</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CREDENTIAL STRIP ───────────── -->
+<div class="cred-strip">
+  <div class="cred-strip-inner">
+    <div class="cred-item">
+      <span class="cred-mark">✓</span>
+      <span class="cred-label">ISO 17025 — First in Alberta</span>
+    </div>
+    <div class="cred-item">
+      <span class="cred-mark">✓</span>
+      <span class="cred-label">NIST &amp; NIM Traceable</span>
+    </div>
+    <div class="cred-item">
+      <span class="cred-mark">✓</span>
+      <span class="cred-label">API 5B · API 7-2</span>
+    </div>
+    <div class="cred-item">
+      <span class="cred-mark">✓</span>
+      <span class="cred-label">Est. 2001 · 25+ Years</span>
+    </div>
+    <div class="cred-item">
+      <span class="cred-mark">✓</span>
+      <span class="cred-label">3 Accredited Labs</span>
+    </div>
+    <div class="cred-item">
+      <span class="cred-mark">✓</span>
+      <span class="cred-label">Cert. Included · No Charge</span>
+    </div>
+    <div class="cred-item">
+      <span class="cred-mark">✓</span>
+      <span class="cred-label">50+ Instrument Types</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PRODUCTS ───────────── -->
+<section class="section products-section">
+  <div class="section-inner">
+    <div class="products-header">
+      <div>
+        <p class="section-overline">Products</p>
+        <h2 class="section-title">Thread gauges for every standard</h2>
+      </div>
+      <a class="view-all" href="https://northerngauge.com/products.php">Full catalogue →</a>
+    </div>
+    <div class="products-grid">
+      <a class="product-card" href="https://northerngauge.com/products.php">
+        <div class="product-img-wrap">
+          <img src="https://northerngauge.com/DSC_4658-ok-log.png"
+               alt="API 5B and API 7-2 thread gauges" loading="lazy" width="200" height="110">
+        </div>
+        <p class="product-cat">API Gauges</p>
+        <h3 class="product-title">API 5B &amp; API 7-2 Thread Gauges</h3>
+        <p class="product-desc">Plug and ring gauges for oilfield tubulars. Largest API master gauge inventory in Canada — all NIST traceable.</p>
+        <span class="product-link">Specifications</span>
+      </a>
+      <a class="product-card" href="https://northerngauge.com/products.php">
+        <div class="product-img-wrap">
+          <img src="https://northerngauge.com/DSC_4627-ok-log-.png"
+               alt="NPT and metric thread gauges" loading="lazy" width="200" height="110">
+        </div>
+        <p class="product-cat">Pipe &amp; Metric</p>
+        <h3 class="product-title">NPT / NPTF, Metric &amp; Unified</h3>
+        <p class="product-desc">ASME B1.20.1 NPT, ISO 1502 metric, ASME B1.2 unified. Go/No-Go pairs standard. Custom tolerances available.</p>
+        <span class="product-link">Specifications</span>
+      </a>
+      <a class="product-card" href="https://northerngauge.com/calibration.php">
+        <div class="product-img-wrap">
+          <img src="https://northerngauge.com/DSC_4549-ok-log.png"
+               alt="ISO 17025 calibration services" loading="lazy" width="200" height="110">
+        </div>
+        <p class="product-cat">Calibration</p>
+        <h3 class="product-title">ISO 17025 Calibration Services</h3>
+        <p class="product-desc">50+ instrument types. Micrometers to 42". Pressure to 35,000 PSI. On-site and rush turnaround available.</p>
+        <span class="product-link">Services</span>
+      </a>
+      <a class="product-card" href="https://northerngauge.com/products.php">
+        <p class="product-cat">Plain Gauges</p>
+        <h3 class="product-title">Plain Ring &amp; Plug Gauges</h3>
+        <p class="product-desc">Plain ring gauges 30–300mm. Taper ring and taper plug gauges. All to ASME/ANSI B89 standards.</p>
+        <span class="product-link">Specifications</span>
+      </a>
+      <a class="product-card" href="https://northerngauge.com/products.php">
+        <p class="product-cat">Specialty</p>
+        <h3 class="product-title">ACME / Stub ACME &amp; Trapezoidal</h3>
+        <p class="product-desc">ACME and Stub ACME plug and ring gauges. Metric trapezoidal. BPV gauges ½" to 6-5/16". Custom thread forms.</p>
+        <span class="product-link">Specifications</span>
+      </a>
+      <a class="product-card" href="https://northerngauge.com/rentals.php">
+        <p class="product-cat">Rentals</p>
+        <h3 class="product-title">Gauge Rental Program</h3>
+        <p class="product-desc">Calibrated rental gauges for shutdown projects, turnarounds, and vendor qualification programs.</p>
+        <span class="product-link">Rental Program</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PHOTO TEXTURE BAND ───────────── -->
+<div class="photo-band">
+  <img src="https://northerngauge.com/DSC_4627-ok-log-.png"
+       alt="" role="presentation" loading="lazy">
+  <div class="photo-band-overlay"></div>
+</div>
+
+<!-- ─── SOLID RING — light grey bg, navy comparison col ───────────── -->
+<section class="solidring-section">
+  <div class="solidring-inner">
+    <div>
+      <p class="section-overline">Technical Position</p>
+      <h2 class="section-title">Why solid ring<br>over AGD adjustable</h2>
+      <p class="solidring-body">
+        Northern Gauge manufactures <strong>solid ring gauges</strong> — not AGD-style adjustable rings. This is a deliberate technical choice.
+      </p>
+      <p class="solidring-body">
+        In a solid ring gauge, the <strong>pitch diameter is physically measurable</strong>. You can verify it directly with a calibrated instrument. In AGD adjustable designs, the pitch diameter is set by a setting plug that may itself carry error — and cannot be independently verified.
+      </p>
+      <p class="solidring-body">
+        Solid rings are also <strong>drop-resistant</strong>. An AGD ring that falls on the shop floor must be re-set and re-verified before use. A solid ring that falls is unchanged.
+      </p>
+      <p class="solidring-footnote">
+        Reference: ASME B47.1 — Gage Blanks. Northern Gauge NIST-traceable calibration certificates document measured pitch diameter on every solid ring gauge shipped.
+      </p>
+    </div>
+    <div>
+      <div class="compare-table">
+        <div class="compare-head">
+          <div class="compare-head-col">AGD Adjustable Ring</div>
+          <div class="compare-head-col preferred-col">Northern Gauge — <span>Solid Ring</span></div>
+        </div>
+        <div class="compare-body">
+          <div class="compare-cell"><span class="compare-cell-icon">—</span>PD set by plug, not directly measured</div>
+          <div class="compare-cell"><span class="compare-cell-icon">✓</span>Pitch diameter physically measurable</div>
+          <div class="compare-cell"><span class="compare-cell-icon">—</span>Requires set plug for every verification</div>
+          <div class="compare-cell"><span class="compare-cell-icon">✓</span>No set plug required</div>
+          <div class="compare-cell"><span class="compare-cell-icon">—</span>Falls shift adjustment — must re-verify</div>
+          <div class="compare-cell"><span class="compare-cell-icon">✓</span>Drop-resistant — stays in calibration</div>
+          <div class="compare-cell"><span class="compare-cell-icon">—</span>Cert documents setting plug, not ring</div>
+          <div class="compare-cell"><span class="compare-cell-icon">✓</span>Cert documents measured PD directly</div>
+          <div class="compare-cell"><span class="compare-cell-icon">—</span>Backlash in adjustment over gauge life</div>
+          <div class="compare-cell"><span class="compare-cell-icon">✓</span>Dimensional stability full gauge life</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS — editorial panels, amber left border ───────────── -->
+<section class="section tenure-section">
+  <div class="section-inner">
+    <p class="section-overline">Client Relationships</p>
+    <h2 class="section-title">Twenty-year partnerships,<br>not transactions</h2>
+    <p class="section-sub">Oil &amp; gas, food manufacturing, and industrial clients who have been working with us across multiple business cycles.</p>
+    <div class="tenure-grid">
+      <div class="tenure-card">
+        <div class="tenure-meta">
+          <div class="tenure-years">~20</div>
+          <div class="tenure-years-unit">Years — Active Relationship</div>
+          <hr class="tenure-rule">
+          <p class="tenure-name">Amar Ubhi</p>
+          <p class="tenure-title">QS Manager</p>
+          <p class="tenure-company">Domino</p>
+        </div>
+        <blockquote class="tenure-quote">
+          Northern Gauge is calibrating Domino's measuring equipments for nearly 20 years now. Domino is very satisfied with their quality of services. Congratulations to the Northern Gauge team for providing highest quality measuring tools and excellent calibration services.
+        </blockquote>
+      </div>
+      <div class="tenure-card">
+        <div class="tenure-meta">
+          <div class="tenure-years">18+</div>
+          <div class="tenure-years-unit">Years — Since 2006</div>
+          <hr class="tenure-rule">
+          <p class="tenure-name">Roger Wolf</p>
+          <p class="tenure-title">QA Manager</p>
+          <p class="tenure-company">Redco Group</p>
+        </div>
+        <blockquote class="tenure-quote">
+          Our group of companies has been partnered with Northern Gauge since 2006. The commitment to the quality of product, service, and technical support is second-to-none in our market. Their adaptability to our ever-changing market is greatly appreciated.
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LOCATIONS ───────────── -->
+<section class="section locations-section">
+  <div class="section-inner">
+    <p class="section-overline">Global Locations</p>
+    <h2 class="section-title">ISO 17025 accredited<br>on three continents</h2>
+    <p class="section-sub">Three stocked, independently accredited facilities. The most comprehensive API 5B and API 7-2 master gauge inventory across North America and South Asia.</p>
+    <div class="locations-grid">
+      <div class="location-card">
+        <p class="location-country">Canada</p>
+        <h3 class="location-city">Sherwood Park</h3>
+        <p class="location-region">Alberta · T8H 2R6</p>
+        <hr class="location-rule">
+        <address class="location-address">400-280 Portage Close<br>Sherwood Park, Alberta</address>
+        <a class="location-phone" href="tel:+18554494935">1-855-449-4935</a>
+        <span class="iso-badge">ISO 17025 Accredited</span>
+      </div>
+      <div class="location-card">
+        <p class="location-country">United States</p>
+        <h3 class="location-city">Broussard</h3>
+        <p class="location-region">Louisiana · 70518</p>
+        <hr class="location-rule">
+        <address class="location-address">202 Tideland Rd<br>Broussard, Louisiana</address>
+        <a class="location-phone" href="tel:+13374261992">1-337-426-1992</a>
+        <span class="iso-badge">ISO 17025 Accredited</span>
+      </div>
+      <div class="location-card">
+        <p class="location-country">India</p>
+        <h3 class="location-city">Ahmednagar</h3>
+        <p class="location-region">Maharashtra</p>
+        <hr class="location-rule">
+        <address class="location-address">NAB Gauge<br>Ahmednagar, Maharashtra</address>
+        <a class="location-phone" href="tel:02412777467">0241-2777467</a>
+        <span class="iso-badge">ISO 17025 Accredited</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ISO CERT + CALIBRATION ───────────── -->
+<section class="cal-section">
+  <div class="cal-inner">
+    <div>
+      <p class="section-overline">Calibration Services</p>
+      <h2 class="section-title">The actual<br>ISO 17025 certificate</h2>
+      <p class="section-sub" style="margin-bottom:24px">Not a claim. The physical accreditation document — first issued in Alberta. Every calibration performed at Northern Gauge is backed by it.</p>
+      <p class="section-sub">50+ instrument types calibrated. Micrometers to 42" OD. Calipers to 60". Pressure gauges to 35,000 PSI. Torque wrenches to 10,000 ft-lbs. On-site services available.</p>
+      <div class="cal-specs" style="margin-top:32px">
+        <div class="cal-spec">
+          <p class="cal-spec-label">Max Pressure</p>
+          <p class="cal-spec-value">35,000 PSI</p>
+        </div>
+        <div class="cal-spec">
+          <p class="cal-spec-label">Max Torque</p>
+          <p class="cal-spec-value">10,000 ft-lbs</p>
+        </div>
+        <div class="cal-spec">
+          <p class="cal-spec-label">Mic Range</p>
+          <p class="cal-spec-value">to 42" OD</p>
+        </div>
+        <div class="cal-spec">
+          <p class="cal-spec-label">Caliper Range</p>
+          <p class="cal-spec-value">to 60"</p>
+        </div>
+      </div>
+      <a class="btn-primary" href="https://northerngauge.com/calibration.php" style="margin-top:28px;display:inline-block">View Calibration Services</a>
+    </div>
+    <div class="cal-cert-wrap">
+      <div class="cal-cert-frame">
+        <img src="https://northerngauge.com/iso.jpg"
+             alt="Northern Gauge ISO 17025 Certificate of Accreditation — First in Alberta"
+             width="460" height="320"
+             loading="lazy">
+        <span class="cal-cert-stamp">ISO 17025 Accredited</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GAGE CALCULATOR ───────────── -->
+<section class="calc-section">
+  <div class="calc-inner">
+    <div>
+      <p class="section-overline">Free Tool</p>
+      <h2 class="section-title">Gage Tolerance<br>Calculator</h2>
+      <p class="section-sub" style="margin-bottom:20px">Enter nominal diameter and tolerance class — get working tolerance limits for plain plug and ring gauges per ASME/ANSI B89.1.5 instantly. Used by QA engineers for vendor qualification checklists and incoming inspection setup.</p>
+      <p class="section-sub">No registration. No account. Bookmark it.</p>
+      <a class="btn-primary" href="https://northerngauge.com/gage_calculator.php" style="margin-top:28px;display:inline-block">Open Gage Calculator</a>
+    </div>
+    <div class="calc-demo" aria-hidden="true">
+      <div class="calc-demo-head">Gage Calculator — <span>Example output</span></div>
+      <div class="calc-demo-body">
+        <div class="calc-input-row">
+          <div class="calc-input-group">
+            <p class="calc-input-label">Nominal Diameter</p>
+            <span class="calc-input-val">25.000 mm</span>
+          </div>
+          <div class="calc-input-group">
+            <p class="calc-input-label">Tolerance Grade</p>
+            <span class="calc-input-val">IT6 · Class ZZ</span>
+          </div>
+        </div>
+        <div class="calc-input-row">
+          <div class="calc-input-group">
+            <p class="calc-input-label">Gage Type</p>
+            <span class="calc-input-val">Plain Plug</span>
+          </div>
+          <div class="calc-input-group">
+            <p class="calc-input-label">Standard</p>
+            <span class="calc-input-val">ASME B89.1.5</span>
+          </div>
+        </div>
+        <hr class="calc-divider">
+        <div class="calc-result-row">
+          <div>
+            <p class="calc-result-label">Go Member</p>
+            <p class="calc-result-val">+0.000 / −0.003</p>
+          </div>
+          <div>
+            <p class="calc-result-label">No-Go Member</p>
+            <p class="calc-result-val">+0.000 / −0.003</p>
+          </div>
+        </div>
+      </div>
+      <div class="calc-demo-foot">All values in mm · Tolerance zone per ASME/ANSI B89.1.5</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TECH TIPS ───────────── -->
+<section class="section tips-section">
+  <div class="section-inner">
+    <div class="tips-header">
+      <div>
+        <p class="section-overline">Technical Journal</p>
+        <h2 class="section-title">Gauging expertise, documented</h2>
+      </div>
+      <a class="view-all" href="https://northerngauge.com/techtips.php">All articles →</a>
+    </div>
+    <div class="tips-grid">
+      <a class="tip-card" href="https://northerngauge.com/techtips.php">
+        <p class="tip-date">March 11, 2023</p>
+        <h3 class="tip-title">How to determine proper gagemaker tolerance for cylindrical plain plug and ring gauging</h3>
+        <p class="tip-excerpt">The "ten percent rule" with worked examples and tolerance charts. Reference for engineers specifying gauging to ASME/ANSI B89.1.5.</p>
+        <hr class="tip-rule">
+        <span class="tip-link">Read article</span>
+      </a>
+      <a class="tip-card" href="https://northerngauge.com/techtips.php">
+        <p class="tip-date">June 29, 2022</p>
+        <h3 class="tip-title">Maintenance &amp; Preservation of Precision Thread Gauges</h3>
+        <p class="tip-excerpt">Cleaning, storage, handling protocols, and gauge life prediction. Wear pattern diagnosis and recalibration intervals.</p>
+        <hr class="tip-rule">
+        <span class="tip-link">Read article</span>
+      </a>
+      <a class="tip-card" href="https://northerngauge.com/techtips.php">
+        <p class="tip-date">June 29, 2022</p>
+        <h3 class="tip-title">Solid Ring Gauge vs. Adjustable Style — which to specify and why</h3>
+        <p class="tip-excerpt">Technical comparison: pitch diameter measurability, drop resistance, and long-term calibration interval differences.</p>
+        <hr class="tip-rule">
+        <span class="tip-link">Read article</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ───────────── -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <p class="section-overline">Get in touch</p>
+      <h2 class="cta-title">Request a quote from<br>an <span class="amber">ISO 17025</span><br>manufacturer</h2>
+      <p class="cta-body">Tell us what you need — gauge type, standard, nominal diameter, quantity. We respond within one business day. Rush orders and rental programs available.</p>
+    </div>
+    <div class="cta-card">
+      <p class="cta-card-label">What's included</p>
+      <ul class="cta-checklist">
+        <li>ISO 17025 accredited — all three labs</li>
+        <li>NIST / NIM traceable on every gauge</li>
+        <li>Calibration certificate — no charge</li>
+        <li>API 5B and API 7-2 in stock</li>
+        <li>Rush turnaround available</li>
+        <li>Rental program for shutdown projects</li>
+      </ul>
+      <a class="btn-primary-full" href="https://northerngauge.com/contact.php">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ───────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <img class="footer-logo" src="https://northerngauge.com/logo.png" alt="Northern Gauge" width="32" height="32">
+        <p class="footer-tagline">ISO 17025-accredited manufacturer and worldwide distributor of precision thread gauges and calibration services. Founded 2001.</p>
+        <a class="footer-cta" href="https://northerngauge.com/contact.php">Request a Quote →</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Products</p>
+        <ul>
+          <li><a href="https://northerngauge.com/products.php">API 5B Thread Gauges</a></li>
+          <li><a href="https://northerngauge.com/products.php">API 7-2 Thread Gauges</a></li>
+          <li><a href="https://northerngauge.com/products.php">NPT / NPTF Gauges</a></li>
+          <li><a href="https://northerngauge.com/products.php">Metric Plug Gauges</a></li>
+          <li><a href="https://northerngauge.com/products.php">Plain Ring &amp; Plug</a></li>
+          <li><a href="https://northerngauge.com/products.php">ACME / Stub ACME</a></li>
+          <li><a href="https://northerngauge.com/products.php">Customized Gauges</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Services</p>
+        <ul>
+          <li><a href="https://northerngauge.com/calibration.php">Calibration Services</a></li>
+          <li><a href="https://northerngauge.com/rentals.php">Equipment Rentals</a></li>
+          <li><a href="https://northerngauge.com/gage_calculator.php">Gage Calculator</a></li>
+          <li><a href="https://northerngauge.com/techtips.php">Tech Tips</a></li>
+          <li><a href="https://drive.google.com/file/d/1AgFkegPB5yCTTIeBdNTej4aZi9xniMdu/view">Product Catalogue</a></li>
+          <li><a href="https://northerngauge.com/about.php">About Us</a></li>
+          <li><a href="https://northerngauge.com/contact.php">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Locations</p>
+        <address>
+          <strong>Canada</strong>
+          400-280 Portage Close<br>
+          Sherwood Park, AB T8H 2R6<br>
+          <a href="tel:+18554494935">1-855-449-4935</a>
+          <strong>United States</strong>
+          202 Tideland Rd<br>
+          Broussard, LA 70518<br>
+          <a href="tel:+13374261992">1-337-426-1992</a>
+          <strong>India</strong>
+          NAB Gauge, Ahmednagar<br>
+          Maharashtra<br>
+          <a href="tel:02412777467">0241-2777467</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Northern Gauge Inc. All Rights Reserved.</p>
+      <p class="footer-iso">ISO 17025 Accredited · NIST Traceable · Est. 2001</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
