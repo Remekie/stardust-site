@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "slug": "poptop",
+  "title": "Poptop Cocktails",
+  "tagline": "From Wix whitespace and buried booking to cans-first, black-and-white premium with a single conversion goal.",
+
+  "source": {
+    "url": "https://www.poptopcocktails.ca/",
+    "register": "brand",
+    "category": "food & beverage · events · local",
+    "extractedAt": "2026-05-16"
+  },
+
+  "direction": {
+    "phrase": "the cans are the hero. high contrast — black and white with one pop of color that shifts per event type. tactile and physical, make it feel like you're already at the party. the voice is already right, the design needs to catch up. booking is the only conversion goal — every section earns the scroll toward it. keep the logo and star motif, ditch the Wix whitespace. this is a premium experience product that happens to be affordable, design for the premium not the price.",
+    "movements": [
+      "visual-weight: scattered grid → cans-first full-bleed hero",
+      "palette: wix-default warm → black #000 + white #FCFCFC + single accent #E8401C",
+      "density: spacious whitespace → tactile high-density editorial",
+      "conversion: multiple scattered CTAs → single booking goal, every section earns the scroll",
+      "type-scale: ad-hoc → modular with Bricolage Grotesque display + Hanken Grotesk body",
+      "ia-fidelity: verbatim nav → reimagined with Inspiration gallery replacing side-by-side projects"
+    ],
+    "seed": {
+      "input": "Poptop Cocktails|2026-05-16",
+      "decade": "2020s",
+      "craft": "editorial-print",
+      "register": "premium-brand",
+      "groundFamily": "stark-black",
+      "pickedBy": "direction"
+    },
+    "fontDeck": {
+      "name": "editorial-contrast",
+      "value": "Bricolage Grotesque display + Hanken Grotesk body",
+      "pickedBy": "direction"
+    },
+    "palette": {
+      "name": "Poptop high-contrast",
+      "source": "direction — black/white + single brand accent",
+      "anchor": "#E8401C",
+      "pickedBy": "direction",
+      "brandFaithfulInversions": [
+        "star motif retained from original logo",
+        "Poptop orange-red retained as the single accent color",
+        "logo kept as-is — black wordmark on white nav"
+      ]
+    },
+    "antiToolbox": { "hits": 0, "justified": 0 }
+  },
+
+  "originalCritique": "Poptop's voice is already right — energetic, personal, unapologetically fun. But the Wix layout buries it. The hero is a centered text block with no visual anchor. The cans — which are the actual product — never take center stage. Booking requires hunting through the nav. Whitespace reads as emptiness, not premium restraint. <strong>The design undersells a premium product by designing for the price, not the experience.</strong>",
+
+  "variants": [
+    {
+      "id": "A",
+      "name": "Cans-first premium",
+      "dominantDimension": "palette",
+      "thesis": "Black-ground hero with full-bleed can photography. Every section earns the scroll toward a single booking CTA. High contrast black/white/#E8401C — the red shifts per event type. Star motif carried through as a structural device.",
+      "fix": "<strong>The cans are the hero</strong> — full-bleed photography from frame one. Black ground establishes premium before price. The #E8401C accent is the only color and it pulls every CTA. Star motif stays; Wix whitespace goes. Booking is the only goal; every section is a step toward it.",
+      "proposedFile": "proposed-A.html",
+      "isPrimary": true
+    }
+  ],
+
+  "createdAt": "2026-05-17",
+  "stardustVersion": "0.2.0",
+  "submittedBy": "Remekie",
+  "license": "Apache-2.0",
+  "thumbnail": null
+}
