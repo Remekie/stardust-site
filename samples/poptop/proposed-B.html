@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<!-- stardust:provenance
+  writtenBy:        stardust:prototype
+  writtenAt:        2026-05-17T04:00:00Z
+  variant:          B
+  label:            CLEAN — typographic lead, headline dominates
+  page:             home
+  againstDirection: stardust/direction.md
+  stardustVersion:  0.2.0
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Custom canned cocktails and mocktails for your event. Fully branded, totally Instagrammable. Book your Poptop experience.">
+<title>Poptop Cocktails — Cans First</title>
+
+<!-- ── SEO / GEO ── -->
+<link rel="canonical" href="https://www.poptopcocktails.ca/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Poptop Cocktails">
+<meta name="theme-color" content="#000000">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Poptop Cocktails">
+<meta property="og:url" content="https://www.poptopcocktails.ca/">
+<meta property="og:title" content="Poptop Cocktails — Cans First">
+<meta property="og:description" content="Custom canned cocktails and mocktails for your event. Fully branded, totally Instagrammable. Book your Poptop experience.">
+<meta property="og:image" content="https://static.wixstatic.com/media/f36ee0_5b62d58f32c245589f0aa457b2e4180e~mv2.png/v1/crop/x_0,y_695,w_1320,h_1233/fill/w_1200,h_630,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0979_PNG.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Custom branded cocktail cans by Poptop — for weddings, corporate events, and more">
+<meta property="og:locale" content="en_CA">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@poptopinc">
+<meta name="twitter:title" content="Poptop Cocktails — Cans First">
+<meta name="twitter:description" content="Custom canned cocktails and mocktails for your event. Fully branded, totally Instagrammable.">
+<meta name="twitter:image" content="https://static.wixstatic.com/media/f36ee0_5b62d58f32c245589f0aa457b2e4180e~mv2.png/v1/crop/x_0,y_695,w_1320,h_1233/fill/w_1200,h_630,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0979_PNG.png">
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "FoodEstablishment"],
+      "@id": "https://www.poptopcocktails.ca/#business",
+      "name": "Poptop Cocktails",
+      "alternateName": "Poptop Inc",
+      "description": "Custom canned cocktails and mocktails designed, canned, and delivered for weddings, corporate events, birthdays, and brand collabs across Alberta.",
+      "url": "https://www.poptopcocktails.ca",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://static.wixstatic.com/media/f36ee0_3833a2448c8b427abaee1a5821f5ec0a~mv2.png/v1/fill/w_234,h_69,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/JPG__POPTOP_INC_BLACK_edited_edited.png",
+        "width": 234,
+        "height": 69
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Edmonton"},
+        {"@type": "City", "name": "Calgary"}
+      ],
+      "sameAs": ["https://www.instagram.com/poptopinc"],
+      "priceRange": "$$",
+      "servesCuisine": ["Cocktails", "Mocktails"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.poptopcocktails.ca/#website",
+      "url": "https://www.poptopcocktails.ca",
+      "name": "Poptop Cocktails",
+      "publisher": {"@id": "https://www.poptopcocktails.ca/#business"},
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.poptopcocktails.ca/#webpage",
+      "url": "https://www.poptopcocktails.ca/",
+      "name": "Poptop Cocktails — Cans First",
+      "isPartOf": {"@id": "https://www.poptopcocktails.ca/#website"},
+      "about": {"@id": "https://www.poptopcocktails.ca/#business"},
+      "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".hero-headline", ".hero-subline", ".events-heading", ".booking-heading"]}
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ─────────────────────────────────────────────────────────
+   :root — stardust token contract
+   Brand-native names: Can · Label · Pour · Rim
+───────────────────────────────────────────────────────── */
+:root {
+  --color-can:   #000000;
+  --color-pour:  #E8401C;
+  --color-label: #FCFCFC;
+  --color-rim:   #D4D4D4;
+  --color-fg:    #000000;
+
+  --font-display: 'Bricolage Grotesque', 'Arial Black', sans-serif;
+  --font-body:    'Hanken Grotesk', Arial, sans-serif;
+
+  --radius: 0;
+
+  --spacing-xs:  4px;
+  --spacing-sm:  8px;
+  --spacing-md:  16px;
+  --spacing-lg:  24px;
+  --spacing-xl:  48px;
+  --spacing-2xl: 96px;
+
+  --max-width: 1200px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Reset + Base
+───────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-fg);
+  background: var(--color-label);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+  outline: 2px solid var(--color-pour);
+  outline-offset: 2px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Nav — white header, logo left, links right
+───────────────────────────────────────────────────────── */
+header {
+  position: relative;
+  background: var(--color-label);
+  border-bottom: 1px solid var(--color-rim);
+  z-index: 100;
+}
+
+/* CSS-only hamburger toggle */
+#nav-toggle {
+  display: none;
+  position: absolute;
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  display: block;
+  height: 35px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-can);
+  transition: opacity 80ms;
+}
+.nav-links a:hover { opacity: 0.55; }
+
+/* Active state: Home with red underline */
+.nav-links a[aria-current="page"] {
+  box-shadow: inset 0 -2px 0 var(--color-pour);
+  padding-bottom: 2px;
+}
+
+.nav-book {
+  display: inline-block;
+  padding: 8px 18px;
+  background: var(--color-pour);
+  color: #fff !important;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 0;
+  transition: opacity 80ms;
+}
+.nav-book:hover { opacity: 0.88; }
+
+/* Hamburger icon — hidden on desktop */
+.nav-hamburger-label {
+  display: none;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.nav-hamburger-label span {
+  display: block;
+  height: 2px;
+  background: var(--color-can);
+  transition: transform 200ms, opacity 200ms;
+}
+
+@media (max-width: 768px) {
+  .nav-hamburger-label { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--color-can);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    z-index: 200;
+  }
+  .nav-links a {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-label);
+    box-shadow: none !important;
+    padding-bottom: 0 !important;
+  }
+  .nav-links a[aria-current="page"] {
+    color: var(--color-pour) !important;
+  }
+  .nav-book {
+    font-size: 18px;
+    padding: 14px 32px;
+  }
+
+  #nav-toggle:checked ~ .nav-inner .nav-links { display: flex; }
+  #nav-toggle:checked ~ .nav-inner .nav-hamburger-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    background: var(--color-label);
+  }
+  #nav-toggle:checked ~ .nav-inner .nav-hamburger-label span:nth-child(2) {
+    opacity: 0;
+  }
+  #nav-toggle:checked ~ .nav-inner .nav-hamburger-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    background: var(--color-label);
+  }
+
+  .nav-inner { padding: 0 24px; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Hero — TYPE FIRST
+   No background image. Pure black ground.
+   The headline IS the visual.
+───────────────────────────────────────────────────────── */
+.hero {
+  background: var(--color-can);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px 72px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Headline cascade: three lines, each line bigger */
+.hero-headline {
+  width: 100%;
+  margin-bottom: 0;
+  line-height: 0.9;
+}
+
+.hero-line {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+/* Line 1 — smallest, near-muted white */
+.hero-line--1 {
+  font-size: clamp(32px, 6vw, 88px);
+  color: rgba(255,255,255,0.72);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.06em;
+}
+
+/* Line 2 — mid-scale, pure white */
+.hero-line--2 {
+  font-size: clamp(52px, 10vw, 148px);
+  color: #fff;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.04em;
+}
+
+/* Line 3 — the biggest line. Full dominance. */
+.hero-line--3 {
+  font-size: clamp(72px, 15vw, 220px);
+  color: #fff;
+  letter-spacing: -0.05em;
+  line-height: 0.84;
+}
+
+/* Rule — thin pour-color hairline beneath headline */
+.hero-rule {
+  display: block;
+  width: clamp(120px, 20vw, 320px);
+  height: 3px;
+  background: var(--color-pour);
+  border: none;
+  margin: 40px auto 48px;
+}
+
+/* Product can — precise object, centered */
+.hero-can {
+  display: block;
+  width: auto;
+  height: clamp(260px, 35vw, 436px);
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center;
+  /* No background, no filter — show the can as-is against black */
+}
+
+/* Subline / descriptor */
+.hero-subline {
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+
+/* Hero CTA */
+.hero-cta {
+  display: inline-block;
+  padding: 16px 40px;
+  background: var(--color-pour);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: opacity 80ms;
+}
+.hero-cta:hover { opacity: 0.88; }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 64px 24px 64px;
+    min-height: 100svh;
+  }
+  .hero-line--1 { font-size: clamp(28px, 8vw, 52px); }
+  .hero-line--2 { font-size: clamp(44px, 12vw, 88px); }
+  .hero-line--3 { font-size: clamp(60px, 18vw, 120px); }
+  .hero-can { height: clamp(220px, 50vw, 340px); }
+}
+
+@media (max-width: 480px) {
+  .hero-line--1 { font-size: clamp(24px, 9vw, 44px); }
+  .hero-line--2 { font-size: clamp(38px, 14vw, 72px); }
+  .hero-line--3 { font-size: clamp(52px, 20vw, 100px); }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Offer strip — white ground, bold proposition
+───────────────────────────────────────────────────────── */
+.offer {
+  background: var(--color-label);
+  border-top: 1px solid var(--color-rim);
+  padding: 80px 40px;
+}
+
+.offer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.offer-kicker {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-pour);
+  margin-bottom: 20px;
+}
+
+.offer-heading {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--color-can);
+  max-width: 780px;
+  margin-bottom: 32px;
+}
+
+.offer-body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--color-can);
+  opacity: 0.68;
+  max-width: 540px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Events — 4-column typographic list
+   Minimalist. No card borders — only column dividers.
+   Large number, event name, 2 lines of copy.
+───────────────────────────────────────────────────────── */
+.events {
+  background: #fff;
+  border-top: 3px solid var(--color-can);
+  padding: 80px 40px;
+}
+
+.events-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.events-heading {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--color-can);
+  margin-bottom: 64px;
+  line-height: 1;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Column divider lines — between items only */
+.event-col {
+  padding: 0 40px 0 0;
+  border-right: 1px solid var(--color-rim);
+}
+.event-col:first-child { padding-left: 0; }
+.event-col:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+.event-col + .event-col { padding-left: 32px; }
+
+.event-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-pour);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.event-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-can);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.event-copy {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-can);
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .events-grid { grid-template-columns: repeat(2, 1fr); gap: 48px 0; }
+  .event-col {
+    padding-right: 24px;
+    padding-bottom: 0;
+  }
+  .event-col:nth-child(2) { border-right: none; padding-right: 0; }
+  .event-col:nth-child(3) { border-right: 1px solid var(--color-rim); }
+  .event-col:nth-child(4) { border-right: none; }
+  .event-col + .event-col { padding-left: 24px; }
+  .event-col:nth-child(odd) { padding-left: 0; }
+  .event-col:nth-child(even) { padding-left: 24px; }
+}
+
+@media (max-width: 540px) {
+  .events { padding: 64px 24px; }
+  .events-grid { grid-template-columns: 1fr; gap: 48px; }
+  .event-col {
+    border-right: none;
+    border-bottom: 1px solid var(--color-rim);
+    padding: 0 0 48px 0;
+  }
+  .event-col:last-child { border-bottom: none; padding-bottom: 0; }
+  .event-col + .event-col { padding-left: 0; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Process / How it works — black ground, editorial
+───────────────────────────────────────────────────────── */
+.process {
+  background: var(--color-can);
+  padding: 80px 40px;
+  border-top: 3px solid var(--color-pour);
+}
+
+.process-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.process-kicker {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-pour);
+  margin-bottom: 20px;
+}
+
+.process-heading {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 64px);
+  font-weight: 800;
+  color: var(--color-label);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 64px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.process-step {
+  padding: 0 40px 0 0;
+  border-right: 1px solid rgba(255,255,255,0.12);
+}
+.process-step:first-child { padding-left: 0; }
+.process-step:last-child { border-right: none; padding-right: 0; }
+.process-step + .process-step { padding-left: 32px; }
+
+.step-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.10);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.step-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-label);
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.step-copy {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.55);
+}
+
+@media (max-width: 768px) {
+  .process-steps { grid-template-columns: 1fr; gap: 48px; }
+  .process-step {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding: 0 0 48px 0;
+  }
+  .process-step:last-child { border-bottom: none; padding-bottom: 0; }
+  .process-step + .process-step { padding-left: 0; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Social proof — white ground, pull-quote dominant
+───────────────────────────────────────────────────────── */
+.proof {
+  background: var(--color-label);
+  border-top: 1px solid var(--color-rim);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.proof-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.proof-star {
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: var(--color-pour);
+  display: block;
+  margin-bottom: 32px;
+}
+
+.proof-quote {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.2vw, 44px);
+  font-weight: 700;
+  color: var(--color-can);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 28px;
+}
+
+.proof-attr {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-can);
+  opacity: 0.45;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Booking CTA — black ground, centered
+───────────────────────────────────────────────────────── */
+.booking {
+  background: var(--color-can);
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.booking-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.booking-kicker {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.booking-heading {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.5vw, 80px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  margin-bottom: 48px;
+}
+
+.booking-cta {
+  display: inline-block;
+  padding: 20px 52px;
+  background: var(--color-pour);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: opacity 80ms;
+}
+.booking-cta:hover { opacity: 0.88; }
+
+@media (max-width: 768px) {
+  .booking { padding: 80px 24px; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Footer — black ground, logo inverted
+───────────────────────────────────────────────────────── */
+footer {
+  background: var(--color-can);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 48px 40px;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  height: 30px;
+  width: auto;
+  filter: invert(1);
+  opacity: 0.85;
+}
+
+.footer-copy {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 0.03em;
+}
+
+.footer-social {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+  transition: color 80ms;
+}
+.footer-social:hover { color: #fff; }
+
+@media (max-width: 600px) {
+  footer { padding: 40px 24px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .offer { padding: 64px 24px; }
+  .events { padding: 64px 24px; }
+  .process { padding: 64px 24px; }
+  .proof { padding: 64px 24px; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Utilities
+───────────────────────────────────────────────────────── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ══════════════════════════════════════════════
+     NAV — white header
+══════════════════════════════════════════════ -->
+<input type="checkbox" id="nav-toggle" class="visually-hidden" aria-label="Toggle navigation">
+<header>
+  <div class="nav-inner">
+    <a href="/poptop/" class="nav-logo">
+      <img src="https://static.wixstatic.com/media/f36ee0_3833a2448c8b427abaee1a5821f5ec0a~mv2.png/v1/fill/w_234,h_69,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/JPG__POPTOP_INC_BLACK_edited_edited.png" alt="Poptop Cocktails" width="117" height="35">
+    </a>
+    <label for="nav-toggle" class="nav-hamburger-label" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <ul class="nav-links" role="list">
+      <li><a href="/poptop/" aria-current="page">Home</a></li>
+      <li><a href="/poptop/about/">About</a></li>
+      <li><a href="/poptop/inspiration/">Inspiration</a></li>
+      <li><a href="/poptop/contact/">Contact</a></li>
+      <li><a href="/poptop/contact/" class="nav-book">Book</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════
+     HERO — TYPE FIRST
+     No background image. Black ground.
+     Headline IS the visual.
+══════════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+
+  <!-- Headline cascade: 3 lines, each line larger -->
+  <h1 class="hero-headline" aria-label="Every can tells a story.">
+    <span class="hero-line hero-line--1">Every can</span>
+    <span class="hero-line hero-line--2">tells a</span>
+    <span class="hero-line hero-line--3">story.</span>
+  </h1>
+
+  <!-- Pour-color rule — structural beat -->
+  <hr class="hero-rule" aria-hidden="true">
+
+  <!-- Can: precise product object against black -->
+  <img
+    class="hero-can"
+    src="https://static.wixstatic.com/media/f36ee0_4226bbf8f18445a49e775bc46c4a57e6~mv2.jpg/v1/crop/x_0,y_175,w_2250,h_2650/fill/w_370,h_436,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_1137_edited.jpg"
+    alt="Poptop Lime Jalapeño Margarita — custom canned cocktail"
+    width="370"
+    height="436"
+    loading="eager"
+    decoding="async"
+  >
+
+  <!-- Subline descriptor -->
+  <p class="hero-subline">Custom canned cocktails &amp; mocktails for your event</p>
+
+  <!-- Booking CTA -->
+  <a href="/poptop/contact/" class="hero-cta">Book your experience</a>
+
+</section>
+
+<!-- ══════════════════════════════════════════════
+     OFFER — what Poptop actually does
+══════════════════════════════════════════════ -->
+<section class="offer" aria-labelledby="offer-heading">
+  <div class="offer-inner">
+    <p class="offer-kicker">★ The Poptop offer</p>
+    <h2 class="offer-heading" id="offer-heading">Your brand. Your flavour. In a can.</h2>
+    <p class="offer-body">We design, fill, and deliver custom canned cocktails and mocktails for weddings, corporate events, birthdays, and brand collabs. Fully branded labels, your chosen flavours — show up and pop the top.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     EVENTS — 4-column typographic list
+     Large #, event name, 2 lines of copy.
+     No card borders — column dividers only.
+══════════════════════════════════════════════ -->
+<section class="events" aria-labelledby="events-heading">
+  <div class="events-inner">
+    <h2 class="events-heading" id="events-heading">Every occasion.<br>One can.</h2>
+
+    <div class="events-grid" role="list">
+
+      <div class="event-col" role="listitem">
+        <span class="event-number" aria-hidden="true">01</span>
+        <span class="event-name">Weddings</span>
+        <p class="event-copy">Custom flavours, your label, served ice-cold. Give guests something they've never seen at a wedding bar.</p>
+      </div>
+
+      <div class="event-col" role="listitem">
+        <span class="event-number" aria-hidden="true">02</span>
+        <span class="event-name">Corporate Events</span>
+        <p class="event-copy">Branded cans are walking billboards. Your logo, your colours, the conversation starter in every hand.</p>
+      </div>
+
+      <div class="event-col" role="listitem">
+        <span class="event-number" aria-hidden="true">03</span>
+        <span class="event-name">Birthdays &amp; Parties</span>
+        <p class="event-copy">Make the celebration unforgettable. A custom can is the gift and the bar rolled into one.</p>
+      </div>
+
+      <div class="event-col" role="listitem">
+        <span class="event-number" aria-hidden="true">04</span>
+        <span class="event-name">Brand Collabs</span>
+        <p class="event-copy">Limited-edition runs for product launches, pop-ups, and partnerships. We move fast, you look sharp.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     PROCESS — black ground, 3-step editorial
+══════════════════════════════════════════════ -->
+<section class="process" aria-labelledby="process-heading">
+  <div class="process-inner">
+    <p class="process-kicker">★ How it works</p>
+    <h2 class="process-heading" id="process-heading">Simple. Fast. Canned.</h2>
+
+    <div class="process-steps">
+
+      <div class="process-step">
+        <span class="step-num" aria-hidden="true">01</span>
+        <span class="step-title">Tell us your vision</span>
+        <p class="step-copy">Flavours, quantities, label design — we walk you through every choice. No brief too big or too weird.</p>
+      </div>
+
+      <div class="process-step">
+        <span class="step-num" aria-hidden="true">02</span>
+        <span class="step-title">We make it happen</span>
+        <p class="step-copy">Our team designs, mixes, and cans your drinks. You approve the label before a single can is filled.</p>
+      </div>
+
+      <div class="process-step">
+        <span class="step-num" aria-hidden="true">03</span>
+        <span class="step-title">You pop the top</span>
+        <p class="step-copy">Cans delivered to your door, chilled and ready. All you have to do is open one and enjoy the party.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SOCIAL PROOF — pull-quote
+══════════════════════════════════════════════ -->
+<section class="proof" aria-label="Customer testimonial">
+  <div class="proof-inner">
+    <span class="proof-star" aria-label="Five stars">★★★★★</span>
+    <blockquote class="proof-quote">"Our guests could not stop talking about the cans. Everyone asked where we got them. Worth every penny."</blockquote>
+    <p class="proof-attr">— Sarah &amp; Jordan, Wedding — Edmonton, AB</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     BOOKING CTA — black ground, centered
+══════════════════════════════════════════════ -->
+<section class="booking" aria-labelledby="booking-heading">
+  <div class="booking-inner">
+    <span class="booking-kicker">★ Ready when you are</span>
+    <h2 class="booking-heading" id="booking-heading">Your event.<br>Your can.</h2>
+    <a href="/poptop/contact/" class="booking-cta">Book your experience</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER — black, logo inverted
+══════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <a href="/poptop/" class="footer-logo" aria-label="Poptop Cocktails home">
+      <img
+        src="https://static.wixstatic.com/media/f36ee0_3833a2448c8b427abaee1a5821f5ec0a~mv2.png/v1/fill/w_234,h_69,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/JPG__POPTOP_INC_BLACK_edited_edited.png"
+        alt="Poptop Cocktails"
+        width="117"
+        height="35"
+      >
+    </a>
+    <p class="footer-copy">© 2026 Poptop Inc. Currently serving Edmonton &amp; community.</p>
+    <a href="https://www.instagram.com/poptopinc" class="footer-social" target="_blank" rel="noopener noreferrer">@poptopinc</a>
+  </div>
+</footer>
+
+</body>
+</html>

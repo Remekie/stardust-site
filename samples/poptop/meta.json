@@ -59,6 +59,33 @@
       "fix": "<strong>The cans are the hero</strong> — full-bleed photography from frame one. Black ground establishes premium before price. The #E8401C accent is the only color and it pulls every CTA. Star motif stays; Wix whitespace goes. Booking is the only goal; every section is a step toward it.",
       "proposedFile": "proposed-A.html",
       "isPrimary": true
+    },
+    {
+      "id": "B",
+      "name": "Typographic lead",
+      "dominantDimension": "typography",
+      "thesis": "Headline dominates from frame one — clean, black ground, type-first hierarchy. The can product photo anchors below the fold. No full-bleed distraction; let the words do the work.",
+      "fix": "Strip the layout back to type. <strong>CRAFTED / CANNed / DRINKs</strong> at poster scale. The can appears as a precise object below the headline — supporting, not competing. Every element serves the word.",
+      "proposedFile": "proposed-B.html",
+      "isPrimary": false
+    },
+    {
+      "id": "C",
+      "name": "Image-first editorial",
+      "dominantDimension": "layout",
+      "thesis": "Full-bleed photography from frame one, text overlaid with editorial confidence. The brand photography fills the hero completely — the cans are ambient, not centered. High editorial density.",
+      "fix": "Photography leads before typography. <strong>Real event photography as hero background</strong>. Text reads as a caption to the image, not a headline fighting it. The brand's physical presence comes first.",
+      "proposedFile": "proposed-C.html",
+      "isPrimary": false
+    },
+    {
+      "id": "D",
+      "name": "Editorial grid",
+      "dominantDimension": "layout",
+      "thesis": "High contrast editorial grid — split-column hero, bold typographic hierarchy, asymmetric layout. Photography and type share the frame as equals. Maximum information density.",
+      "fix": "Split the hero: <strong>type left / photography right</strong>. Two columns, two equal focal points. The grid is the brand voice — structured, confident, unapologetically editorial. Nothing floats.",
+      "proposedFile": "proposed-D.html",
+      "isPrimary": false
     }
   ],
 

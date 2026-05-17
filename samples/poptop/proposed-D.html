@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- stardust:provenance
+    writtenBy:        stardust:prototype
+    writtenAt:        2026-05-17T04:00:00Z
+    variant:          D
+    label:            BOLD — high contrast, editorial grid
+    page:             home
+    againstDirection: stardust/direction.md
+    stardustVersion:  0.2.0
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poptop Cocktails — BOLD Editorial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --color-can:   #000000;
+      --color-pour:  #E8401C;
+      --color-label: #FCFCFC;
+      --color-rim:   #D4D4D4;
+      --font-display: 'Bricolage Grotesque', sans-serif;
+      --font-body:    'Hanken Grotesk', sans-serif;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-label);
+      color: var(--color-can);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── NAV ────────────────────────────────────────────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--color-label);
+      border-bottom: 2px solid var(--color-can);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 64px;
+    }
+
+    .nav-logo img {
+      height: 35px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-can);
+      transition: color 0.15s;
+    }
+
+    .nav-links a[aria-current="page"] {
+      box-shadow: 0 3px 0 0 var(--color-pour);
+      padding-bottom: 2px;
+    }
+
+    .nav-links a:hover:not(.nav-book) { color: var(--color-pour); }
+
+    .nav-book {
+      background: var(--color-can);
+      color: var(--color-label) !important;
+      padding: 10px 24px;
+      font-weight: 700 !important;
+      letter-spacing: 0.1em;
+    }
+
+    .nav-book:hover { background: var(--color-pour) !important; color: var(--color-label) !important; }
+
+    /* ─── HAMBURGER (mobile) ─────────────────────────────── */
+    .nav-toggle {
+      display: none;
+      cursor: pointer;
+    }
+
+    #nav-check { display: none; }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 28px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 2px;
+      background: var(--color-can);
+      width: 100%;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100svh;
+      min-height: 600px;
+    }
+
+    .hero-left {
+      background: var(--color-can);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 64px;
+      gap: 32px;
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 5.5vw, 80px);
+      font-weight: 800;
+      color: var(--color-label);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-sub {
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--color-rim);
+      line-height: 1.6;
+      max-width: 380px;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      width: fit-content;
+      background: var(--color-pour);
+      color: var(--color-label);
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 20px 48px;
+    }
+
+    .hero-cta:hover { background: #c5330e; }
+
+    .hero-right {
+      overflow: hidden;
+    }
+
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* ─── MARQUEE STRIP ──────────────────────────────────── */
+    .marquee-strip {
+      background: var(--color-can);
+      overflow: hidden;
+      border-top: 2px solid var(--color-can);
+      border-bottom: 2px solid var(--color-can);
+      padding: 18px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+
+    .marquee-track span {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-label);
+      white-space: nowrap;
+      padding-right: 64px;
+    }
+
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ─── EVENTS SECTION ─────────────────────────────────── */
+    .events {
+      background: var(--color-label);
+      border-top: 2px solid var(--color-can);
+    }
+
+    .section-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .section-heading-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-can);
+      white-space: nowrap;
+    }
+
+    .section-rule {
+      flex: 1;
+      height: 2px;
+      background: var(--color-can);
+    }
+
+    /* ─── EDITORIAL GRID ─────────────────────────────────── */
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--color-can);
+    }
+
+    .grid-cell {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--color-can);
+      min-height: 420px;
+      overflow: hidden;
+    }
+
+    /* Odd cells: text left, photo right */
+    .grid-cell:nth-child(odd) .cell-content  { order: 1; }
+    .grid-cell:nth-child(odd) .cell-photo    { order: 2; }
+
+    /* Even cells: photo left, text right */
+    .grid-cell:nth-child(even) .cell-photo   { order: 1; }
+    .grid-cell:nth-child(even) .cell-content { order: 2; }
+
+    .cell-content {
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 12px;
+      border-right: 1px solid var(--color-can);
+    }
+
+    .grid-cell:nth-child(even) .cell-content {
+      border-right: none;
+      border-left: 1px solid var(--color-can);
+    }
+
+    .cell-number {
+      font-family: var(--font-display);
+      font-size: clamp(80px, 8vw, 120px);
+      font-weight: 400;
+      color: var(--color-rim);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .cell-name {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-can);
+      line-height: 1.1;
+    }
+
+    .cell-copy {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 400;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .cell-photo {
+      overflow: hidden;
+    }
+
+    .cell-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* ─── PULL QUOTE BAND ────────────────────────────────── */
+    .pull-quote {
+      background: var(--color-pour);
+      text-align: center;
+      padding: 80px 40px;
+      border-top: 2px solid var(--color-can);
+      border-bottom: 2px solid var(--color-can);
+    }
+
+    .pull-quote blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 700;
+      color: var(--color-label);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ─── BOOKING CTA ────────────────────────────────────── */
+    .booking {
+      background: var(--color-label);
+      border-top: 2px solid var(--color-can);
+    }
+
+    .booking-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 100px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+      text-align: center;
+    }
+
+    .booking-heading {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 800;
+      color: var(--color-can);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 2px solid var(--color-can);
+      width: 100%;
+      max-width: 560px;
+    }
+
+    .stat {
+      padding: 40px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stat:first-child {
+      border-right: 2px solid var(--color-can);
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 64px;
+      font-weight: 800;
+      color: var(--color-can);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .stat-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #666;
+    }
+
+    .booking-btn {
+      display: inline-block;
+      background: var(--color-can);
+      color: var(--color-label);
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 24px 64px;
+    }
+
+    .booking-btn:hover { background: var(--color-pour); }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    footer {
+      background: var(--color-can);
+      border-top: 2px solid var(--color-can);
+      padding: 48px 40px;
+    }
+
+    .footer-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer-logo img {
+      height: 35px;
+      width: auto;
+      filter: invert(1);
+    }
+
+    .footer-meta {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--color-rim);
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    .footer-meta a {
+      color: var(--color-rim);
+      font-weight: 600;
+    }
+
+    .footer-meta a:hover { color: var(--color-pour); }
+
+    /* ─── MOBILE ─────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      /* Nav */
+      .nav-toggle { display: block; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--color-label);
+        border-bottom: 2px solid var(--color-can);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 0;
+      }
+
+      .nav-links li { width: 100%; border-top: 1px solid var(--color-rim); }
+
+      .nav-links a {
+        display: block;
+        padding: 18px 24px;
+        font-size: 15px;
+      }
+
+      .nav-links a[aria-current="page"] {
+        box-shadow: inset 4px 0 0 0 var(--color-pour);
+        padding-bottom: 18px;
+      }
+
+      .nav-book {
+        width: 100%;
+        text-align: left;
+        padding: 18px 24px !important;
+      }
+
+      #nav-check:checked ~ .nav-links { display: flex; }
+
+      /* Hero: single column */
+      .hero {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: auto;
+      }
+
+      .hero-right {
+        height: 56vw;
+        min-height: 280px;
+      }
+
+      .hero-left {
+        padding: 48px 24px;
+        gap: 24px;
+      }
+
+      .hero-headline { font-size: clamp(36px, 10vw, 56px); }
+
+      .hero-sub { font-size: 16px; }
+
+      /* Events */
+      .editorial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-cell {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .grid-cell:nth-child(even) .cell-photo,
+      .grid-cell:nth-child(odd)  .cell-photo  { order: 1; }
+      .grid-cell:nth-child(even) .cell-content,
+      .grid-cell:nth-child(odd)  .cell-content { order: 2; border-left: none; border-right: none; border-top: 1px solid var(--color-can); }
+
+      .cell-photo { height: 240px; }
+      .cell-content { padding: 32px 24px; }
+
+      .cell-number { font-size: 72px; }
+      .cell-name { font-size: 24px; }
+
+      /* Booking */
+      .stat-row { max-width: 100%; }
+      .stat { padding: 32px 24px; }
+      .stat-number { font-size: 48px; }
+      .booking-btn { padding: 20px 40px; font-size: 16px; }
+
+      /* Footer */
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+      }
+      .footer-meta { text-align: left; }
+
+      .section-inner { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ───────────────────────────────────────────── -->
+  <input type="checkbox" id="nav-check" aria-hidden="true">
+  <header>
+    <div class="nav-inner">
+      <a href="/poptop/" class="nav-logo">
+        <img src="https://static.wixstatic.com/media/f36ee0_3833a2448c8b427abaee1a5821f5ec0a~mv2.png/v1/fill/w_234,h_69,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/JPG__POPTOP_INC_BLACK_edited_edited.png" alt="Poptop Cocktails" width="117" height="35">
+      </a>
+      <label for="nav-check" class="nav-toggle" aria-label="Toggle navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+      <ul class="nav-links" role="list">
+        <li><a href="/poptop/" aria-current="page">Home</a></li>
+        <li><a href="/poptop/about/">About</a></li>
+        <li><a href="/poptop/inspiration/">Inspiration</a></li>
+        <li><a href="/poptop/contact/">Contact</a></li>
+        <li><a href="/poptop/contact/" class="nav-book">Book</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ─── HERO ─────────────────────────────────────────── -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-left">
+        <h1 class="hero-headline">EVERY CAN TELLS A STORY.</h1>
+        <p class="hero-sub">Edmonton's premier custom cocktail experience.</p>
+        <a href="/poptop/contact/" class="hero-cta">Book Now</a>
+      </div>
+      <div class="hero-right">
+        <img
+          src="assets/hero-banner.jpg"
+          alt="Poptop custom cocktail can"
+          loading="eager"
+          fetchpriority="high"
+        >
+      </div>
+    </section>
+
+    <!-- ─── MARQUEE STRIP ─────────────────────────────────── -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span>★&nbsp; CUSTOM CANS &nbsp;★&nbsp; YOUR RECIPE &nbsp;★&nbsp; YOUR LABEL &nbsp;★&nbsp; YOUR BRAND &nbsp;★&nbsp; EDMONTON AB &nbsp;★&nbsp; CUSTOM CANS &nbsp;★&nbsp; YOUR RECIPE &nbsp;★&nbsp; YOUR LABEL &nbsp;★&nbsp; YOUR BRAND &nbsp;★&nbsp; CUSTOM CANS &nbsp;★&nbsp; YOUR RECIPE &nbsp;★&nbsp; YOUR LABEL &nbsp;★&nbsp; YOUR BRAND &nbsp;★&nbsp; EDMONTON AB &nbsp;★&nbsp; CUSTOM CANS &nbsp;★&nbsp; YOUR RECIPE &nbsp;★&nbsp; YOUR LABEL &nbsp;★&nbsp; YOUR BRAND &nbsp;★</span>
+        <span>★&nbsp; CUSTOM CANS &nbsp;★&nbsp; YOUR RECIPE &nbsp;★&nbsp; YOUR LABEL &nbsp;★&nbsp; YOUR BRAND &nbsp;★&nbsp; EDMONTON AB &nbsp;★&nbsp; CUSTOM CANS &nbsp;★&nbsp; YOUR RECIPE &nbsp;★&nbsp; YOUR LABEL &nbsp;★&nbsp; YOUR BRAND &nbsp;★&nbsp; CUSTOM CANS &nbsp;★&nbsp; YOUR RECIPE &nbsp;★&nbsp; YOUR LABEL &nbsp;★&nbsp; YOUR BRAND &nbsp;★&nbsp; EDMONTON AB &nbsp;★&nbsp; CUSTOM CANS &nbsp;★&nbsp; YOUR RECIPE &nbsp;★&nbsp; YOUR LABEL &nbsp;★&nbsp; YOUR BRAND &nbsp;★</span>
+      </div>
+    </div>
+
+    <!-- ─── EVENTS / EDITORIAL GRID ───────────────────────── -->
+    <section class="events" aria-label="What we do">
+      <div class="section-inner">
+        <div class="section-heading-row">
+          <span class="section-label">What We Do</span>
+          <div class="section-rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="editorial-grid">
+
+          <!-- 01 — His & Hers -->
+          <article class="grid-cell">
+            <div class="cell-content">
+              <div class="cell-number" aria-hidden="true">01</div>
+              <h2 class="cell-name">His &amp; Hers</h2>
+              <p class="cell-copy">Two signatures. One unforgettable night. Custom cans built for couples, receptions, and intimate celebrations.</p>
+            </div>
+            <div class="cell-photo">
+              <img
+                src="https://static.wixstatic.com/media/f36ee0_4226bbf8f18445a49e775bc46c4a57e6~mv2.jpg/v1/crop/x_0,y_175,w_2250,h_2650/fill/w_370,h_436,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_1137_edited.jpg"
+                alt="His and Hers custom cocktail cans"
+                loading="lazy"
+              >
+            </div>
+          </article>
+
+          <!-- 02 — Your Recipe -->
+          <article class="grid-cell">
+            <div class="cell-content">
+              <div class="cell-number" aria-hidden="true">02</div>
+              <h2 class="cell-name">Your Recipe</h2>
+              <p class="cell-copy">Bring your vision. We mix it, can it, label it. Fully bespoke cocktails from concept to cold beverage.</p>
+            </div>
+            <div class="cell-photo">
+              <img
+                src="https://static.wixstatic.com/media/f36ee0_2f64bc0a122247d485a7a0616797ad56~mv2.png/v1/fill/w_328,h_441,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_2445_heic.png"
+                alt="Custom recipe cocktail can"
+                loading="lazy"
+              >
+            </div>
+          </article>
+
+          <!-- 03 — Mocktails -->
+          <article class="grid-cell">
+            <div class="cell-content">
+              <div class="cell-number" aria-hidden="true">03</div>
+              <h2 class="cell-name">Mocktails</h2>
+              <p class="cell-copy">Zero proof. Full flavour. Inclusive options for every guest — same premium can, same bespoke experience.</p>
+            </div>
+            <div class="cell-photo">
+              <img
+                src="https://static.wixstatic.com/media/f36ee0_5b62d58f32c245589f0aa457b2e4180e~mv2.png/v1/crop/x_0,y_695,w_1320,h_1233/fill/w_378,h_353,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0979_PNG.png"
+                alt="Mocktail custom cans"
+                loading="lazy"
+              >
+            </div>
+          </article>
+
+          <!-- 04 — Corporate -->
+          <article class="grid-cell">
+            <div class="cell-content">
+              <div class="cell-number" aria-hidden="true">04</div>
+              <h2 class="cell-name">Corporate</h2>
+              <p class="cell-copy">Brand it. Drink it. Remember it. Custom canned cocktails that turn client events into conversations.</p>
+            </div>
+            <div class="cell-photo">
+              <img
+                src="https://static.wixstatic.com/media/f36ee0_f3d12ef0e03b43408d71f8920071934b~mv2.jpg/v1/crop/x_0,y_254,w_2001,h_1641/fill/w_328,h_352,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Photo%20134_edited.jpg"
+                alt="Corporate event custom cocktail cans"
+                loading="lazy"
+              >
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PULL QUOTE BAND ───────────────────────────────── -->
+    <div class="pull-quote">
+      <blockquote>"The can is the invitation."</blockquote>
+    </div>
+
+    <!-- ─── BOOKING CTA ────────────────────────────────────── -->
+    <section class="booking" aria-label="Book your experience">
+      <div class="booking-inner">
+        <h2 class="booking-heading">READY TO POP?</h2>
+        <div class="stat-row">
+          <div class="stat">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Events</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Event Types</span>
+          </div>
+        </div>
+        <a href="/poptop/contact/" class="booking-btn">Book Your Experience &rarr;</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <a href="/poptop/" class="footer-logo" aria-label="Poptop Cocktails home">
+        <img
+          src="https://static.wixstatic.com/media/f36ee0_3833a2448c8b427abaee1a5821f5ec0a~mv2.png/v1/fill/w_234,h_69,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/JPG__POPTOP_INC_BLACK_edited_edited.png"
+          alt="Poptop Cocktails"
+          width="117"
+          height="35"
+        >
+      </a>
+      <div class="footer-meta">
+        <p>&copy; 2026 Poptop Inc. All rights reserved.</p>
+        <p><a href="https://instagram.com/poptopinc" target="_blank" rel="noopener">@poptopinc</a> &mdash; Edmonton, AB</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
