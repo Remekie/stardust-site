@@ -90,6 +90,15 @@
       "fix": "The <strong>brand's physical presence comes first</strong> — you see the gauge before you read anything. Editorial asymmetry: photos span 60-65% of every panel, text in a narrow caption column. Section numbers, mono labels, and DM Serif pull-quotes keep the typographic register precise without competing with the photography.",
       "proposedFile": "proposed-D.html",
       "isPrimary": false
+    },
+    {
+      "id": "E",
+      "name": "Specification sheet",
+      "dominantDimension": "anti-vibe",
+      "thesis": "Every visual decision derived from the physical world of calibration certificates, ISO documents, and machined steel — not AI-generation defaults. Palette: cert paper #F7F5F0, ISO document navy #1C3252, machined steel #4A5C6E, brand orange-red #C84822. Fonts: Barlow Condensed + IBM Plex Mono + Georgia. No gradients. No Inter. No card hover effects. No abstract hero background. No scroll animations. Products as a spec table with thread standards and tolerances. Calibration instruments listed by actual type, not marketing copy.",
+      "fix": "The <strong>specification sheet register</strong> — calibration certificate letterhead, HTML spec tables with real thread standards, instrument categories listed by type (API 5B/7-2/NPT/Metric/ACME), tenure-first client record — positions Northern Gauge as a laboratory instrument authority. Every element traces to a physical document or instrument, not a design trend.",
+      "proposedFile": "proposed-E.html",
+      "isPrimary": false
     }
   ],
 
