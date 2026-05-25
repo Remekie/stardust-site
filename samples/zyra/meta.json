@@ -95,6 +95,14 @@
       "proposedFile": "proposed-E.html"
     },
     {
+      "id": "G",
+      "name": "Product carousel",
+      "dominantDimension": "layout",
+      "thesis": "Full-viewport hero carousel — one slide per SKU. Each product gets the full screen: bottle at 115% height on solid ground, Alfa Slab One claim at display scale, single CTA. Inspired by Liquid Death's product-dominant carousel register. Below the fold: lineup tile grid + Root Beer Rush claim section.",
+      "fix": "<strong>Each SKU owns a full viewport.</strong> Gold on near-black, Coco Mist on deep olive-black, Rush on mahogany #2B1308. Bottle PNG at 115% slide height — the product is unavoidable. Arrow + dot nav, 5.5s auto-advance, swipe-enabled. Tests whether Zyra's three-product range is strong enough to anchor a product-first hero rather than a brand-statement hero.",
+      "proposedFile": "proposed-G.html"
+    },
+    {
       "id": "F",
       "name": "Mid-tier DTC baseline",
       "dominantDimension": "tokens",

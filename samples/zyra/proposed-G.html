@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<!-- stardust:provenance
+  writtenBy: stardust:prototype
+  variant: G — Full-width product carousel hero
+  brief: zyra-stardust-direction
+  writtenAt: 2026-05-25T00:00:00Z
+  reference: liquiddeath.com carousel — full-bleed slide, bottle dominant right, type left
+  fontDeck: retro-italian (Alfa Slab One + Hanken Grotesk)
+  palette: brand-native (Bottle #0A0907 / Rush #2B1308 / Gold #C49A3A / Distillate #F5F5F3)
+  antiVibeScore: 0
+  stardustVersion: 0.2.0
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zyra Vodka — Gold, Coco Mist, Root Beer Rush. Three vodkas. None of them boring.">
+<title>Zyra Vodka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ─── TOKENS ─────────────────────────────────────────── */
+:root {
+  --heading-font:  'Alfa Slab One', Georgia, serif;
+  --body-font:     'Hanken Grotesk', Arial, sans-serif;
+
+  --color-bottle:     #0A0907;
+  --color-distillate: #F5F5F3;
+  --color-gold:       #C49A3A;
+  --color-rush:       #2B1308;
+  --color-coconut:    #D4A96A;
+  --color-grain:      #7A6E63;
+
+  --max-w: 1200px;
+  --pad:   clamp(24px, 5vw, 64px);
+  --radius: 2px;
+}
+
+/* ─── RESET ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body-font); background: var(--color-bottle); color: var(--color-distillate); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ─── NAV ────────────────────────────────────────────── */
+.nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 20px var(--pad);
+  background: linear-gradient(180deg, rgba(10,9,7,0.8) 0%, transparent 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav.scrolled {
+  position: fixed;
+  background: rgba(10,9,7,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(245,245,243,0.07);
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.nav-logo {
+  font-family: var(--heading-font);
+  font-size: 22px;
+  color: var(--color-distillate);
+  letter-spacing: 0.02em;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(245,245,243,0.65);
+  transition: color 80ms;
+}
+.nav-links a:hover { color: var(--color-distillate); }
+.nav-links .nav-cta {
+  color: var(--color-gold);
+  border-bottom: 1px solid rgba(196,154,58,0.4);
+  padding-bottom: 1px;
+}
+.nav-links .nav-cta:hover { color: var(--color-gold); border-color: var(--color-gold); }
+@media (max-width: 680px) { .nav-links { display: none; } }
+
+/* ─── CAROUSEL HERO ──────────────────────────────────── */
+.carousel-hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 600px;
+  overflow: hidden;
+  background: var(--color-bottle);
+  user-select: none;
+}
+.carousel-track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+  transition: transform 520ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+/* ─── SLIDE ──────────────────────────────────────────── */
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 80px var(--pad) 64px;
+  position: relative;
+  overflow: hidden;
+}
+.slide--gold  { background: var(--color-bottle); }
+.slide--coco  { background: #0D0E0A; }
+.slide--rush  { background: var(--color-rush); }
+
+.slide-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 520px;
+}
+.slide-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+.slide--coco .slide-eyebrow { color: var(--color-coconut); }
+.slide-headline {
+  font-family: var(--heading-font);
+  font-size: clamp(52px, 8vw, 108px);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  color: var(--color-distillate);
+}
+.slide-sub {
+  font-size: 16px;
+  color: rgba(245,245,243,0.55);
+  line-height: 1.65;
+  max-width: 38ch;
+}
+.slide-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-family: var(--body-font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  transition: opacity 80ms;
+  white-space: nowrap;
+}
+.btn:hover { opacity: 0.88; }
+.btn--gold  { background: var(--color-gold);  color: var(--color-bottle); }
+.btn--coco  { background: var(--color-coconut); color: var(--color-bottle); }
+.btn--ghost {
+  background: transparent;
+  color: var(--color-distillate);
+  border: 1px solid rgba(245,245,243,0.25);
+}
+.btn--ghost:hover { border-color: var(--color-distillate); opacity: 1; }
+
+/* Bottle image column */
+.slide-bottle {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+}
+.slide-bottle img {
+  height: 115%;
+  width: auto;
+  object-fit: contain;
+  transform: translateY(-7%);
+  filter: drop-shadow(0 32px 64px rgba(0,0,0,0.55));
+  transition: transform 520ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.slide-bottle img.entering { transform: translateY(-7%) scale(1.04); }
+
+/* Slide accent rule */
+.slide-rule {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-gold) 0%, transparent 100%);
+  opacity: 0.6;
+}
+.slide--coco .slide-rule { background: linear-gradient(90deg, var(--color-coconut) 0%, transparent 100%); }
+
+/* ─── CAROUSEL CONTROLS ──────────────────────────────── */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: 1px solid rgba(245,245,243,0.18);
+  color: rgba(245,245,243,0.7);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: border-color 150ms, color 150ms;
+  border-radius: 0;
+}
+.carousel-arrow:hover { border-color: var(--color-gold); color: var(--color-gold); }
+.carousel-prev { left: var(--pad); }
+.carousel-next { right: var(--pad); }
+@media (max-width: 680px) {
+  .carousel-prev { left: 16px; }
+  .carousel-next { right: 16px; }
+  .carousel-arrow { width: 40px; height: 40px; font-size: 15px; }
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-gold);
+  background: transparent;
+  cursor: pointer;
+  transition: background 200ms, transform 200ms;
+  padding: 0;
+}
+.dot.active {
+  background: var(--color-gold);
+  transform: scale(1.4);
+}
+
+/* Slide counter */
+.carousel-counter {
+  position: absolute;
+  bottom: 28px;
+  right: var(--pad);
+  z-index: 20;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--color-grain);
+}
+.carousel-counter span { color: var(--color-gold); }
+
+/* ─── LINEUP ─────────────────────────────────────────── */
+.lineup {
+  padding: 88px 0;
+  background: var(--color-bottle);
+  border-top: 1px solid rgba(245,245,243,0.06);
+}
+.lineup .inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+.lineup-header { margin-bottom: 56px; }
+.lineup-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-grain);
+  margin-bottom: 12px;
+}
+.lineup-title {
+  font-family: var(--heading-font);
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.05;
+  color: var(--color-distillate);
+}
+.lineup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(245,245,243,0.06);
+  border: 1px solid rgba(245,245,243,0.06);
+}
+.product-tile {
+  background: var(--color-bottle);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.product-tile-img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+.product-tile-color {
+  width: 24px;
+  height: 3px;
+  border-radius: 1px;
+}
+.product-tile-color--gold    { background: var(--color-gold); }
+.product-tile-color--coconut { background: var(--color-coconut); }
+.product-tile-color--rush    { background: var(--color-rush); border: 1px solid rgba(245,245,243,0.12); }
+.product-tile-name {
+  font-family: var(--heading-font);
+  font-size: 22px;
+  color: var(--color-distillate);
+  line-height: 1.1;
+}
+.product-tile-desc {
+  font-size: 14px;
+  color: var(--color-grain);
+  line-height: 1.65;
+  flex: 1;
+}
+.product-tile-price {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-distillate);
+  border-top: 1px solid rgba(245,245,243,0.08);
+  padding-top: 16px;
+}
+.product-tile-cta {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  border-bottom: 1px solid rgba(196,154,58,0.35);
+  padding-bottom: 1px;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+.product-tile-cta:hover { border-color: var(--color-gold); }
+.product-tile-tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-grain);
+  border: 1px solid rgba(245,245,243,0.15);
+  padding: 4px 10px;
+  align-self: flex-start;
+}
+@media (max-width: 900px) {
+  .lineup-grid { grid-template-columns: 1fr; }
+  .slide { grid-template-columns: 1fr; padding-bottom: 100px; }
+  .slide-bottle { height: 45svh; overflow: hidden; }
+  .slide-bottle img { height: 100%; transform: none; }
+  .slide-text { max-width: 100%; }
+}
+
+/* ─── CLAIM BAND ─────────────────────────────────────── */
+.claim-band {
+  padding: 80px 0;
+  background: var(--color-rush);
+  border-top: 1px solid rgba(196,154,58,0.12);
+}
+.claim-band .inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.claim-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+}
+.claim-title {
+  font-family: var(--heading-font);
+  font-size: clamp(32px, 5vw, 60px);
+  line-height: 1.0;
+  color: var(--color-distillate);
+  margin-bottom: 24px;
+}
+.claim-body {
+  font-size: 15px;
+  color: rgba(245,245,243,0.55);
+  line-height: 1.7;
+}
+.notify-form {
+  display: flex;
+  gap: 0;
+  margin-top: 32px;
+  max-width: 400px;
+}
+.notify-input {
+  flex: 1;
+  padding: 14px 20px;
+  background: rgba(245,245,243,0.06);
+  border: 1px solid rgba(245,245,243,0.15);
+  border-right: none;
+  color: var(--color-distillate);
+  font-family: var(--body-font);
+  font-size: 14px;
+  outline: none;
+}
+.notify-input::placeholder { color: var(--color-grain); }
+.notify-input:focus { border-color: var(--color-gold); }
+.notify-btn {
+  padding: 14px 24px;
+  background: var(--color-gold);
+  color: var(--color-bottle);
+  border: none;
+  font-family: var(--body-font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.claim-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(245,245,243,0.08);
+}
+.claim-spec {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(245,245,243,0.06);
+  align-items: start;
+}
+.claim-spec:last-child { border-bottom: none; }
+.claim-spec-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-grain);
+  padding-top: 2px;
+}
+.claim-spec-value {
+  font-size: 14px;
+  color: var(--color-distillate);
+  line-height: 1.55;
+}
+@media (max-width: 900px) {
+  .claim-band .inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* ─── FOOTER ─────────────────────────────────────────── */
+footer {
+  padding: 40px var(--pad);
+  border-top: 1px solid rgba(245,245,243,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-logo {
+  font-family: var(--heading-font);
+  font-size: 20px;
+  color: var(--color-distillate);
+}
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+.footer-links a {
+  font-size: 13px;
+  color: var(--color-grain);
+  transition: color 80ms;
+}
+.footer-links a:hover { color: var(--color-distillate); }
+.footer-legal {
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid rgba(245,245,243,0.06);
+  font-size: 11px;
+  color: var(--color-grain);
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="site-nav">
+  <a class="nav-logo" href="/">Zyra</a>
+  <ul class="nav-links">
+    <li><a href="/collections/all">Shop</a></li>
+    <li><a href="/pages/recipe-gallery">Cocktails</a></li>
+    <li><a href="/pages/our-story">Our Story</a></li>
+    <li><a href="/collections/all" class="nav-cta">Buy Now →</a></li>
+  </ul>
+</header>
+
+<!-- CAROUSEL HERO -->
+<section class="carousel-hero" aria-label="Zyra product carousel" id="carousel">
+  <div class="carousel-track" id="carouselTrack">
+
+    <!-- SLIDE 1: Gold -->
+    <article class="slide slide--gold" role="group" aria-roledescription="slide" aria-label="Zyra Gold — 1 of 3">
+      <div class="slide-text">
+        <p class="slide-eyebrow">Zyra Gold</p>
+        <h1 class="slide-headline">Distilled<br>thirty<br>times over.</h1>
+        <p class="slide-sub">Exceptional smoothness from carefully selected grains. The one you reach for when the occasion doesn't need an explanation.</p>
+        <div class="slide-actions">
+          <a href="/products/zyra-vodka-gold-750-ml" class="btn btn--gold">Shop Gold — $44.99</a>
+          <a href="#lineup" class="btn btn--ghost">See all three</a>
+        </div>
+      </div>
+      <div class="slide-bottle" aria-hidden="true">
+        <img src="https://drinkzyra.com/cdn/shop/files/gold-front-bg.png?v=1754530870&width=700"
+             alt="Zyra Gold vodka bottle"
+             loading="eager">
+      </div>
+      <div class="slide-rule"></div>
+    </article>
+
+    <!-- SLIDE 2: Coco Mist -->
+    <article class="slide slide--coco" role="group" aria-roledescription="slide" aria-label="Zyra Coco Mist — 2 of 3">
+      <div class="slide-text">
+        <p class="slide-eyebrow">Zyra Coco Mist</p>
+        <h2 class="slide-headline">Tropical.<br>Without<br>apology.</h2>
+        <p class="slide-sub">Pineapple and coconut. Works over ice. Works in a punch. Works at 1am.</p>
+        <div class="slide-actions">
+          <a href="/products/zyra-vodka-coco-mist-750-ml" class="btn btn--gold">Shop Coco Mist</a>
+        </div>
+      </div>
+      <div class="slide-bottle" aria-hidden="true">
+        <img src="https://drinkzyra.com/cdn/shop/files/coco-mist-front-bg.png?v=1754530857&width=700"
+             alt="Zyra Coco Mist vodka bottle"
+             loading="lazy">
+      </div>
+      <div class="slide-rule" style="background:linear-gradient(90deg,var(--color-coconut) 0%,transparent 100%)"></div>
+    </article>
+
+    <!-- SLIDE 3: Root Beer Rush -->
+    <article class="slide slide--rush" role="group" aria-roledescription="slide" aria-label="Root Beer Rush — 3 of 3">
+      <div class="slide-text">
+        <p class="slide-eyebrow">Root Beer Rush · Coming Soon</p>
+        <h2 class="slide-headline">North<br>America's<br>only.</h2>
+        <p class="slide-sub">Craft root beer vodka. Triticale base. Cold-infused real sarsaparilla and vanilla. 30% ABV.</p>
+        <div class="slide-actions">
+          <a href="#notify" class="btn btn--gold">Get notified</a>
+        </div>
+      </div>
+      <div class="slide-bottle" aria-hidden="true">
+        <img src="https://drinkzyra.com/cdn/shop/files/root-beer-rush-front-bg.png?v=1754530834&width=700"
+             alt="Zyra Root Beer Rush vodka bottle"
+             loading="lazy">
+      </div>
+      <div class="slide-rule"></div>
+    </article>
+
+  </div>
+
+  <!-- Arrows -->
+  <button class="carousel-arrow carousel-prev" id="prevBtn" aria-label="Previous product">&#8592;</button>
+  <button class="carousel-arrow carousel-next" id="nextBtn" aria-label="Next product">&#8594;</button>
+
+  <!-- Dots -->
+  <div class="carousel-dots" role="tablist" aria-label="Go to slide">
+    <button class="dot active" data-slide="0" role="tab" aria-selected="true"  aria-label="Gold"></button>
+    <button class="dot"        data-slide="1" role="tab" aria-selected="false" aria-label="Coco Mist"></button>
+    <button class="dot"        data-slide="2" role="tab" aria-selected="false" aria-label="Root Beer Rush"></button>
+  </div>
+
+  <!-- Counter -->
+  <p class="carousel-counter" aria-hidden="true"><span id="slideNum">01</span> / 03</p>
+
+</section>
+
+<!-- LINEUP -->
+<section class="lineup" id="lineup">
+  <div class="inner">
+    <div class="lineup-header">
+      <p class="lineup-eyebrow">Three Vodkas</p>
+      <h2 class="lineup-title">Not one of them<br>tastes like vodka.</h2>
+    </div>
+    <div class="lineup-grid">
+
+      <div class="product-tile">
+        <img class="product-tile-img"
+             src="https://drinkzyra.com/cdn/shop/files/gold-front-bg.png?v=1754530870&width=400"
+             alt="Zyra Gold" loading="lazy">
+        <div class="product-tile-color product-tile-color--gold"></div>
+        <p class="product-tile-name">Gold</p>
+        <p class="product-tile-desc">Distilled thirty times. Carefully selected grains. Clean. Always in style.</p>
+        <p class="product-tile-price">$44.99 CAD · 750ml</p>
+        <a href="/products/zyra-vodka-gold-750-ml" class="product-tile-cta">Shop Gold →</a>
+      </div>
+
+      <div class="product-tile">
+        <img class="product-tile-img"
+             src="https://drinkzyra.com/cdn/shop/files/coco-mist-front-bg.png?v=1754530857&width=400"
+             alt="Zyra Coco Mist" loading="lazy">
+        <div class="product-tile-color product-tile-color--coconut"></div>
+        <p class="product-tile-name">Coco Mist</p>
+        <p class="product-tile-desc">Pineapple and coconut. Tropical. The Misty Mojito at 1am.</p>
+        <p class="product-tile-price">$44.99 CAD · 750ml</p>
+        <a href="/products/zyra-vodka-coco-mist-750-ml" class="product-tile-cta">Shop Coco Mist →</a>
+      </div>
+
+      <div class="product-tile">
+        <img class="product-tile-img"
+             src="https://drinkzyra.com/cdn/shop/files/root-beer-rush-front-bg.png?v=1754530834&width=400"
+             alt="Root Beer Rush" loading="lazy">
+        <div class="product-tile-color product-tile-color--rush"></div>
+        <p class="product-tile-name">Root Beer Rush</p>
+        <p class="product-tile-desc">North America's only craft root beer vodka. Triticale. Real sarsaparilla. Coming soon.</p>
+        <p class="product-tile-price">30% ABV · Coming Soon</p>
+        <span class="product-tile-tag">Notify Me</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CLAIM -->
+<section class="claim-band" id="notify">
+  <div class="inner">
+    <div>
+      <p class="claim-eyebrow">Root Beer Rush</p>
+      <h2 class="claim-title">North America's<br>only craft<br>root beer vodka.</h2>
+      <p class="claim-body">One email when it ships. No newsletter. No noise.</p>
+      <form class="notify-form" action="/pages/contact" method="get">
+        <input class="notify-input" type="email" name="email" placeholder="your@email.com" aria-label="Email address">
+        <button class="notify-btn" type="submit">Notify me</button>
+      </form>
+    </div>
+    <div class="claim-specs">
+      <div class="claim-spec">
+        <p class="claim-spec-label">Base</p>
+        <p class="claim-spec-value">Triticale — a wheat-rye hybrid grain, not generic "grain vodka."</p>
+      </div>
+      <div class="claim-spec">
+        <p class="claim-spec-label">Method</p>
+        <p class="claim-spec-value">Hand-distilled. Cold-infused with real sarsaparilla root and a hint of vanilla.</p>
+      </div>
+      <div class="claim-spec">
+        <p class="claim-spec-label">ABV</p>
+        <p class="claim-spec-value">30% — the infusion doesn't need to hide behind heat.</p>
+      </div>
+      <div class="claim-spec">
+        <p class="claim-spec-label">Serve</p>
+        <p class="claim-spec-value">Neat. Over ice. Spiked Root Mule: 2 oz Rush + 4 oz ginger beer + lime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Zyra</div>
+  <ul class="footer-links">
+    <li><a href="/pages/our-story">Our Story</a></li>
+    <li><a href="/collections/all">Shop</a></li>
+    <li><a href="/pages/recipe-gallery">Cocktails</a></li>
+    <li><a href="/pages/contact">Contact</a></li>
+  </ul>
+  <p class="footer-legal">© 2026 Zyra Vodka. All rights reserved. Please drink responsibly.</p>
+</footer>
+
+<script>
+(function() {
+  /* ── Nav scroll ── */
+  var nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  /* ── Carousel ── */
+  var track  = document.getElementById('carouselTrack');
+  var dots   = document.querySelectorAll('.dot');
+  var num    = document.getElementById('slideNum');
+  var total  = 3;
+  var cur    = 0;
+  var timer;
+
+  function goTo(n) {
+    cur = ((n % total) + total) % total;
+    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+    dots.forEach(function(d, i) {
+      d.classList.toggle('active', i === cur);
+      d.setAttribute('aria-selected', String(i === cur));
+    });
+    num.textContent = String(cur + 1).padStart(2, '0');
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', function() { goTo(cur - 1); resetTimer(); });
+  document.getElementById('nextBtn').addEventListener('click', function() { goTo(cur + 1); resetTimer(); });
+  dots.forEach(function(d) {
+    d.addEventListener('click', function() { goTo(parseInt(d.dataset.slide, 10)); resetTimer(); });
+  });
+
+  /* Auto-advance */
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(function() { goTo(cur + 1); }, 5500);
+  }
+  resetTimer();
+
+  var hero = document.getElementById('carousel');
+  hero.addEventListener('mouseenter', function() { clearInterval(timer); });
+  hero.addEventListener('mouseleave', function() { resetTimer(); });
+
+  /* Touch swipe */
+  var sx = 0;
+  track.addEventListener('touchstart', function(e) { sx = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', function(e) {
+    var dx = sx - e.changedTouches[0].clientX;
+    if (Math.abs(dx) > 48) { goTo(cur + (dx > 0 ? 1 : -1)); resetTimer(); }
+  }, { passive: true });
+
+  /* Keyboard */
+  hero.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft')  { goTo(cur - 1); resetTimer(); }
+    if (e.key === 'ArrowRight') { goTo(cur + 1); resetTimer(); }
+  });
+})();
+</script>
+
+</body>
+</html>
