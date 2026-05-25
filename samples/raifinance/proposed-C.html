@@ -1,1113 +1,480 @@
 <!DOCTYPE html>
 <!-- stardust:provenance
   writtenBy: stardust:prototype
-  variant: C — The time-bound claim
+  variant: C — Loan calculator hero · "Find out what your car is worth"
   brand: Fast Cash Auto / raifinance.com
   writtenAt: 2026-05-25T00:00:00Z
-  palette: asphalt #1A1916 / document #F5F0E8 / amber #D4820A / ink #2A2E35
-  fontDeck: DM Serif Display (display) + IBM Plex Sans (body) + IBM Plex Mono (specs)
-  thesis: "Call by 4:30. Cash by 5:30." — the specific time-bound promise as the lead claim
-  antiVibeScore: 0
+  palette: green #539744 / white #FFFFFF / sage #F0F5EE / ink #1B2118
+  fontDeck: Nunito Sans
+  thesis: Lead with the loan estimator — the answer to "how much can I get?"
+          reduces anxiety before asking for contact info.
+          Tests whether giving the number first converts better than asking first.
   stardustVersion: 0.2.0
 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Car Title Loans Alberta | Fast Cash Auto — Call by 4:30. Cash by 5:30.</title>
-<meta name="description" content="Same-day vehicle equity loans in Edmonton, Calgary, and across Canada. Call before 4:30 PM, cash by 5:30. No credit check. No employment history.">
-<meta property="og:title" content="Fast Cash Auto — Call by 4:30. Cash by 5:30.">
-<meta property="og:description" content="Same-day vehicle equity loans. $4,000–$50,000. No credit check. Edmonton & Calgary.">
+<title>How Much Can I Get? | Car Title Loan Calculator Edmonton | Fast Cash Auto</title>
+<meta name="description" content="Find out what your car is worth in 60 seconds. Fast Cash Auto car title loan calculator for Edmonton, Calgary, and across Canada. No credit check. $4,000–$50,000.">
+<meta property="og:title" content="Car Title Loan Calculator — Fast Cash Auto">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://raifinance.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FinancialService","name":"Fast Cash Auto","url":"https://raifinance.com","telephone":"+17809951579","openingHours":"Mo-Su 09:00-21:00","areaServed":["Edmonton AB","Calgary AB","Vancouver BC","Winnipeg MB","Regina SK","Toronto ON"],"address":{"@type":"PostalAddress","addressLocality":"Edmonton","addressRegion":"AB","addressCountry":"CA"}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-
-/* ─── TOKENS ──────────────────────────────────────────── */
 :root {
-  --asphalt:    #1A1916;
-  --asphalt-2:  #222019;
-  --ink:        #2A2E35;
-  --document:   #F5F0E8;
-  --document-2: #EDE8DF;
-  --amber:      #D4820A;
-  --amber-bright: #F09B14;
-  --amber-lt:   rgba(212,130,10,0.12);
-  --steel:      #7C8087;
-  --sky:        #B8C4CE;
-  --rule:       rgba(245,240,232,0.08);
-  --rule-doc:   rgba(42,46,53,0.1);
-  --white:      #FFFFFF;
+  --green:    #539744;
+  --green-dk: #3D6E33;
+  --green-bg: #2A5120;
+  --green-lt: #F0F5EE;
+  --green-mid:#D5E8CF;
+  --ink:      #1B2118;
+  --mid:      #445040;
+  --muted:    #7A8A74;
+  --white:    #FFFFFF;
+  --off:      #F8F9F7;
+  --rule:     rgba(27,33,24,0.1);
+  --sans: 'Nunito Sans', system-ui, sans-serif;
+  --max-w: 1160px;
+  --pad: clamp(20px,5vw,64px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:16px;line-height:1.6;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
 
-  --serif:  'DM Serif Display', Georgia, serif;
-  --sans:   'IBM Plex Sans', system-ui, sans-serif;
-  --mono:   'IBM Plex Mono', 'Courier New', monospace;
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--rule)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad);height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-links{display:flex;list-style:none;gap:28px;align-items:center}
+.nav-links a{font-size:14px;font-weight:600;color:var(--mid);transition:color 100ms}
+.nav-links a:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-phone{font-size:16px;font-weight:800;color:var(--ink);letter-spacing:-0.01em;transition:color 100ms}
+.nav-phone:hover{color:var(--green-dk)}
+.nav-btn{background:var(--green);color:var(--white);font-size:13px;font-weight:700;padding:10px 20px;border-radius:3px;transition:background 100ms}
+.nav-btn:hover{background:var(--green-dk);color:var(--white)}
+@media(max-width:820px){.nav-links{display:none}}
 
-  --max-w:  1160px;
-  --pad:    clamp(20px, 5vw, 64px);
-}
+/* HERO — CALCULATOR */
+.hero{background:var(--green-lt);border-bottom:2px solid var(--green-mid);padding:72px 0 64px}
+.hero-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad);display:grid;grid-template-columns:1fr 480px;gap:56px;align-items:center}
+.hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.hero-h1{font-size:clamp(34px,4.5vw,58px);font-weight:900;line-height:1.05;color:var(--ink);letter-spacing:-0.025em;margin-bottom:16px}
+.hero-h1 span{color:var(--green-dk)}
+.hero-lede{font-size:16px;color:var(--mid);line-height:1.7;max-width:440px;margin-bottom:20px}
+.hero-trust{display:flex;flex-direction:column;gap:8px}
+.ht-item{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--mid)}
+.ht-item::before{content:'✓';color:var(--green);font-weight:800;font-size:13px;flex-shrink:0}
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--sans); font-size: 17px; line-height: 1.6; background: var(--asphalt); color: var(--document); -webkit-font-smoothing: antialiased; }
-a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
+/* CALCULATOR CARD */
+.calc-card{background:var(--white);border:1px solid var(--rule);border-radius:6px;overflow:hidden;box-shadow:0 4px 24px rgba(27,33,24,0.08)}
+.calc-head{background:var(--green);padding:20px 24px}
+.calc-title{font-size:16px;font-weight:800;color:var(--white)}
+.calc-sub{font-size:13px;color:rgba(255,255,255,0.72);margin-top:2px}
+.calc-body{padding:24px;display:flex;flex-direction:column;gap:18px}
 
-/* ─── NAV ─────────────────────────────────────────────── */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--asphalt);
-  border-bottom: 1px solid var(--rule);
-}
-.nav-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--pad);
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 28px;
-  align-items: center;
-}
-.nav-links a {
-  font-size: 13px;
-  color: rgba(245,240,232,0.45);
-  letter-spacing: 0.01em;
-  transition: color 100ms;
-}
-.nav-links a:hover { color: var(--document); }
-.nav-phone-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.nav-phone-label {
-  font-family: var(--mono);
-  font-size: 9px;
-  color: var(--amber);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-.nav-phone-num {
-  font-family: var(--mono);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--document);
-  letter-spacing: 0.04em;
-}
-.nav-phone-num:hover { color: var(--amber); }
-@media (max-width: 820px) { .nav-links { display: none; } }
+/* Inputs */
+.calc-label{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+.calc-input,.calc-select{width:100%;padding:12px 14px;border:1.5px solid var(--rule);background:var(--off);color:var(--ink);font-family:var(--sans);font-size:15px;font-weight:600;outline:none;border-radius:3px;transition:border-color 100ms;appearance:none;-webkit-appearance:none}
+.calc-input::placeholder{color:var(--muted);font-weight:400}
+.calc-input:focus,.calc-select:focus{border-color:var(--green);background:var(--white)}
 
-/* ─── HERO ────────────────────────────────────────────── */
-.hero {
-  position: relative;
-  min-height: 90svh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background: var(--asphalt);
-}
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url('https://raifinance.com/wp-content/uploads/2021/07/fastcash_slider_02.jpg');
-  background-size: cover;
-  background-position: center 40%;
-  opacity: 0.22;
-}
-.hero-bg-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(26,25,22,0.92) 0%,
-    rgba(26,25,22,0.55) 60%,
-    rgba(26,25,22,0.15) 100%
-  );
-}
-.hero-inner {
-  position: relative;
-  z-index: 1;
-  max-width: var(--max-w);
-  width: 100%;
-  margin: 0 auto;
-  padding: 80px var(--pad);
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 64px;
-  align-items: center;
-}
-.hero-overline {
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 28px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.hero-overline::after {
-  content: '';
-  display: block;
-  width: 32px;
-  height: 1px;
-  background: rgba(212,130,10,0.4);
-}
-.hero-h1 {
-  font-family: var(--serif);
-  font-size: clamp(40px, 6.5vw, 88px);
-  font-weight: 400;
-  line-height: 1.0;
-  color: var(--document);
-  letter-spacing: -0.02em;
-  margin-bottom: 32px;
-}
-.hero-h1 .time-claim {
-  display: block;
-  color: var(--amber-bright);
-  font-style: italic;
-}
-.hero-lede {
-  font-size: 16px;
-  color: var(--steel);
-  line-height: 1.7;
-  max-width: 500px;
-  margin-bottom: 44px;
-}
-.hero-phone-cta {
-  margin-bottom: 16px;
-}
-.hero-phone-cta a {
-  font-family: var(--mono);
-  font-size: clamp(24px, 3.5vw, 40px);
-  font-weight: 600;
-  color: var(--document);
-  letter-spacing: 0.04em;
-  border-bottom: 2px solid var(--amber);
-  padding-bottom: 4px;
-  transition: color 100ms;
-  display: inline-block;
-}
-.hero-phone-cta a:hover { color: var(--amber); }
-.hero-phone-sub {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--steel);
-  margin-top: 6px;
-  margin-bottom: 24px;
-}
-.hero-online {
-  font-size: 14px;
-  color: rgba(245,240,232,0.45);
-}
-.hero-online a {
-  color: var(--amber);
-  border-bottom: 1px solid rgba(212,130,10,0.35);
-  transition: border-color 100ms;
-}
-.hero-online a:hover { border-color: var(--amber); }
+/* Slider */
+.slider-wrap{display:flex;flex-direction:column;gap:6px}
+.slider-top{display:flex;justify-content:space-between;align-items:baseline}
+.slider-val{font-size:22px;font-weight:900;color:var(--ink);letter-spacing:-0.02em}
+.slider-range{font-size:11px;color:var(--muted)}
+input[type=range]{width:100%;height:6px;accent-color:var(--green);cursor:pointer;border-radius:3px}
 
-/* Hero side panel */
-.hero-side {
-  background: rgba(34,32,25,0.85);
-  border: 1px solid var(--rule);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.side-title {
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--rule);
-}
-.side-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--rule);
-  gap: 12px;
-}
-.side-row:last-of-type { border-bottom: none; }
-.side-label {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--steel);
-  flex-shrink: 0;
-}
-.side-value {
-  font-family: var(--mono);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--document);
-  text-align: right;
-}
-.side-value.amber { color: var(--amber-bright); }
-.side-cta {
-  display: block;
-  background: var(--amber);
-  color: var(--asphalt);
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 14px 20px;
-  text-align: center;
-  margin-top: 24px;
-  transition: opacity 80ms;
-}
-.side-cta:hover { opacity: 0.88; }
-@media (max-width: 860px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 40px; min-height: auto; }
-  .hero { min-height: auto; }
-  .hero-side { display: none; }
-}
+/* Result */
+.calc-result{display:none;background:var(--green-lt);border:1.5px solid var(--green-mid);border-radius:4px;padding:20px;flex-direction:column;gap:4px}
+.calc-result.show{display:flex}
+.cr-label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green)}
+.cr-amount{font-size:36px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1}
+.cr-note{font-size:13px;color:var(--mid);margin-top:4px;line-height:1.5}
+.calc-estimate-btn{width:100%;background:var(--green);color:var(--white);font-family:var(--sans);font-size:16px;font-weight:800;padding:15px;border:none;cursor:pointer;border-radius:3px;transition:background 100ms;letter-spacing:-0.01em}
+.calc-estimate-btn:hover{background:var(--green-dk)}
+.calc-next{display:none;flex-direction:column;gap:10px}
+.calc-next.show{display:flex}
+.calc-next-label{font-size:13px;font-weight:600;color:var(--mid);text-align:center}
+.calc-apply-btn{display:block;background:var(--green-dk);color:var(--white);font-size:15px;font-weight:800;padding:14px;border-radius:3px;text-align:center;transition:background 100ms}
+.calc-apply-btn:hover{background:var(--green-bg);color:var(--white)}
+.calc-tel{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--green-lt);padding:12px;border-radius:3px;font-size:16px;font-weight:800;color:var(--green-dk);border:1px solid var(--green-mid);transition:background 100ms}
+.calc-tel:hover{background:var(--green-mid)}
+.calc-fine{font-size:10px;color:var(--muted);line-height:1.55;text-align:center}
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr;gap:36px}.calc-card{max-width:460px}}
 
-/* ─── URGENCY STRIP ───────────────────────────────────── */
-.urgency-strip {
-  background: var(--amber);
-}
-.urgency-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 16px var(--pad);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.urgency-text {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--asphalt);
-}
-.urgency-locations {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: rgba(26,25,22,0.6);
-  letter-spacing: 0.08em;
-}
-.urgency-cta {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--asphalt);
-  border-bottom: 1px solid rgba(26,25,22,0.35);
-  padding-bottom: 1px;
-  white-space: nowrap;
-}
+/* TRUST STRIP */
+.trust-strip{background:var(--ink)}
+.trust-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad);display:flex;align-items:center;overflow-x:auto}
+.ti{display:flex;align-items:center;gap:8px;padding:13px 22px;border-right:1px solid rgba(255,255,255,0.07);white-space:nowrap;flex-shrink:0}
+.ti:first-child{padding-left:0}
+.ti-check{font-size:12px;color:var(--green);font-weight:800}
+.ti-text{font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.42)}
 
-/* ─── TRUST STRIP ─────────────────────────────────────── */
-.trust-strip {
-  background: var(--ink);
-  border-bottom: 1px solid var(--rule);
-}
-.trust-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--pad);
-  display: flex;
-  align-items: center;
-  overflow-x: auto;
-  gap: 0;
-}
-.trust-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 24px;
-  border-right: 1px solid var(--rule);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.trust-item:first-child { padding-left: 0; }
-.trust-mark {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--amber);
-}
-.trust-label {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(245,240,232,0.45);
-}
+/* SECTIONS */
+.section{padding:80px 0}
+.inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad)}
+.label{font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.title{font-size:clamp(28px,3.5vw,44px);font-weight:900;line-height:1.08;color:var(--ink);letter-spacing:-0.02em;margin-bottom:14px}
+.sub{font-size:15px;color:var(--mid);line-height:1.75;max-width:540px}
 
-/* ─── SECTION BASE ────────────────────────────────────── */
-.section { padding: 88px 0; }
-.inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--pad);
-}
-.sec-overline {
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 12px;
-}
-.sec-title {
-  font-family: var(--serif);
-  font-size: clamp(28px, 3.5vw, 46px);
-  font-weight: 400;
-  line-height: 1.1;
-  color: var(--document);
-  margin-bottom: 16px;
-  letter-spacing: -0.01em;
-}
-.sec-sub {
-  font-size: 15px;
-  color: var(--steel);
-  line-height: 1.75;
-  max-width: 560px;
-}
+/* TESTIMONIALS */
+.testi-section{background:var(--off);border-bottom:1px solid var(--rule)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.testi{background:var(--white);padding:24px;border-radius:3px;border:1px solid var(--rule)}
+.testi-stars{color:var(--green);font-size:14px;letter-spacing:1px;margin-bottom:10px}
+.testi-q{font-size:14px;color:var(--ink);line-height:1.65;font-style:italic;margin-bottom:10px}
+.testi-who{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:720px){.testi-grid{grid-template-columns:1fr}}
 
-/* ─── WHO QUALIFIES ───────────────────────────────────── */
-.qualify-section {
-  background: var(--asphalt-2);
-  border-bottom: 1px solid var(--rule);
-}
-.qualify-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 88px var(--pad);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
-.qualify-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--rule);
-  border: 1px solid var(--rule);
-  margin-top: 0;
-}
-.qualify-cell {
-  background: var(--asphalt);
-  padding: 24px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.qualify-icon {
-  font-family: var(--mono);
-  font-size: 14px;
-  color: var(--amber);
-  margin-bottom: 4px;
-}
-.qualify-label {
-  font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--document);
-  line-height: 1.3;
-}
-.qualify-note {
-  font-size: 12px;
-  color: var(--steel);
-  line-height: 1.5;
-}
-@media (max-width: 860px) {
-  .qualify-inner { grid-template-columns: 1fr; gap: 40px; }
-}
+/* HOW IT WORKS */
+.process-section{background:var(--green-lt);border-top:1px solid var(--green-mid);border-bottom:1px solid var(--green-mid)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);margin-top:48px;border:1px solid var(--green-mid);border-radius:3px;overflow:hidden}
+.step{background:var(--white);padding:36px 28px;border-right:1px solid var(--green-mid)}
+.step:last-child{border-right:none}
+.step-n{font-size:52px;font-weight:900;color:var(--green-mid);line-height:1;margin-bottom:12px}
+.step-title{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:8px;line-height:1.2}
+.step-body{font-size:14px;color:var(--mid);line-height:1.65}
+.step-time{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-top:16px;padding-top:14px;border-top:1px solid var(--green-mid)}
+@media(max-width:720px){.steps{grid-template-columns:1fr}.step{border-right:none;border-bottom:1px solid var(--green-mid)}.step:last-child{border-bottom:none}}
 
-/* ─── HOW FAST ────────────────────────────────────────── */
-.fast-section {
-  background: var(--asphalt);
-  border-bottom: 1px solid var(--rule);
-}
-.fast-timeline {
-  margin-top: 52px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border: 1px solid var(--rule);
-}
-.timeline-step {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 0;
-  border-bottom: 1px solid var(--rule);
-}
-.timeline-step:last-child { border-bottom: none; }
-.timeline-time {
-  background: var(--ink);
-  padding: 28px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: 1px solid var(--rule);
-}
-.timeline-time-val {
-  font-family: var(--mono);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--amber);
-  letter-spacing: 0.04em;
-  text-align: center;
-  line-height: 1.3;
-}
-.timeline-content {
-  padding: 24px 28px;
-  background: var(--asphalt);
-}
-.timeline-title {
-  font-family: var(--serif);
-  font-size: 20px;
-  color: var(--document);
-  margin-bottom: 6px;
-}
-.timeline-body {
-  font-size: 14px;
-  color: var(--steel);
-  line-height: 1.6;
-}
-@media (max-width: 600px) {
-  .timeline-step { grid-template-columns: 80px 1fr; }
-  .timeline-time { padding: 20px 12px; }
-  .timeline-time-val { font-size: 11px; }
-}
+/* QUALIFY GRID */
+.qualify-section{background:var(--white);border-bottom:1px solid var(--rule)}
+.qualify-inner{max-width:var(--max-w);margin:0 auto;padding:80px var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.qualify-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.qc{background:var(--white);padding:22px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:4px}
+.qc:nth-child(even){border-right:none}
+.qc:nth-last-child(-n+2){border-bottom:none}
+.qc-icon{font-size:16px;color:var(--green);margin-bottom:2px}
+.qc-title{font-size:14px;font-weight:800;color:var(--ink);line-height:1.3}
+.qc-note{font-size:12px;color:var(--muted);line-height:1.45}
+@media(max-width:860px){.qualify-inner{grid-template-columns:1fr;gap:36px}}
 
-/* ─── LOCATIONS ───────────────────────────────────────── */
-.locations-section {
-  background: var(--asphalt-2);
-  border-bottom: 1px solid var(--rule);
-}
-.locations-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--rule);
-  border: 1px solid var(--rule);
-  margin-top: 48px;
-}
-.location-card {
-  background: var(--asphalt);
-  padding: 28px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.location-province {
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--amber);
-}
-.location-city {
-  font-family: var(--serif);
-  font-size: 22px;
-  color: var(--document);
-  line-height: 1.1;
-  margin: 4px 0;
-}
-.location-phone {
-  font-family: var(--mono);
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--document);
-  letter-spacing: 0.04em;
-  margin-top: 10px;
-  transition: color 100ms;
-}
-.location-phone:hover { color: var(--amber); }
-.location-note {
-  font-size: 12px;
-  color: var(--steel);
-}
+/* LOCATIONS */
+.locations-section{background:var(--green-lt);border-top:1px solid var(--green-mid);border-bottom:1px solid var(--green-mid)}
+.locs{display:grid;grid-template-columns:repeat(3,1fr);margin-top:48px;border:1px solid var(--green-mid);border-radius:3px;overflow:hidden}
+.loc{background:var(--white);padding:24px 22px;border-right:1px solid var(--green-mid);border-bottom:1px solid var(--green-mid);transition:background 120ms}
+.loc:hover{background:var(--green-lt)}
+.loc:nth-child(3n){border-right:none}
+.loc:nth-last-child(-n+3){border-bottom:none}
+.loc-region{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
+.loc-city{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:4px;letter-spacing:-0.02em}
+.loc-note{font-size:12px;color:var(--muted);margin-bottom:14px}
+.loc-phone{font-size:15px;font-weight:800;color:var(--green-dk);border-bottom:1.5px solid var(--green-mid);padding-bottom:1px;display:inline-block;transition:border-color 100ms}
+.loc-phone:hover{border-color:var(--green)}
+@media(max-width:720px){.locs{grid-template-columns:1fr 1fr}.loc:nth-child(3n){border-right:inherit}.loc:nth-child(even){border-right:none}}
+@media(max-width:480px){.locs{grid-template-columns:1fr}.loc{border-right:none!important}}
 
-/* ─── APPLY ───────────────────────────────────────────── */
-.apply-section {
-  background: var(--ink);
-  padding: 88px 0;
-}
-.apply-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--pad);
-  display: grid;
-  grid-template-columns: 1fr 520px;
-  gap: 80px;
-  align-items: start;
-}
-.apply-pre-cta {
-  margin-top: 36px;
-  padding: 28px;
-  background: rgba(212,130,10,0.08);
-  border: 1px solid rgba(212,130,10,0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.pre-cta-label {
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--amber);
-}
-.pre-cta-num {
-  font-family: var(--mono);
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--document);
-  letter-spacing: 0.04em;
-}
-.pre-cta-num a { transition: color 100ms; }
-.pre-cta-num a:hover { color: var(--amber); }
-.pre-cta-hours {
-  font-size: 13px;
-  color: var(--steel);
-}
-.apply-form {
-  background: var(--asphalt);
-  border: 1px solid var(--rule);
-}
-.form-head {
-  background: var(--amber);
-  padding: 16px 28px;
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--asphalt);
-}
-.form-body { padding: 28px; }
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-.form-row.full { grid-template-columns: 1fr; }
-.form-label {
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--steel);
-  display: block;
-  margin-bottom: 6px;
-}
-.form-input {
-  width: 100%;
-  padding: 12px 14px;
-  background: var(--asphalt-2);
-  border: 1px solid rgba(245,240,232,0.1);
-  color: var(--document);
-  font-family: var(--sans);
-  font-size: 14px;
-  outline: none;
-  transition: border-color 100ms;
-}
-.form-input::placeholder { color: var(--steel); }
-.form-input:focus { border-color: var(--amber); }
-.form-submit {
-  display: block;
-  width: 100%;
-  background: var(--amber);
-  color: var(--asphalt);
-  font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 16px;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: opacity 80ms;
-}
-.form-submit:hover { opacity: 0.88; }
-.form-legal {
-  font-family: var(--mono);
-  font-size: 9px;
-  color: var(--steel);
-  line-height: 1.55;
-  margin-top: 12px;
-  opacity: 0.65;
-}
-@media (max-width: 860px) {
-  .apply-inner { grid-template-columns: 1fr; gap: 40px; }
-  .form-row { grid-template-columns: 1fr; }
-}
+/* FAQ */
+.faq-section{background:var(--white);border-bottom:1px solid var(--rule)}
+.faqs{margin-top:48px;border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.faq{border-bottom:1px solid var(--rule);background:var(--white)}
+.faq:last-child{border-bottom:none}
+.faq-q{padding:20px 22px;font-size:16px;font-weight:700;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;user-select:none}
+.faq-q:hover{background:var(--green-lt)}
+.faq-q::after{content:'+';font-size:22px;font-weight:300;color:var(--green);flex-shrink:0;transition:transform 200ms;line-height:1}
+.faq.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{padding:0 22px;max-height:0;overflow:hidden;font-size:15px;color:var(--mid);line-height:1.7;transition:max-height 250ms ease,padding 250ms ease}
+.faq.open .faq-a{max-height:320px;padding:0 22px 20px}
 
-/* ─── FOOTER ──────────────────────────────────────────── */
-footer {
-  background: var(--asphalt);
-  padding: 48px 0 28px;
-  border-top: 1px solid var(--rule);
-}
-.footer-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--pad);
-}
-.footer-top {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 48px;
-  padding-bottom: 36px;
-  border-bottom: 1px solid var(--rule);
-  margin-bottom: 24px;
-}
-.footer-brand {
-  font-family: var(--serif);
-  font-size: 22px;
-  color: var(--document);
-  margin-bottom: 10px;
-}
-.footer-desc {
-  font-size: 13px;
-  color: var(--steel);
-  line-height: 1.7;
-  max-width: 260px;
-  margin-bottom: 20px;
-}
-.footer-col-title {
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 16px;
-}
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.footer-col ul a {
-  font-size: 13px;
-  color: rgba(245,240,232,0.3);
-  transition: color 100ms;
-}
-.footer-col ul a:hover { color: var(--document); }
-.footer-col address {
-  font-style: normal;
-  font-size: 12px;
-  color: rgba(245,240,232,0.28);
-  line-height: 1.9;
-}
-.footer-col address a { color: rgba(245,240,232,0.28); }
-.footer-col address a:hover { color: var(--amber); }
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.footer-copy {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: rgba(245,240,232,0.18);
-  letter-spacing: 0.04em;
-}
-.footer-rate {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--steel);
-  opacity: 0.5;
-  letter-spacing: 0.04em;
-}
-@media (max-width: 720px) {
-  .footer-top { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 500px) {
-  .footer-top { grid-template-columns: 1fr; }
-}
+/* APPLY */
+.apply-section{background:var(--ink);padding:80px 0}
+.apply-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad);display:grid;grid-template-columns:1fr 520px;gap:72px;align-items:start}
+.apply-left .title{color:var(--white)}
+.apply-left .label{color:var(--green)}
+.apply-left .sub{color:rgba(255,255,255,0.5)}
+.apply-bullets{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.apply-bullets li{display:flex;align-items:center;gap:10px;font-size:15px;color:rgba(255,255,255,0.55)}
+.apply-bullets li::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0}
+.apply-form{background:var(--white);border-radius:4px;overflow:hidden}
+.af-head{background:var(--green);padding:18px 24px}
+.af-head-t{font-size:15px;font-weight:800;color:var(--white)}
+.af-head-s{font-size:12px;color:rgba(255,255,255,0.7);margin-top:2px}
+.af-body{padding:24px;display:flex;flex-direction:column;gap:12px}
+.af-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.af-row.full{grid-template-columns:1fr}
+.af-label{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:5px}
+.af-input{width:100%;padding:12px 14px;border:1.5px solid var(--rule);background:var(--off);color:var(--ink);font-family:var(--sans);font-size:14px;font-weight:600;outline:none;border-radius:3px;transition:border-color 100ms}
+.af-input::placeholder{color:var(--muted);font-weight:400}
+.af-input:focus{border-color:var(--green);background:var(--white)}
+.af-submit{width:100%;background:var(--green);color:var(--white);font-family:var(--sans);font-size:16px;font-weight:800;padding:15px;border:none;cursor:pointer;border-radius:3px;margin-top:6px;transition:background 100ms}
+.af-submit:hover{background:var(--green-dk)}
+.af-legal{font-size:10px;color:var(--muted);line-height:1.55;margin-top:8px}
+@media(max-width:860px){.apply-inner{grid-template-columns:1fr;gap:36px}.af-row{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{background:var(--green-bg);padding:52px 0 28px}
+.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad)}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:22px}
+.footer-brand{font-size:22px;font-weight:900;color:var(--white);margin-bottom:8px}
+.footer-desc{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.7;max-width:240px;margin-bottom:16px}
+.footer-col-t{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.footer-col ul a{font-size:13px;color:rgba(255,255,255,0.3);transition:color 100ms}
+.footer-col ul a:hover{color:var(--white)}
+.footer-col address{font-style:normal;font-size:12px;color:rgba(255,255,255,0.28);line-height:1.9}
+.footer-col address a{color:rgba(255,255,255,0.28)}
+.footer-col address a:hover{color:#7FDB6A}
+.footer-bot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.18)}
+.footer-rate{font-size:10px;color:rgba(255,255,255,0.22);max-width:480px;line-height:1.55}
+@media(max-width:720px){.footer-top{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr}}
+
+.mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--green);box-shadow:0 -2px 16px rgba(0,0,0,0.2)}
+.mob-cta a{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;font-size:17px;font-weight:800;color:var(--white)}
+@media(max-width:640px){.mob-cta{display:block}body{padding-bottom:54px}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="/">
-      <img src="https://raifinance.com/wp-content/uploads/2025/03/logo_fastcashauto_transparent-300x103.png"
-           alt="Fast Cash Auto" height="32" style="filter:brightness(0) invert(1);height:32px;width:auto;display:block;">
-    </a>
+    <a href="/"><img src="https://raifinance.com/wp-content/uploads/2025/03/logo_fastcashauto_transparent-300x103.png" alt="Fast Cash Auto" height="36" style="height:36px;width:auto"></a>
     <ul class="nav-links">
-      <li><a href="#how-fast">How Fast</a></li>
-      <li><a href="#qualifies">Who Qualifies</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#locations">Locations</a></li>
-      <li><a href="#apply">Apply</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
-    <div class="nav-phone-block">
-      <span class="nav-phone-label">Call now — Edmonton</span>
-      <a href="tel:+17809951579" class="nav-phone-num">(780) 995-1579</a>
+    <div class="nav-right">
+      <a href="tel:+17809951579" class="nav-phone">(780) 995-1579</a>
+      <a href="#apply" class="nav-btn">Apply Now</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-bg-gradient"></div>
   <div class="hero-inner">
     <div>
-      <p class="hero-overline">Same-day vehicle equity loans · Alberta & Canada</p>
-      <h1 class="hero-h1">
-        Call by 4:30.
-        <span class="time-claim">Cash by 5:30.</span>
-      </h1>
-      <p class="hero-lede">
-        No credit check. No employment history. Just your vehicle's equity and a phone call. Edmonton, Calgary, Vancouver, and 3 more cities. Open 7 days.
-      </p>
-      <div class="hero-phone-cta">
-        <a href="tel:+17809951579">(780) 995-1579</a>
-        <p class="hero-phone-sub">Edmonton — available 7 days a week, 9am–9pm</p>
+      <p class="hero-eyebrow">Edmonton · Calgary · Vancouver · Winnipeg · Toronto</p>
+      <h1 class="hero-h1">Find out what<br><span>your car is worth</span><br>in 60 seconds.</h1>
+      <p class="hero-lede">No credit check. No paperwork. Just tell us about your vehicle and we'll show you what you could qualify for — $4,000 to $50,000.</p>
+      <div class="hero-trust">
+        <div class="ht-item">No credit check — ever</div>
+        <div class="ht-item">Approved in 60 minutes</div>
+        <div class="ht-item">You keep driving your car</div>
+        <div class="ht-item">Open 7 days, 9am–9pm</div>
       </div>
-      <p class="hero-online">Or <a href="#apply">apply online →</a> — we'll call you back within minutes</p>
     </div>
-    <div class="hero-side">
-      <p class="side-title">Loan parameters</p>
-      <div class="side-row">
-        <span class="side-label">Range</span>
-        <span class="side-value amber">$4K – $50K</span>
+    <div class="calc-card" id="calculator">
+      <div class="calc-head"><div class="calc-title">Vehicle equity estimator</div><div class="calc-sub">Free · No credit check · No obligation</div></div>
+      <div class="calc-body">
+        <div>
+          <label class="calc-label">Vehicle year</label>
+          <select class="calc-select" id="vYear" onchange="calcEstimate()">
+            <option value="">Select year…</option>
+            <option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option>
+            <option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option>
+            <option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option>
+            <option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option>
+            <option value="2012">2012 or older</option>
+          </select>
+        </div>
+        <div>
+          <label class="calc-label">Make &amp; model</label>
+          <input class="calc-input" type="text" id="vMake" placeholder="e.g. Toyota Camry" oninput="calcEstimate()">
+        </div>
+        <div class="slider-wrap">
+          <label class="calc-label">Kilometres driven</label>
+          <div class="slider-top">
+            <span class="slider-val" id="kmDisplay">85,000</span>
+            <span class="slider-range">0 – 300,000</span>
+          </div>
+          <input type="range" id="kmSlider" min="0" max="300000" step="5000" value="85000" oninput="updateKm(this.value);calcEstimate()">
+        </div>
+        <div>
+          <label class="calc-label">Approximate balance owing (if any)</label>
+          <input class="calc-input" type="text" id="vOwing" placeholder="e.g. $8,000 or $0" oninput="calcEstimate()">
+        </div>
+        <div class="calc-result" id="calcResult">
+          <span class="cr-label">Estimated loan range</span>
+          <span class="cr-amount" id="crAmount">—</span>
+          <span class="cr-note" id="crNote">Based on vehicle equity estimate. Actual amount confirmed on call — no paperwork needed.</span>
+        </div>
+        <button class="calc-estimate-btn" id="calcBtn" onclick="showEstimate()">Show my estimate →</button>
+        <div class="calc-next" id="calcNext">
+          <span class="calc-next-label">Ready to apply? Get your exact offer in 60 minutes.</span>
+          <a href="#apply" class="calc-apply-btn">Get my confirmed quote →</a>
+          <a href="tel:+17809951579" class="calc-tel">📞 Call (780) 995-1579</a>
+        </div>
+        <p class="calc-fine">Estimate is illustrative only. Actual loan amount based on vehicle inspection and equity verification. No hard credit inquiry.</p>
       </div>
-      <div class="side-row">
-        <span class="side-label">APR</span>
-        <span class="side-value">9% – 35%</span>
-      </div>
-      <div class="side-row">
-        <span class="side-label">Term</span>
-        <span class="side-value">Up to 3 yrs</span>
-      </div>
-      <div class="side-row">
-        <span class="side-label">Credit</span>
-        <span class="side-value amber">Not required</span>
-      </div>
-      <div class="side-row">
-        <span class="side-label">Employment</span>
-        <span class="side-value amber">Not required</span>
-      </div>
-      <div class="side-row">
-        <span class="side-label">Your car</span>
-        <span class="side-value">You keep it</span>
-      </div>
-      <a href="#apply" class="side-cta">Get my quote instantly →</a>
     </div>
   </div>
 </section>
 
-<!-- URGENCY STRIP -->
-<div class="urgency-strip">
-  <div class="urgency-inner">
-    <span class="urgency-text">Open 7 days a week — 9am to 9pm</span>
-    <span class="urgency-locations">Edmonton · Calgary · Vancouver · Winnipeg · Regina · Toronto</span>
-    <a href="tel:+17809951579" class="urgency-cta">Call (780) 995-1579 →</a>
-  </div>
-</div>
-
-<!-- TRUST STRIP -->
 <div class="trust-strip">
   <div class="trust-inner">
-    <div class="trust-item">
-      <span class="trust-mark">✓</span>
-      <span class="trust-label">No credit check</span>
-    </div>
-    <div class="trust-item">
-      <span class="trust-mark">✓</span>
-      <span class="trust-label">No employment verification</span>
-    </div>
-    <div class="trust-item">
-      <span class="trust-mark">✓</span>
-      <span class="trust-label">You keep driving</span>
-    </div>
-    <div class="trust-item">
-      <span class="trust-mark">✓</span>
-      <span class="trust-label">Same-day approval</span>
-    </div>
-    <div class="trust-item">
-      <span class="trust-mark">✓</span>
-      <span class="trust-label">15+ years in business</span>
-    </div>
-    <div class="trust-item">
-      <span class="trust-mark">✓</span>
-      <span class="trust-label">No early payout penalty</span>
+    <div class="ti"><span class="ti-check">✓</span><span class="ti-text">No credit check</span></div>
+    <div class="ti"><span class="ti-check">✓</span><span class="ti-text">No employment history</span></div>
+    <div class="ti"><span class="ti-check">✓</span><span class="ti-text">You keep driving</span></div>
+    <div class="ti"><span class="ti-check">✓</span><span class="ti-text">60 min approval</span></div>
+    <div class="ti"><span class="ti-check">✓</span><span class="ti-text">Open 7 days</span></div>
+    <div class="ti"><span class="ti-check">✓</span><span class="ti-text">No early payout penalty</span></div>
+  </div>
+</div>
+
+<div class="testi-section section">
+  <div class="inner">
+    <p class="label">What customers say</p>
+    <h2 class="title">Real people. Real approvals.</h2>
+    <div class="testi-grid">
+      <div class="testi"><div class="testi-stars">★★★★★</div><p class="testi-q">"Used the calculator first — then called. The actual number came in right at the estimate. 45 minutes start to finish."</p><span class="testi-who">Mike T. — Edmonton, AB</span></div>
+      <div class="testi"><div class="testi-stars">★★★★★</div><p class="testi-q">"Needed $8,000 for medical bills. The estimate gave me confidence to call. Done the same day, no credit check."</p><span class="testi-who">Sandra K. — Calgary, AB</span></div>
+      <div class="testi"><div class="testi-stars">★★★★★</div><p class="testi-q">"Had a bankruptcy on my file. They didn't care. The loan is on my truck, not my history. Exactly as fast as promised."</p><span class="testi-who">Dave M. — Red Deer, AB</span></div>
     </div>
   </div>
 </div>
 
-<!-- HOW FAST -->
-<section class="section fast-section" id="how-fast">
+<section class="section process-section" id="how-it-works">
   <div class="inner">
-    <p class="sec-overline">The 60-minute process</p>
-    <h2 class="sec-title">From call to cash.<br>Every time.</h2>
-    <p class="sec-sub">This is the actual sequence. Not "up to X days" — this is the day-of timeline for every approved loan.</p>
-    <div class="fast-timeline">
-      <div class="timeline-step">
-        <div class="timeline-time">
-          <span class="timeline-time-val">0:00<br>You call</span>
-        </div>
-        <div class="timeline-content">
-          <h3 class="timeline-title">Tell us about your vehicle</h3>
-          <p class="timeline-body">Year, make, model, kilometres, any balance owing. We assess equity on the call — no paperwork yet, no obligation, no credit inquiry.</p>
-        </div>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-time">
-          <span class="timeline-time-val">+15 min<br>Approval</span>
-        </div>
-        <div class="timeline-content">
-          <h3 class="timeline-title">You're approved</h3>
-          <p class="timeline-body">Loan amount and exact terms confirmed. The only factor is your vehicle's equity. No credit check, no income verification — the answer is based entirely on what you own.</p>
-        </div>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-time">
-          <span class="timeline-time-val">+30 min<br>Paperwork</span>
-        </div>
-        <div class="timeline-content">
-          <h3 class="timeline-title">Loan agreement signed</h3>
-          <p class="timeline-body">Review and sign the loan documents. Everything is disclosed upfront — rate, term, total cost of borrowing. No hidden fees.</p>
-        </div>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-time">
-          <span class="timeline-time-val">+60 min<br>Cash</span>
-        </div>
-        <div class="timeline-content">
-          <h3 class="timeline-title">Funds in your account</h3>
-          <p class="timeline-body">Transfer complete. You drive home. The title is held as collateral — your vehicle never leaves your possession for the duration of the loan.</p>
-        </div>
-      </div>
+    <p class="label">How it works</p>
+    <h2 class="title">Three steps. One hour.</h2>
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><h3 class="step-title">Get your estimate above</h3><p class="step-body">Enter your vehicle details to see what you could qualify for. No credit inquiry — the estimate is instant and free.</p><p class="step-time">→ 60 seconds</p></div>
+      <div class="step"><div class="step-n">2</div><h3 class="step-title">Call or apply to confirm</h3><p class="step-body">Your exact loan amount and terms are confirmed on the call or via the form. Based entirely on vehicle equity — no credit check, no income verification.</p><p class="step-time">→ 5–15 minutes</p></div>
+      <div class="step"><div class="step-n">3</div><h3 class="step-title">Cash in your account</h3><p class="step-body">Funds transferred directly. You drive home in your own vehicle. Total process from first call to cash: 60 minutes.</p><p class="step-time">→ Total: 60 minutes</p></div>
     </div>
   </div>
 </section>
 
-<!-- WHO QUALIFIES -->
-<section class="section qualify-section" id="qualifies">
+<section class="section qualify-section">
   <div class="qualify-inner">
     <div>
-      <p class="sec-overline">Who qualifies</p>
-      <h2 class="sec-title">If you own a<br>vehicle, you<br>likely qualify.</h2>
-      <p class="sec-sub" style="margin-top:16px;margin-bottom:24px">
-        The only requirement is vehicle equity. We have approved applications that every bank, credit union, and payday lender already declined.
-      </p>
-      <p class="sec-sub">
-        Your credit score is not the asset. Your vehicle is.
-      </p>
-      <a href="#apply" style="display:inline-block;margin-top:28px;background:var(--amber);color:var(--asphalt);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:0.04em;padding:13px 28px;transition:opacity 80ms" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Check if I qualify →</a>
+      <p class="label">Who qualifies</p>
+      <h2 class="title">If you own a vehicle, you likely qualify.</h2>
+      <p class="sub" style="margin-top:12px;margin-bottom:20px">The only requirement is vehicle equity. We have approved applications that every bank, credit union, and payday lender already declined.</p>
+      <p class="sub">Your credit score is not the asset. Your vehicle is.</p>
+      <a href="#calculator" style="display:inline-block;margin-top:24px;background:var(--green);color:var(--white);font-size:15px;font-weight:800;padding:13px 26px;border-radius:3px;transition:background 100ms" onmouseover="this.style.background='var(--green-dk)'" onmouseout="this.style.background='var(--green)'">Check my vehicle →</a>
     </div>
     <div class="qualify-grid">
-      <div class="qualify-cell">
-        <span class="qualify-icon">✓</span>
-        <span class="qualify-label">Bad credit or no credit history</span>
-        <span class="qualify-note">Credit score is irrelevant to approval</span>
-      </div>
-      <div class="qualify-cell">
-        <span class="qualify-icon">✓</span>
-        <span class="qualify-label">Self-employed income</span>
-        <span class="qualify-note">No T4 or proof of income required</span>
-      </div>
-      <div class="qualify-cell">
-        <span class="qualify-icon">✓</span>
-        <span class="qualify-label">Previous bankruptcy</span>
-        <span class="qualify-note">Discharged or in progress — you can still qualify</span>
-      </div>
-      <div class="qualify-cell">
-        <span class="qualify-icon">✓</span>
-        <span class="qualify-label">Social assistance or pension</span>
-        <span class="qualify-note">Any income type accepted</span>
-      </div>
-      <div class="qualify-cell">
-        <span class="qualify-icon">✓</span>
-        <span class="qualify-label">Vehicle with existing loan</span>
-        <span class="qualify-note">If you have equity above the balance, you qualify</span>
-      </div>
-      <div class="qualify-cell">
-        <span class="qualify-icon">✓</span>
-        <span class="qualify-label">New to Canada</span>
-        <span class="qualify-note">No Canadian credit history required</span>
-      </div>
+      <div class="qc"><span class="qc-icon">✓</span><span class="qc-title">Bad or no credit</span><span class="qc-note">Credit score is irrelevant to approval</span></div>
+      <div class="qc"><span class="qc-icon">✓</span><span class="qc-title">Self-employed</span><span class="qc-note">No T4 or income proof required</span></div>
+      <div class="qc"><span class="qc-icon">✓</span><span class="qc-title">Previous bankruptcy</span><span class="qc-note">Discharged or not — you can qualify</span></div>
+      <div class="qc"><span class="qc-icon">✓</span><span class="qc-title">Social assistance</span><span class="qc-note">Any income type accepted</span></div>
+      <div class="qc"><span class="qc-icon">✓</span><span class="qc-title">Existing car loan</span><span class="qc-note">Qualify if equity exceeds balance</span></div>
+      <div class="qc"><span class="qc-icon">✓</span><span class="qc-title">New to Canada</span><span class="qc-note">No Canadian credit history needed</span></div>
     </div>
   </div>
 </section>
 
-<!-- LOCATIONS -->
 <section class="section locations-section" id="locations">
   <div class="inner">
-    <p class="sec-overline">Where to call</p>
-    <h2 class="sec-title">Six cities.<br>Same-day approvals<br>at every one.</h2>
-    <div class="locations-grid">
-      <div class="location-card">
-        <p class="location-province">Alberta</p>
-        <h3 class="location-city">Edmonton</h3>
-        <p class="location-note">Open 7 days, 9am–9pm</p>
-        <a class="location-phone" href="tel:+17809951579">(780) 995-1579</a>
-      </div>
-      <div class="location-card">
-        <p class="location-province">Alberta</p>
-        <h3 class="location-city">Calgary</h3>
-        <p class="location-note">Open 7 days, 9am–9pm</p>
-        <a class="location-phone" href="tel:+14038186666">(403) 818-6666</a>
-      </div>
-      <div class="location-card">
-        <p class="location-province">British Columbia</p>
-        <h3 class="location-city">Vancouver</h3>
-        <p class="location-note">Open 7 days</p>
-        <a class="location-phone" href="tel:+16042027545">(604) 202-7545</a>
-      </div>
-      <div class="location-card">
-        <p class="location-province">Manitoba</p>
-        <h3 class="location-city">Winnipeg</h3>
-        <p class="location-note">Open 7 days</p>
-        <a class="location-phone" href="tel:+12045580448">(204) 558-0448</a>
-      </div>
-      <div class="location-card">
-        <p class="location-province">Saskatchewan</p>
-        <h3 class="location-city">Regina · Saskatoon</h3>
-        <p class="location-note">Open 7 days</p>
-        <a class="location-phone" href="tel:+13064509242">(306) 450-9242</a>
-      </div>
-      <div class="location-card">
-        <p class="location-province">Ontario</p>
-        <h3 class="location-city">Toronto</h3>
-        <p class="location-note">Greater Toronto Area</p>
-        <a class="location-phone" href="tel:+16474601161">(647) 460-1161</a>
-      </div>
+    <p class="label">Where to find us</p>
+    <h2 class="title">Edmonton, Calgary &amp; across Canada.</h2>
+    <p class="sub">Same-day approvals at every location. Open 7 days a week.</p>
+    <div class="locs">
+      <div class="loc"><p class="loc-region">Alberta</p><h3 class="loc-city">Edmonton</h3><p class="loc-note">Open 7 days · Same-day approvals</p><a class="loc-phone" href="tel:+17809951579">(780) 995-1579</a></div>
+      <div class="loc"><p class="loc-region">Alberta</p><h3 class="loc-city">Calgary</h3><p class="loc-note">Open 7 days · Same-day approvals</p><a class="loc-phone" href="tel:+14038186666">(403) 818-6666</a></div>
+      <div class="loc"><p class="loc-region">British Columbia</p><h3 class="loc-city">Vancouver</h3><p class="loc-note">Open 7 days</p><a class="loc-phone" href="tel:+16042027545">(604) 202-7545</a></div>
+      <div class="loc"><p class="loc-region">Manitoba</p><h3 class="loc-city">Winnipeg</h3><p class="loc-note">Open 7 days</p><a class="loc-phone" href="tel:+12045580448">(204) 558-0448</a></div>
+      <div class="loc"><p class="loc-region">Saskatchewan</p><h3 class="loc-city">Regina · Saskatoon</h3><p class="loc-note">Open 7 days</p><a class="loc-phone" href="tel:+13064509242">(306) 450-9242</a></div>
+      <div class="loc"><p class="loc-region">Ontario</p><h3 class="loc-city">Toronto</h3><p class="loc-note">Greater Toronto Area</p><a class="loc-phone" href="tel:+16474601161">(647) 460-1161</a></div>
     </div>
   </div>
 </section>
 
-<!-- APPLY -->
+<section class="section faq-section" id="faq">
+  <div class="inner">
+    <p class="label">Common questions</p>
+    <h2 class="title">How car title loans work.</h2>
+    <div class="faqs">
+      <div class="faq open"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How accurate is the estimate?</div><div class="faq-a">The estimator uses vehicle age and mileage to produce a reasonable range based on typical equity values in Alberta. The actual confirmed amount may be higher or lower depending on the vehicle's current condition and market value. The real number is confirmed on the call — no hard inquiry, no obligation.</div></div>
+      <div class="faq"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do car title loans work?</div><div class="faq-a">A car title loan uses your vehicle as collateral. You keep driving while the loan is outstanding. We hold the title as security — not the car. Approval is based on vehicle equity. No credit check required.</div></div>
+      <div class="faq"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do I need good credit to qualify?</div><div class="faq-a">No. We do not check credit. We approve applicants with bad credit, no credit, previous bankruptcy, consumer proposals, and new immigrants with no Canadian credit file.</div></div>
+      <div class="faq"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I keep my car during the loan?</div><div class="faq-a">Yes. You keep driving throughout the entire loan term. We hold the title as collateral only — the car stays with you.</div></div>
+    </div>
+  </div>
+</section>
+
 <section class="apply-section" id="apply">
   <div class="apply-inner">
-    <div>
-      <p class="sec-overline">Apply online</p>
-      <h2 class="sec-title">Tell us your<br>vehicle. We call<br>you back in<br>minutes.</h2>
-      <p class="sec-sub" style="margin-top:16px">No obligation. No credit check on the quote. 7 days a week.</p>
-      <div class="apply-pre-cta">
-        <span class="pre-cta-label">Prefer to call?</span>
-        <span class="pre-cta-num"><a href="tel:+17809951579">(780) 995-1579</a></span>
-        <span class="pre-cta-hours">Edmonton — 9am to 9pm, 7 days a week</span>
-      </div>
+    <div class="apply-left">
+      <p class="label">Get your confirmed quote</p>
+      <h2 class="title">Ready to confirm your amount?</h2>
+      <p class="sub" style="margin-top:12px">No obligation. No credit check. 7 days a week, 9am–9pm.</p>
+      <ul class="apply-bullets">
+        <li>Exact amount confirmed on call</li>
+        <li>Approval in as little as 60 minutes</li>
+        <li>No impact on your credit score</li>
+        <li>Funds transferred same day</li>
+      </ul>
     </div>
     <form class="apply-form" action="https://raifinance.com/apply" method="post">
-      <div class="form-head">Vehicle equity quote — no obligation</div>
-      <div class="form-body">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Vehicle Year</label>
-            <input class="form-input" type="text" name="year" placeholder="e.g. 2019">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Make & Model</label>
-            <input class="form-input" type="text" name="vehicle" placeholder="e.g. Toyota Camry">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Kilometres</label>
-            <input class="form-input" type="text" name="km" placeholder="e.g. 85,000">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Balance Owing</label>
-            <input class="form-input" type="text" name="owing" placeholder="e.g. $8,000">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Your Name</label>
-            <input class="form-input" type="text" name="name" placeholder="Full name">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Phone Number</label>
-            <input class="form-input" type="tel" name="phone" placeholder="(780) 000-0000">
-          </div>
-        </div>
-        <div class="form-row full">
-          <div class="form-group">
-            <label class="form-label">City</label>
-            <input class="form-input" type="text" name="city" placeholder="Edmonton, Calgary, Vancouver…">
-          </div>
-        </div>
-        <button class="form-submit" type="submit">Get my vehicle equity quote →</button>
-        <p class="form-legal">Submitting this form does not affect your credit score. No hard inquiry. By submitting you agree to be contacted by a Fast Cash Auto loan specialist.</p>
+      <div class="af-head"><div class="af-head-t">Vehicle equity quote</div><div class="af-head-s">No obligation · No credit check</div></div>
+      <div class="af-body">
+        <div class="af-row"><div><label class="af-label">Vehicle Year</label><input class="af-input" type="text" name="year" placeholder="e.g. 2019"></div><div><label class="af-label">Make &amp; Model</label><input class="af-input" type="text" name="vehicle" placeholder="e.g. Toyota Camry"></div></div>
+        <div class="af-row"><div><label class="af-label">Kilometres</label><input class="af-input" type="text" name="km" placeholder="e.g. 85,000"></div><div><label class="af-label">Balance Owing</label><input class="af-input" type="text" name="owing" placeholder="e.g. $8,000"></div></div>
+        <div class="af-row"><div><label class="af-label">Your Name</label><input class="af-input" type="text" name="name" placeholder="Full name"></div><div><label class="af-label">Phone Number</label><input class="af-input" type="tel" name="phone" placeholder="(780) 000-0000"></div></div>
+        <div class="af-row full"><label class="af-label">City</label><input class="af-input" type="text" name="city" placeholder="Edmonton, Calgary, Vancouver…"></div>
+        <button class="af-submit" type="submit">Get my vehicle equity quote →</button>
+        <p class="af-legal">No hard credit inquiry. No obligation. By submitting you agree to be contacted by a Fast Cash Auto specialist.</p>
       </div>
     </form>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
-      <div>
-        <p class="footer-brand">Fast Cash Auto</p>
-        <p class="footer-desc">Vehicle equity loans across Canada. No credit check. Approved in 60 minutes. Open 7 days.</p>
-        <a href="tel:+17809951579" style="font-family:var(--mono);font-size:13px;color:var(--amber)">(780) 995-1579 — Edmonton</a>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-title">Services</p>
-        <ul>
-          <li><a href="#">Car Title Loans</a></li>
-          <li><a href="#">Truck & SUV Equity</a></li>
-          <li><a href="#">Same-Day Approval</a></li>
-          <li><a href="#">Loan Renewal</a></li>
-          <li><a href="#">Early Payout</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-title">Locations</p>
-        <address>
-          Edmonton: <a href="tel:+17809951579">(780) 995-1579</a><br>
-          Calgary: <a href="tel:+14038186666">(403) 818-6666</a><br>
-          Vancouver: <a href="tel:+16042027545">(604) 202-7545</a><br>
-          Winnipeg: <a href="tel:+12045580448">(204) 558-0448</a><br>
-          Regina/Saskatoon: <a href="tel:+13064509242">(306) 450-9242</a><br>
-          Toronto: <a href="tel:+16474601161">(647) 460-1161</a>
-        </address>
-      </div>
+      <div><p class="footer-brand">Fast Cash Auto</p><p class="footer-desc">Vehicle equity loans across Canada. No credit check. Approved in 60 minutes. Open 7 days.</p><a href="tel:+17809951579" style="font-size:16px;font-weight:800;color:#7FDB6A">(780) 995-1579 — Edmonton</a></div>
+      <div class="footer-col"><p class="footer-col-t">Services</p><ul><li><a href="#">Car Title Loans</a></li><li><a href="#">Truck &amp; SUV Equity</a></li><li><a href="#">Same-Day Approval</a></li><li><a href="#">Loan Renewal</a></li></ul></div>
+      <div class="footer-col"><p class="footer-col-t">Locations</p><address>Edmonton: <a href="tel:+17809951579">(780) 995-1579</a><br>Calgary: <a href="tel:+14038186666">(403) 818-6666</a><br>Vancouver: <a href="tel:+16042027545">(604) 202-7545</a><br>Winnipeg: <a href="tel:+12045580448">(204) 558-0448</a><br>Regina/Saskatoon: <a href="tel:+13064509242">(306) 450-9242</a><br>Toronto: <a href="tel:+16474601161">(647) 460-1161</a></address></div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 Fast Cash Auto / Rai Finance. All rights reserved.</p>
-      <p class="footer-rate">Representative APR 9%–35%. $5,600 over 12 mo at 31.76% APR = $7,661.92.</p>
-    </div>
+    <div class="footer-bot"><p class="footer-copy">© 2026 Fast Cash Auto / Rai Finance. All rights reserved.</p><p class="footer-rate">Representative APR 9%–35%. Example: $5,600 over 12 months at 31.76% APR = $7,661.92 total. Rates vary by vehicle value and term.</p></div>
   </div>
 </footer>
 
+<div class="mob-cta"><a href="tel:+17809951579">📞 Call (780) 995-1579 · Approved today</a></div>
+
+<script>
+function updateKm(v) {
+  const n = parseInt(v);
+  document.getElementById('kmDisplay').textContent = n.toLocaleString();
+}
+
+function calcEstimate() {
+  const year = parseInt(document.getElementById('vYear').value) || 0;
+  const make = document.getElementById('vMake').value.trim();
+  const km = parseInt(document.getElementById('kmSlider').value) || 0;
+  if (!year || !make) return;
+
+  const age = new Date().getFullYear() - year;
+  // Rough equity model: newer + lower km = higher range
+  let base = 25000;
+  base -= age * 1800;
+  base -= (km / 10000) * 600;
+  base = Math.max(base, 4000);
+  const lo = Math.round(Math.max(base * 0.55, 4000) / 500) * 500;
+  const hi = Math.round(Math.min(base * 0.85, 50000) / 500) * 500;
+
+  const fmt = v => '$' + v.toLocaleString();
+  document.getElementById('crAmount').textContent = fmt(lo) + ' – ' + fmt(hi);
+  document.getElementById('calcResult').classList.add('show');
+}
+
+function showEstimate() {
+  calcEstimate();
+  const result = document.getElementById('calcResult');
+  const next = document.getElementById('calcNext');
+  const btn = document.getElementById('calcBtn');
+  if (result.classList.contains('show')) {
+    next.classList.add('show');
+    btn.style.display = 'none';
+    result.scrollIntoView({behavior:'smooth', block:'nearest'});
+  } else {
+    // no inputs yet — scroll to first field
+    document.getElementById('vYear').focus();
+  }
+}
+</script>
 </body>
 </html>
