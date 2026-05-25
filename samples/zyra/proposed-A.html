@@ -813,54 +813,6 @@
     }
     .footer-legal a:hover { color: var(--color-distillate); }
 
-    /* ─── AGE GATE ────────────────────────────────────────────────────── */
-    .age-gate {
-      position: fixed;
-      inset: 0;
-      background: var(--color-bottle);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: var(--spacing-xl);
-    }
-    .age-gate-box {
-      max-width: 440px;
-      width: 100%;
-      text-align: center;
-    }
-    .age-gate-logo {
-      font-family: var(--heading-font-family);
-      font-size: 36px;
-      color: var(--color-gold);
-      margin-bottom: var(--spacing-xl);
-      letter-spacing: 0.04em;
-    }
-    .age-gate-headline {
-      font-family: var(--heading-font-family);
-      font-size: var(--heading-md);
-      color: var(--color-distillate);
-      margin-bottom: var(--spacing-md);
-      line-height: 1.2;
-    }
-    .age-gate-copy {
-      font-size: var(--body-sm);
-      color: var(--color-grain);
-      margin-bottom: var(--spacing-xl);
-      line-height: 1.65;
-    }
-    .age-gate-actions {
-      display: flex;
-      gap: var(--spacing-md);
-      justify-content: center;
-    }
-    .age-gate-legal {
-      margin-top: var(--spacing-xl);
-      font-size: 11px;
-      color: var(--color-grain);
-      line-height: 1.6;
-    }
-    .age-gate.hidden { display: none; }
 
     /* ─── RESPONSIVE ──────────────────────────────────────────────────── */
     @media (max-width: 900px) {
@@ -886,20 +838,6 @@
   </style>
 </head>
 <body>
-
-  <!-- AGE GATE -->
-  <div class="age-gate" id="ageGate" role="dialog" aria-labelledby="age-gate-title" aria-modal="true">
-    <div class="age-gate-box">
-      <div class="age-gate-logo">Zyra</div>
-      <h1 class="age-gate-headline" id="age-gate-title">You must be of legal drinking age to enter.</h1>
-      <p class="age-gate-copy">Are you 19 years of age or older?</p>
-      <div class="age-gate-actions">
-        <button class="btn btn--gold" onclick="enterSite()">Yes, I'm 19+</button>
-        <a href="https://www.responsibility.org" class="btn btn--outline">No</a>
-      </div>
-      <p class="age-gate-legal">By entering, you confirm you are of legal drinking age in your jurisdiction and agree to our terms of service. Please drink responsibly.</p>
-    </div>
-  </div>
 
   <!-- NAVIGATION -->
   <header data-section="nav" data-intent="wayfinding" data-layout="contained" data-nav-collapse="hamburger" id="site-nav">
@@ -1250,14 +1188,6 @@
   </footer>
 
   <script>
-    function enterSite() {
-      document.getElementById('ageGate').classList.add('hidden');
-      sessionStorage.setItem('zyra_age_verified', '1');
-    }
-    if (sessionStorage.getItem('zyra_age_verified')) {
-      document.getElementById('ageGate').classList.add('hidden');
-    }
-
     /* Nav scroll state */
     (function() {
       var nav = document.getElementById('site-nav');
