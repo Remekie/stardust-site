@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 2,
+  "slug": "raifinance",
+  "title": "Fast Cash Auto / Raifinance",
+  "tagline": "From generic WordPress loan page to authority-dark editorial with a time-bound claim. Three stardust variants: dark asphalt authority, document-white photo hero, and speed-first time claim.",
+
+  "source": {
+    "url": "https://raifinance.com/",
+    "register": "brand",
+    "category": "financial services · car title loans · DTC direct lender",
+    "extractedAt": "2026-05-25"
+  },
+
+  "direction": {
+    "phrase": "Anti-Vibe Design Mandate — authority dark editorial for a regulated lender in the non-prime segment. Dark asphalt ground required. Every headline passes specificity test: remove the brand name — could this belong to any other lender? If yes, rewrite. The unarguable claim is the vehicle-equity mechanism: 'No credit check because the collateral is real.' All IA around the buyer's actual decision sequence: Am I in the right place? → Do I qualify? → How fast? → What do I get? → Where do I go? → Apply.",
+    "movements": [
+      "ground: WordPress cream default → asphalt #1A1916",
+      "palette: Shopify blue-grey → amber #D4820A pulled from the Fast Cash Auto brand color",
+      "typography: Inter + generic → DM Serif Display (authority) + IBM Plex Sans (precision) + IBM Plex Mono (specs/rates)",
+      "IA: generic hero + form → buyer decision journey (qualify → how fast → parameters → locations → apply)",
+      "copy: 'get cash fast' generic → specificity-tested (vehicle equity mechanism as the load-bearing sentence)",
+      "images: placeholder → brand slider images + actual logo with correct treatment",
+      "hero angle: A=dark authority typographic, B=photo hero warm approachable, C=time-bound claim dominant"
+    ],
+    "seed": {
+      "input": "Fast Cash Auto|2026-05-25",
+      "decade": "2025-now",
+      "craft": "Financial editorial",
+      "register": "Regulated lender authority",
+      "groundFamily": "dark",
+      "pickedBy": "direction"
+    },
+    "fontDeck": {
+      "name": "authority-financial",
+      "value": "DM Serif Display (display authority) + IBM Plex Sans (body precision) + IBM Plex Mono (rates/specs)",
+      "pickedBy": "direction"
+    },
+    "palette": {
+      "name": "Fast Cash Auto brand-native",
+      "source": "derived from brand amber, asphalt authority, document warmth",
+      "anchor": "#D4820A",
+      "pickedBy": "direction",
+      "brandFaithfulInversions": [
+        "Asphalt #1A1916 — authority dark ground, trust-building for a regulated financial service",
+        "Amber #D4820A — the Fast Cash Auto brand orange, pulled from their actual logo and identity",
+        "Document #F5F0E8 — warm cream for variant B light ground, approachable register",
+        "Steel #7C8087 — body text at reduced emphasis, rates and legal",
+        "Ink #2A2E35 — dark text on light ground for variant B"
+      ]
+    },
+    "antiToolbox": { "hits": 0, "justified": 0 }
+  },
+
+  "originalCritique": "Raifinance.com is a WordPress loan site that undersells the one thing Fast Cash Auto actually owns: the vehicle-equity mechanism that bypasses credit scoring entirely. The hero opens with a generic slider using stock photography and taglines that belong to 200 other lenders. 'Get cash fast' and 'No credit check' appear in every non-prime lending ad in Alberta. The design is cream-on-white, Inter or similar, with card grids and generic CTAs. The site scores 4/10 — functional but invisible in a noisy category. <strong>The product is legitimate and the differentiator is real. The site's job is to make that differentiator unavoidable.</strong>",
+
+  "variants": [
+    {
+      "id": "A",
+      "name": "Dark authority · Typographic",
+      "dominantDimension": "tokens",
+      "thesis": "Dark asphalt editorial with amber accent, DM Serif Display display type, and the vehicle-equity mechanism as the load-bearing sentence. Buyer decision journey IA. Loan parameters in an aside panel. The 'serious regulated lender' look that builds trust for non-prime borrowers who have been turned down everywhere else.",
+      "fix": "<strong>Asphalt #1A1916 ground, amber #D4820A accent, DM Serif Display.</strong> IA rewritten around the buyer's actual decision path. Hero headline: 'Your car has equity. We release it in 60 minutes.' — passes specificity test. Loan parameters aside panel with exact figures. No-credit-check comparison table showing the mechanism, not just the benefit. Six-city location grid with direct phone numbers.",
+      "proposedFile": "proposed-A.html",
+      "isPrimary": true
+    },
+    {
+      "id": "B",
+      "name": "Document white · Photo hero",
+      "dominantDimension": "ia",
+      "thesis": "Light warm ground with the brand slider image as a full-bleed photo hero. More approachable register for borrowers who are nervous about financial services. The 'bank said no, we said yes' framing targets the actual emotional state of the applicant. Tests whether warmth and human imagery convert better than dark authority.",
+      "fix": "<strong>Document cream ground (#F5F0E8), full-bleed photo hero with gradient overlay, amber CTA.</strong> Same fonts, same specificity discipline. Hero: 'When the bank said no, we said yes.' — the actual emotional situation. Proof card on hero showing $4K–$50K / 60 min / 15 years. Human image from brand asset in 'who we help' section. Light-ground loan terms card. Tests whether approachability outperforms authority for this audience.",
+      "proposedFile": "proposed-B.html"
+    },
+    {
+      "id": "C",
+      "name": "The time-bound claim",
+      "dominantDimension": "ia",
+      "thesis": "Lead with the specific, verifiable, time-bound promise: 'Call by 4:30. Cash by 5:30.' at display scale. The phone number is treated as the primary CTA — larger than any button. Tests whether specificity of the time promise ('5:30' not '60 minutes') is the stronger conversion hook. Slider 02 brand image as atmospheric background at low opacity.",
+      "fix": "<strong>'Call by 4:30. Cash by 5:30.' at hero scale — the phone number IS the CTA.</strong> Slider 02 background at 22% opacity. Phone number at mono 40px below the headline — no button required. Amber urgency strip with 7-day hours. Timeline section showing the actual sequence from 0:00 to +60 min. Who-qualifies grid for every edge case the banks decline. The question being tested: does a precise time promise ('5:30') outconvert an abstract duration ('60 minutes')?",
+      "proposedFile": "proposed-C.html"
+    }
+  ],
+
+  "brandReview": null,
+  "createdAt": "2026-05-25",
+  "stardustVersion": "0.2.0",
+  "submittedBy": "Remekie",
+  "license": "Apache-2.0",
+  "thumbnail": null
+}

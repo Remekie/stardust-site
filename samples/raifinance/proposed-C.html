@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<!-- stardust:provenance
+  writtenBy: stardust:prototype
+  variant: C — The time-bound claim
+  brand: Fast Cash Auto / raifinance.com
+  writtenAt: 2026-05-25T00:00:00Z
+  palette: asphalt #1A1916 / document #F5F0E8 / amber #D4820A / ink #2A2E35
+  fontDeck: DM Serif Display (display) + IBM Plex Sans (body) + IBM Plex Mono (specs)
+  thesis: "Call by 4:30. Cash by 5:30." — the specific time-bound promise as the lead claim
+  antiVibeScore: 0
+  stardustVersion: 0.2.0
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Title Loans Alberta | Fast Cash Auto — Call by 4:30. Cash by 5:30.</title>
+<meta name="description" content="Same-day vehicle equity loans in Edmonton, Calgary, and across Canada. Call before 4:30 PM, cash by 5:30. No credit check. No employment history.">
+<meta property="og:title" content="Fast Cash Auto — Call by 4:30. Cash by 5:30.">
+<meta property="og:description" content="Same-day vehicle equity loans. $4,000–$50,000. No credit check. Edmonton & Calgary.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://raifinance.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ─── TOKENS ──────────────────────────────────────────── */
+:root {
+  --asphalt:    #1A1916;
+  --asphalt-2:  #222019;
+  --ink:        #2A2E35;
+  --document:   #F5F0E8;
+  --document-2: #EDE8DF;
+  --amber:      #D4820A;
+  --amber-bright: #F09B14;
+  --amber-lt:   rgba(212,130,10,0.12);
+  --steel:      #7C8087;
+  --sky:        #B8C4CE;
+  --rule:       rgba(245,240,232,0.08);
+  --rule-doc:   rgba(42,46,53,0.1);
+  --white:      #FFFFFF;
+
+  --serif:  'DM Serif Display', Georgia, serif;
+  --sans:   'IBM Plex Sans', system-ui, sans-serif;
+  --mono:   'IBM Plex Mono', 'Courier New', monospace;
+
+  --max-w:  1160px;
+  --pad:    clamp(20px, 5vw, 64px);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); font-size: 17px; line-height: 1.6; background: var(--asphalt); color: var(--document); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ─── NAV ─────────────────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--asphalt);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 13px;
+  color: rgba(245,240,232,0.45);
+  letter-spacing: 0.01em;
+  transition: color 100ms;
+}
+.nav-links a:hover { color: var(--document); }
+.nav-phone-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.nav-phone-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--amber);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.nav-phone-num {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--document);
+  letter-spacing: 0.04em;
+}
+.nav-phone-num:hover { color: var(--amber); }
+@media (max-width: 820px) { .nav-links { display: none; } }
+
+/* ─── HERO ────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 90svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--asphalt);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://raifinance.com/wp-content/uploads/2021/07/fastcash_slider_02.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  opacity: 0.22;
+}
+.hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(26,25,22,0.92) 0%,
+    rgba(26,25,22,0.55) 60%,
+    rgba(26,25,22,0.15) 100%
+  );
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-w);
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px var(--pad);
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 64px;
+  align-items: center;
+}
+.hero-overline {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-overline::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: rgba(212,130,10,0.4);
+}
+.hero-h1 {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6.5vw, 88px);
+  font-weight: 400;
+  line-height: 1.0;
+  color: var(--document);
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+.hero-h1 .time-claim {
+  display: block;
+  color: var(--amber-bright);
+  font-style: italic;
+}
+.hero-lede {
+  font-size: 16px;
+  color: var(--steel);
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 44px;
+}
+.hero-phone-cta {
+  margin-bottom: 16px;
+}
+.hero-phone-cta a {
+  font-family: var(--mono);
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 600;
+  color: var(--document);
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--amber);
+  padding-bottom: 4px;
+  transition: color 100ms;
+  display: inline-block;
+}
+.hero-phone-cta a:hover { color: var(--amber); }
+.hero-phone-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+.hero-online {
+  font-size: 14px;
+  color: rgba(245,240,232,0.45);
+}
+.hero-online a {
+  color: var(--amber);
+  border-bottom: 1px solid rgba(212,130,10,0.35);
+  transition: border-color 100ms;
+}
+.hero-online a:hover { border-color: var(--amber); }
+
+/* Hero side panel */
+.hero-side {
+  background: rgba(34,32,25,0.85);
+  border: 1px solid var(--rule);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.side-title {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.side-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  gap: 12px;
+}
+.side-row:last-of-type { border-bottom: none; }
+.side-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
+  flex-shrink: 0;
+}
+.side-value {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--document);
+  text-align: right;
+}
+.side-value.amber { color: var(--amber-bright); }
+.side-cta {
+  display: block;
+  background: var(--amber);
+  color: var(--asphalt);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 14px 20px;
+  text-align: center;
+  margin-top: 24px;
+  transition: opacity 80ms;
+}
+.side-cta:hover { opacity: 0.88; }
+@media (max-width: 860px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; min-height: auto; }
+  .hero { min-height: auto; }
+  .hero-side { display: none; }
+}
+
+/* ─── URGENCY STRIP ───────────────────────────────────── */
+.urgency-strip {
+  background: var(--amber);
+}
+.urgency-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 16px var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.urgency-text {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--asphalt);
+}
+.urgency-locations {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(26,25,22,0.6);
+  letter-spacing: 0.08em;
+}
+.urgency-cta {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--asphalt);
+  border-bottom: 1px solid rgba(26,25,22,0.35);
+  padding-bottom: 1px;
+  white-space: nowrap;
+}
+
+/* ─── TRUST STRIP ─────────────────────────────────────── */
+.trust-strip {
+  background: var(--ink);
+  border-bottom: 1px solid var(--rule);
+}
+.trust-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  gap: 0;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-right: 1px solid var(--rule);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.trust-item:first-child { padding-left: 0; }
+.trust-mark {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--amber);
+}
+.trust-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.45);
+}
+
+/* ─── SECTION BASE ────────────────────────────────────── */
+.section { padding: 88px 0; }
+.inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+.sec-overline {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+.sec-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--document);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+.sec-sub {
+  font-size: 15px;
+  color: var(--steel);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+/* ─── WHO QUALIFIES ───────────────────────────────────── */
+.qualify-section {
+  background: var(--asphalt-2);
+  border-bottom: 1px solid var(--rule);
+}
+.qualify-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 88px var(--pad);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.qualify-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-top: 0;
+}
+.qualify-cell {
+  background: var(--asphalt);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.qualify-icon {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--amber);
+  margin-bottom: 4px;
+}
+.qualify-label {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--document);
+  line-height: 1.3;
+}
+.qualify-note {
+  font-size: 12px;
+  color: var(--steel);
+  line-height: 1.5;
+}
+@media (max-width: 860px) {
+  .qualify-inner { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ─── HOW FAST ────────────────────────────────────────── */
+.fast-section {
+  background: var(--asphalt);
+  border-bottom: 1px solid var(--rule);
+}
+.fast-timeline {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--rule);
+}
+.timeline-step {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--rule);
+}
+.timeline-step:last-child { border-bottom: none; }
+.timeline-time {
+  background: var(--ink);
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--rule);
+}
+.timeline-time-val {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--amber);
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.3;
+}
+.timeline-content {
+  padding: 24px 28px;
+  background: var(--asphalt);
+}
+.timeline-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--document);
+  margin-bottom: 6px;
+}
+.timeline-body {
+  font-size: 14px;
+  color: var(--steel);
+  line-height: 1.6;
+}
+@media (max-width: 600px) {
+  .timeline-step { grid-template-columns: 80px 1fr; }
+  .timeline-time { padding: 20px 12px; }
+  .timeline-time-val { font-size: 11px; }
+}
+
+/* ─── LOCATIONS ───────────────────────────────────────── */
+.locations-section {
+  background: var(--asphalt-2);
+  border-bottom: 1px solid var(--rule);
+}
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-top: 48px;
+}
+.location-card {
+  background: var(--asphalt);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.location-province {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.location-city {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--document);
+  line-height: 1.1;
+  margin: 4px 0;
+}
+.location-phone {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--document);
+  letter-spacing: 0.04em;
+  margin-top: 10px;
+  transition: color 100ms;
+}
+.location-phone:hover { color: var(--amber); }
+.location-note {
+  font-size: 12px;
+  color: var(--steel);
+}
+
+/* ─── APPLY ───────────────────────────────────────────── */
+.apply-section {
+  background: var(--ink);
+  padding: 88px 0;
+}
+.apply-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 80px;
+  align-items: start;
+}
+.apply-pre-cta {
+  margin-top: 36px;
+  padding: 28px;
+  background: rgba(212,130,10,0.08);
+  border: 1px solid rgba(212,130,10,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pre-cta-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.pre-cta-num {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--document);
+  letter-spacing: 0.04em;
+}
+.pre-cta-num a { transition: color 100ms; }
+.pre-cta-num a:hover { color: var(--amber); }
+.pre-cta-hours {
+  font-size: 13px;
+  color: var(--steel);
+}
+.apply-form {
+  background: var(--asphalt);
+  border: 1px solid var(--rule);
+}
+.form-head {
+  background: var(--amber);
+  padding: 16px 28px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--asphalt);
+}
+.form-body { padding: 28px; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.form-row.full { grid-template-columns: 1fr; }
+.form-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  display: block;
+  margin-bottom: 6px;
+}
+.form-input {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--asphalt-2);
+  border: 1px solid rgba(245,240,232,0.1);
+  color: var(--document);
+  font-family: var(--sans);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 100ms;
+}
+.form-input::placeholder { color: var(--steel); }
+.form-input:focus { border-color: var(--amber); }
+.form-submit {
+  display: block;
+  width: 100%;
+  background: var(--amber);
+  color: var(--asphalt);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: opacity 80ms;
+}
+.form-submit:hover { opacity: 0.88; }
+.form-legal {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--steel);
+  line-height: 1.55;
+  margin-top: 12px;
+  opacity: 0.65;
+}
+@media (max-width: 860px) {
+  .apply-inner { grid-template-columns: 1fr; gap: 40px; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+/* ─── FOOTER ──────────────────────────────────────────── */
+footer {
+  background: var(--asphalt);
+  padding: 48px 0 28px;
+  border-top: 1px solid var(--rule);
+}
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 24px;
+}
+.footer-brand {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--document);
+  margin-bottom: 10px;
+}
+.footer-desc {
+  font-size: 13px;
+  color: var(--steel);
+  line-height: 1.7;
+  max-width: 260px;
+  margin-bottom: 20px;
+}
+.footer-col-title {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul a {
+  font-size: 13px;
+  color: rgba(245,240,232,0.3);
+  transition: color 100ms;
+}
+.footer-col ul a:hover { color: var(--document); }
+.footer-col address {
+  font-style: normal;
+  font-size: 12px;
+  color: rgba(245,240,232,0.28);
+  line-height: 1.9;
+}
+.footer-col address a { color: rgba(245,240,232,0.28); }
+.footer-col address a:hover { color: var(--amber); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer-copy {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(245,240,232,0.18);
+  letter-spacing: 0.04em;
+}
+.footer-rate {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--steel);
+  opacity: 0.5;
+  letter-spacing: 0.04em;
+}
+@media (max-width: 720px) {
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/">
+      <img src="https://raifinance.com/wp-content/uploads/2025/03/logo_fastcashauto_transparent-300x103.png"
+           alt="Fast Cash Auto" height="32" style="filter:brightness(0) invert(1);height:32px;width:auto;display:block;">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how-fast">How Fast</a></li>
+      <li><a href="#qualifies">Who Qualifies</a></li>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="#apply">Apply</a></li>
+    </ul>
+    <div class="nav-phone-block">
+      <span class="nav-phone-label">Call now — Edmonton</span>
+      <a href="tel:+17809951579" class="nav-phone-num">(780) 995-1579</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-gradient"></div>
+  <div class="hero-inner">
+    <div>
+      <p class="hero-overline">Same-day vehicle equity loans · Alberta & Canada</p>
+      <h1 class="hero-h1">
+        Call by 4:30.
+        <span class="time-claim">Cash by 5:30.</span>
+      </h1>
+      <p class="hero-lede">
+        No credit check. No employment history. Just your vehicle's equity and a phone call. Edmonton, Calgary, Vancouver, and 3 more cities. Open 7 days.
+      </p>
+      <div class="hero-phone-cta">
+        <a href="tel:+17809951579">(780) 995-1579</a>
+        <p class="hero-phone-sub">Edmonton — available 7 days a week, 9am–9pm</p>
+      </div>
+      <p class="hero-online">Or <a href="#apply">apply online →</a> — we'll call you back within minutes</p>
+    </div>
+    <div class="hero-side">
+      <p class="side-title">Loan parameters</p>
+      <div class="side-row">
+        <span class="side-label">Range</span>
+        <span class="side-value amber">$4K – $50K</span>
+      </div>
+      <div class="side-row">
+        <span class="side-label">APR</span>
+        <span class="side-value">9% – 35%</span>
+      </div>
+      <div class="side-row">
+        <span class="side-label">Term</span>
+        <span class="side-value">Up to 3 yrs</span>
+      </div>
+      <div class="side-row">
+        <span class="side-label">Credit</span>
+        <span class="side-value amber">Not required</span>
+      </div>
+      <div class="side-row">
+        <span class="side-label">Employment</span>
+        <span class="side-value amber">Not required</span>
+      </div>
+      <div class="side-row">
+        <span class="side-label">Your car</span>
+        <span class="side-value">You keep it</span>
+      </div>
+      <a href="#apply" class="side-cta">Get my quote instantly →</a>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCY STRIP -->
+<div class="urgency-strip">
+  <div class="urgency-inner">
+    <span class="urgency-text">Open 7 days a week — 9am to 9pm</span>
+    <span class="urgency-locations">Edmonton · Calgary · Vancouver · Winnipeg · Regina · Toronto</span>
+    <a href="tel:+17809951579" class="urgency-cta">Call (780) 995-1579 →</a>
+  </div>
+</div>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <span class="trust-mark">✓</span>
+      <span class="trust-label">No credit check</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-mark">✓</span>
+      <span class="trust-label">No employment verification</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-mark">✓</span>
+      <span class="trust-label">You keep driving</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-mark">✓</span>
+      <span class="trust-label">Same-day approval</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-mark">✓</span>
+      <span class="trust-label">15+ years in business</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-mark">✓</span>
+      <span class="trust-label">No early payout penalty</span>
+    </div>
+  </div>
+</div>
+
+<!-- HOW FAST -->
+<section class="section fast-section" id="how-fast">
+  <div class="inner">
+    <p class="sec-overline">The 60-minute process</p>
+    <h2 class="sec-title">From call to cash.<br>Every time.</h2>
+    <p class="sec-sub">This is the actual sequence. Not "up to X days" — this is the day-of timeline for every approved loan.</p>
+    <div class="fast-timeline">
+      <div class="timeline-step">
+        <div class="timeline-time">
+          <span class="timeline-time-val">0:00<br>You call</span>
+        </div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Tell us about your vehicle</h3>
+          <p class="timeline-body">Year, make, model, kilometres, any balance owing. We assess equity on the call — no paperwork yet, no obligation, no credit inquiry.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-time">
+          <span class="timeline-time-val">+15 min<br>Approval</span>
+        </div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">You're approved</h3>
+          <p class="timeline-body">Loan amount and exact terms confirmed. The only factor is your vehicle's equity. No credit check, no income verification — the answer is based entirely on what you own.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-time">
+          <span class="timeline-time-val">+30 min<br>Paperwork</span>
+        </div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Loan agreement signed</h3>
+          <p class="timeline-body">Review and sign the loan documents. Everything is disclosed upfront — rate, term, total cost of borrowing. No hidden fees.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-time">
+          <span class="timeline-time-val">+60 min<br>Cash</span>
+        </div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Funds in your account</h3>
+          <p class="timeline-body">Transfer complete. You drive home. The title is held as collateral — your vehicle never leaves your possession for the duration of the loan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO QUALIFIES -->
+<section class="section qualify-section" id="qualifies">
+  <div class="qualify-inner">
+    <div>
+      <p class="sec-overline">Who qualifies</p>
+      <h2 class="sec-title">If you own a<br>vehicle, you<br>likely qualify.</h2>
+      <p class="sec-sub" style="margin-top:16px;margin-bottom:24px">
+        The only requirement is vehicle equity. We have approved applications that every bank, credit union, and payday lender already declined.
+      </p>
+      <p class="sec-sub">
+        Your credit score is not the asset. Your vehicle is.
+      </p>
+      <a href="#apply" style="display:inline-block;margin-top:28px;background:var(--amber);color:var(--asphalt);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:0.04em;padding:13px 28px;transition:opacity 80ms" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Check if I qualify →</a>
+    </div>
+    <div class="qualify-grid">
+      <div class="qualify-cell">
+        <span class="qualify-icon">✓</span>
+        <span class="qualify-label">Bad credit or no credit history</span>
+        <span class="qualify-note">Credit score is irrelevant to approval</span>
+      </div>
+      <div class="qualify-cell">
+        <span class="qualify-icon">✓</span>
+        <span class="qualify-label">Self-employed income</span>
+        <span class="qualify-note">No T4 or proof of income required</span>
+      </div>
+      <div class="qualify-cell">
+        <span class="qualify-icon">✓</span>
+        <span class="qualify-label">Previous bankruptcy</span>
+        <span class="qualify-note">Discharged or in progress — you can still qualify</span>
+      </div>
+      <div class="qualify-cell">
+        <span class="qualify-icon">✓</span>
+        <span class="qualify-label">Social assistance or pension</span>
+        <span class="qualify-note">Any income type accepted</span>
+      </div>
+      <div class="qualify-cell">
+        <span class="qualify-icon">✓</span>
+        <span class="qualify-label">Vehicle with existing loan</span>
+        <span class="qualify-note">If you have equity above the balance, you qualify</span>
+      </div>
+      <div class="qualify-cell">
+        <span class="qualify-icon">✓</span>
+        <span class="qualify-label">New to Canada</span>
+        <span class="qualify-note">No Canadian credit history required</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="section locations-section" id="locations">
+  <div class="inner">
+    <p class="sec-overline">Where to call</p>
+    <h2 class="sec-title">Six cities.<br>Same-day approvals<br>at every one.</h2>
+    <div class="locations-grid">
+      <div class="location-card">
+        <p class="location-province">Alberta</p>
+        <h3 class="location-city">Edmonton</h3>
+        <p class="location-note">Open 7 days, 9am–9pm</p>
+        <a class="location-phone" href="tel:+17809951579">(780) 995-1579</a>
+      </div>
+      <div class="location-card">
+        <p class="location-province">Alberta</p>
+        <h3 class="location-city">Calgary</h3>
+        <p class="location-note">Open 7 days, 9am–9pm</p>
+        <a class="location-phone" href="tel:+14038186666">(403) 818-6666</a>
+      </div>
+      <div class="location-card">
+        <p class="location-province">British Columbia</p>
+        <h3 class="location-city">Vancouver</h3>
+        <p class="location-note">Open 7 days</p>
+        <a class="location-phone" href="tel:+16042027545">(604) 202-7545</a>
+      </div>
+      <div class="location-card">
+        <p class="location-province">Manitoba</p>
+        <h3 class="location-city">Winnipeg</h3>
+        <p class="location-note">Open 7 days</p>
+        <a class="location-phone" href="tel:+12045580448">(204) 558-0448</a>
+      </div>
+      <div class="location-card">
+        <p class="location-province">Saskatchewan</p>
+        <h3 class="location-city">Regina · Saskatoon</h3>
+        <p class="location-note">Open 7 days</p>
+        <a class="location-phone" href="tel:+13064509242">(306) 450-9242</a>
+      </div>
+      <div class="location-card">
+        <p class="location-province">Ontario</p>
+        <h3 class="location-city">Toronto</h3>
+        <p class="location-note">Greater Toronto Area</p>
+        <a class="location-phone" href="tel:+16474601161">(647) 460-1161</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="apply-section" id="apply">
+  <div class="apply-inner">
+    <div>
+      <p class="sec-overline">Apply online</p>
+      <h2 class="sec-title">Tell us your<br>vehicle. We call<br>you back in<br>minutes.</h2>
+      <p class="sec-sub" style="margin-top:16px">No obligation. No credit check on the quote. 7 days a week.</p>
+      <div class="apply-pre-cta">
+        <span class="pre-cta-label">Prefer to call?</span>
+        <span class="pre-cta-num"><a href="tel:+17809951579">(780) 995-1579</a></span>
+        <span class="pre-cta-hours">Edmonton — 9am to 9pm, 7 days a week</span>
+      </div>
+    </div>
+    <form class="apply-form" action="https://raifinance.com/apply" method="post">
+      <div class="form-head">Vehicle equity quote — no obligation</div>
+      <div class="form-body">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Vehicle Year</label>
+            <input class="form-input" type="text" name="year" placeholder="e.g. 2019">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Make & Model</label>
+            <input class="form-input" type="text" name="vehicle" placeholder="e.g. Toyota Camry">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Kilometres</label>
+            <input class="form-input" type="text" name="km" placeholder="e.g. 85,000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Balance Owing</label>
+            <input class="form-input" type="text" name="owing" placeholder="e.g. $8,000">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input class="form-input" type="text" name="name" placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input class="form-input" type="tel" name="phone" placeholder="(780) 000-0000">
+          </div>
+        </div>
+        <div class="form-row full">
+          <div class="form-group">
+            <label class="form-label">City</label>
+            <input class="form-input" type="text" name="city" placeholder="Edmonton, Calgary, Vancouver…">
+          </div>
+        </div>
+        <button class="form-submit" type="submit">Get my vehicle equity quote →</button>
+        <p class="form-legal">Submitting this form does not affect your credit score. No hard inquiry. By submitting you agree to be contacted by a Fast Cash Auto loan specialist.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">Fast Cash Auto</p>
+        <p class="footer-desc">Vehicle equity loans across Canada. No credit check. Approved in 60 minutes. Open 7 days.</p>
+        <a href="tel:+17809951579" style="font-family:var(--mono);font-size:13px;color:var(--amber)">(780) 995-1579 — Edmonton</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Services</p>
+        <ul>
+          <li><a href="#">Car Title Loans</a></li>
+          <li><a href="#">Truck & SUV Equity</a></li>
+          <li><a href="#">Same-Day Approval</a></li>
+          <li><a href="#">Loan Renewal</a></li>
+          <li><a href="#">Early Payout</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Locations</p>
+        <address>
+          Edmonton: <a href="tel:+17809951579">(780) 995-1579</a><br>
+          Calgary: <a href="tel:+14038186666">(403) 818-6666</a><br>
+          Vancouver: <a href="tel:+16042027545">(604) 202-7545</a><br>
+          Winnipeg: <a href="tel:+12045580448">(204) 558-0448</a><br>
+          Regina/Saskatoon: <a href="tel:+13064509242">(306) 450-9242</a><br>
+          Toronto: <a href="tel:+16474601161">(647) 460-1161</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Fast Cash Auto / Rai Finance. All rights reserved.</p>
+      <p class="footer-rate">Representative APR 9%–35%. $5,600 over 12 mo at 31.76% APR = $7,661.92.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
