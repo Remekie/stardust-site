@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:prototype
+  writtenAt:         2026-05-24T20:00:00Z
+  page:              home
+  variant:           F — "Mid-tier DTC baseline"
+  dominantDimension: tokens (category-default control case)
+  pageUrl:           https://drinkzyra.com/
+  note:              The anti-vibe control case. Every major anti-vibe tell intentionally included to calibrate the delta from Variant A. OFF-WHITE BACKGROUND. INTER. CARD GRID WITH HOVER TRANSLATEY. GENERIC COPY. This is what every DTC spirits brand looks like.
+  antiVibeScore:     8/8 tells present (intentional)
+  stardustVersion:   0.2.0
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zyra Vodka — Artisanal Craft Spirits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* NOTE: This is the category-default look — every element is an intentional anti-vibe tell.
+     Inter. Off-white ground. Card grid with hover translateY. Generic copy. Multiple CTAs.
+     Cream background (#FAF8F5). Newsletter. 4-column footer.
+     Included as a calibration reference. */
+  :root {
+    --font:        'Inter', 'Helvetica Neue', Arial, sans-serif;
+    --bg:          #FAF8F5;      /* cream — ANTI-VIBE TELL #1 */
+    --bg-alt:      #F0EDE8;
+    --fg:          #1A1814;
+    --fg-muted:    #6B6560;
+    --accent:      #7C5CBF;      /* purple — ANTI-VIBE TELL #2 */
+    --accent-light:#A07FD8;
+    --white:       #FFFFFF;
+    --border:      #E0DBD4;
+    --max-width:   1200px;
+    --pad:         clamp(20px, 4vw, 60px);
+    --radius:      12px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font);   /* ANTI-VIBE TELL #3: Inter-only */
+    font-size: 16px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--pad); }
+
+  /* ── NAV ── sticky ANTI-VIBE TELL #4 */
+  nav.main-nav {
+    background: rgba(250,248,245,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;  /* STICKY: anti-vibe tell */
+    padding: 0;
+  }
+  .nav-row { display: flex; align-items: center; height: 60px; gap: 32px; }
+  .nav-logo { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: var(--fg); }
+  .nav-links { display: flex; gap: 24px; list-style: none; margin-right: auto; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: var(--fg-muted); transition: color 120ms; }
+  .nav-links a:hover { color: var(--fg); }
+  .nav-actions { display: flex; gap: 12px; align-items: center; }
+  .btn {
+    display: inline-block; font-family: var(--font);
+    font-size: 14px; font-weight: 600;
+    padding: 10px 24px; border-radius: 100px; /* PILL RADIUS: DTC default */
+    cursor: pointer; transition: all 150ms; border: none;
+  }
+  .btn--primary { background: var(--accent); color: #fff; }
+  .btn--primary:hover { background: var(--accent-light); }
+  .btn--secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); }
+  .btn--secondary:hover { border-color: var(--fg-muted); }
+
+  /* ── HERO — dark hero + abstract bg + 2 buttons ANTI-VIBE TELL #5 */
+  .hero {
+    background: linear-gradient(135deg, #1A0A2E 0%, #2D1654 40%, #4A2080 100%); /* PURPLE GRADIENT ANTI-VIBE TELL */
+    padding: 100px 0 120px;
+    position: relative; overflow: hidden;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -50%; left: -20%;
+    width: 80vw; height: 80vw;
+    background: radial-gradient(circle, rgba(160,127,216,0.3) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -20%; right: -10%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(124,92,191,0.2) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.85);
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 6px 16px; border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.15);
+    margin-bottom: 24px;
+  }
+  .hero-content h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .hero-content p {
+    font-size: 18px; color: rgba(255,255,255,0.7);
+    line-height: 1.7; margin-bottom: 36px;
+  }
+  .hero-btns {
+    display: flex; gap: 12px; justify-content: center; /* TWO HERO BTNS: anti-vibe tell */
+    flex-wrap: wrap;
+  }
+  .btn--hero-primary { background: #fff; color: var(--accent); font-size: 15px; padding: 14px 32px; border-radius: 100px; font-weight: 700; }
+  .btn--hero-secondary { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.3); font-size: 15px; padding: 14px 32px; border-radius: 100px; font-weight: 500; }
+  .hero-img-row {
+    margin-top: 60px;
+    display: flex; justify-content: center; gap: 24px;
+  }
+  .hero-img-row img { max-height: 300px; width: auto; }
+
+  /* ── MOOD QUIZ ANTI-VIBE TELL: mood/vibe CTAs */
+  .mood-section {
+    background: #fff;
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .mood-section h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 12px; }
+  .mood-section p { color: var(--fg-muted); margin-bottom: 40px; }
+  .mood-cards {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  .mood-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    cursor: pointer;
+    transition: all 200ms;
+  }
+  .mood-card:hover {
+    transform: translateY(-4px); /* HOVER TRANSLATEY: anti-vibe tell */
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+    border-color: var(--accent);
+  }
+  .mood-emoji { font-size: 36px; margin-bottom: 12px; }
+  .mood-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+  .mood-card p { font-size: 14px; color: var(--fg-muted); }
+
+  /* ── PRODUCTS — card grid with hover shadows ANTI-VIBE TELL #6 */
+  .products { padding: 80px 0; }
+  .section-header { text-align: center; margin-bottom: 48px; }
+  .section-eyebrow {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent); display: block; margin-bottom: 12px;
+  }
+  .section-header h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -0.01em; }
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .product-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all 220ms;
+    display: flex; flex-direction: column;
+  }
+  .product-card:hover {
+    transform: translateY(-6px); /* HOVER TRANSLATEY: anti-vibe tell */
+    box-shadow: 0 24px 48px rgba(0,0,0,0.1);
+    border-color: rgba(124,92,191,0.3);
+  }
+  .product-img-wrap {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
+    padding: 40px; text-align: center;
+    height: 260px; display: flex; align-items: center; justify-content: center;
+  }
+  .product-img-wrap img { max-height: 200px; width: auto; }
+  .product-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+  .product-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .tag {
+    display: inline-block;
+    background: rgba(124,92,191,0.1);
+    color: var(--accent);
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 100px;
+  }
+  .tag--coming { background: rgba(107,101,96,0.1); color: var(--fg-muted); }
+  .product-body h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+  .product-body p { font-size: 14px; color: var(--fg-muted); line-height: 1.65; flex: 1; margin-bottom: 20px; }
+  .product-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--border); }
+  .product-price { font-size: 18px; font-weight: 700; }
+  .product-soon { font-size: 12px; color: var(--fg-muted); }
+
+  /* ── TESTIMONIALS ANTI-VIBE TELL #7: testimonial carousel */
+  .testimonials { padding: 80px 0; background: #fff; }
+  .testimonials-header { text-align: center; margin-bottom: 48px; }
+  .testimonials-header h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.01em; }
+  .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .testimonial-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .stars { color: #F6B800; font-size: 16px; margin-bottom: 12px; }
+  .testimonial-card p { font-size: 15px; color: var(--fg); line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+  .reviewer { font-size: 13px; font-weight: 600; color: var(--fg-muted); }
+
+  /* ── NEWSLETTER ANTI-VIBE TELL #8 */
+  .newsletter {
+    background: linear-gradient(135deg, var(--accent) 0%, #5E3EA8 100%);
+    padding: 80px 0; text-align: center;
+    color: #fff;
+  }
+  .newsletter h2 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+  .newsletter p { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 32px; }
+  .newsletter-form {
+    display: flex; gap: 12px; max-width: 420px; margin: 0 auto;
+  }
+  .newsletter-input {
+    flex: 1; padding: 14px 20px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 100px; color: #fff; font-family: var(--font); font-size: 14px;
+    outline: none;
+  }
+  .newsletter-input::placeholder { color: rgba(255,255,255,0.5); }
+  .newsletter-submit {
+    padding: 14px 28px; background: #fff; color: var(--accent);
+    border: none; border-radius: 100px;
+    font-family: var(--font); font-size: 14px; font-weight: 700;
+    cursor: pointer;
+  }
+
+  /* ── FOOTER — 4-column ANTI-VIBE TELL */
+  footer { background: #1A1814; color: #fff; padding: 64px 0 32px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+  .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 20px; }
+  .footer-socials { display: flex; gap: 12px; }
+  .social-btn {
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; transition: background 120ms;
+  }
+  .social-btn:hover { background: var(--accent); }
+  .footer-col h4 { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; }
+  .footer-col a { font-size: 14px; color: rgba(255,255,255,0.6); transition: color 120ms; }
+  .footer-col a:hover { color: #fff; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.35); }
+</style>
+</head>
+<body>
+
+  <!-- NAV — sticky with blur -->
+  <nav class="main-nav" data-section="nav">
+    <div class="container">
+      <div class="nav-row">
+        <a href="/" class="nav-logo">Zyra Vodka</a>
+        <ul class="nav-links">
+          <li><a href="/collections/all">Shop</a></li>
+          <li><a href="/pages/recipe-gallery">Cocktails</a></li>
+          <li><a href="/pages/our-story">Our Story</a></li>
+          <li><a href="/pages/events">Events</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="/pages/contact" class="btn btn--secondary">Contact</a>
+          <a href="/collections/all" class="btn btn--primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO — purple gradient + abstract bg + 2 buttons -->
+  <section class="hero" data-section="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">✨ Artisanal · Crafted · Premium</span>
+        <h1>Your New Party Starter.<br>Tropical, Bold,<br>Made to Turn Heads.</h1>
+        <p>Three premium craft vodkas, cold-infused with real flavors. Hand-distilled in Canada. Curated for the moments that matter.</p>
+        <div class="hero-btns">
+          <a href="/collections/all" class="btn--hero-primary">Shop Collection</a>
+          <a href="#mood" class="btn--hero-secondary">Find Your Vibe</a>
+        </div>
+      </div>
+      <div class="hero-img-row">
+        <img src="https://drinkzyra.com/cdn/shop/files/gold-front-bg.png?v=1754530870&width=400" alt="Zyra Gold" style="opacity:0.9;">
+        <img src="https://drinkzyra.com/cdn/shop/files/coco-mist-front-bg.png?v=1754530857&width=400" alt="Coco Mist">
+        <img src="https://drinkzyra.com/cdn/shop/files/root-beer-rush-front-bg.png?v=1754530834&width=400" alt="Root Beer Rush" style="opacity:0.7;">
+      </div>
+    </div>
+  </section>
+
+  <!-- MOOD QUIZ — "What's Your Vodka Mood?" -->
+  <section class="mood-section" id="mood" data-section="mood-quiz">
+    <div class="container">
+      <h2>What's Your Vodka Mood?</h2>
+      <p>Find the Zyra that matches your vibe.</p>
+      <div class="mood-cards">
+        <div class="mood-card">
+          <div class="mood-emoji">🌴</div>
+          <h3>Sip Paradise</h3>
+          <p>Tropical and refreshing. Coconut dreams and pineapple everything.</p>
+        </div>
+        <div class="mood-card">
+          <div class="mood-emoji">⭐</div>
+          <h3>Classic &amp; Clean</h3>
+          <p>Smooth and versatile. The go-to for any occasion.</p>
+        </div>
+        <div class="mood-card">
+          <div class="mood-emoji">🍺</div>
+          <h3>Bold &amp; Different</h3>
+          <p>For the adventurous. A flavor nobody else is making.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS — card grid with hover translateY -->
+  <section class="products" data-section="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Our Collection</span>
+        <h2>Artisanal Craft Vodkas</h2>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img src="https://drinkzyra.com/cdn/shop/files/gold-front-bg.png?v=1754530870&width=400" alt="Zyra Gold">
+          </div>
+          <div class="product-body">
+            <div class="product-tags"><span class="tag">Premium</span><span class="tag">Bestseller</span></div>
+            <h3>Zyra Gold</h3>
+            <p>Our signature expression. Premium grain-based vodka, distilled 30 times for exceptional smoothness and clarity.</p>
+            <div class="product-footer">
+              <span class="product-price">$44.99</span>
+              <a href="/products/zyra-vodka-gold-750-ml" class="btn btn--primary" style="padding:10px 22px;border-radius:100px;font-size:13px;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img src="https://drinkzyra.com/cdn/shop/files/coco-mist-front-bg.png?v=1754530857&width=400" alt="Coco Mist">
+          </div>
+          <div class="product-body">
+            <div class="product-tags"><span class="tag">Tropical</span><span class="tag">Fan Favorite</span></div>
+            <h3>Coco Mist</h3>
+            <p>Tropical pineapple and coconut vibes in every sip. Curated for summer moments that turn heads.</p>
+            <div class="product-footer">
+              <span class="product-price">$44.99</span>
+              <a href="/products/zyra-vodka-coco-mist-750-ml" class="btn btn--primary" style="padding:10px 22px;border-radius:100px;font-size:13px;">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img-wrap" style="background:linear-gradient(135deg,#F5EFE6,#EDE5D8);">
+            <img src="https://drinkzyra.com/cdn/shop/files/root-beer-rush-front-bg.png?v=1754530834&width=400" alt="Root Beer Rush">
+          </div>
+          <div class="product-body">
+            <div class="product-tags"><span class="tag tag--coming">Coming Soon</span></div>
+            <h3>Root Beer Rush</h3>
+            <p>Bold and adventurous. Cold-infused sarsaparilla and vanilla for a truly unique craft spirit experience.</p>
+            <div class="product-footer">
+              <span class="product-price">$44.99</span>
+              <span class="product-soon">Be the first to know →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" data-section="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <h2>What People Are Saying</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Best flavored vodka I've ever tried. The Coco Mist is absolutely amazing — so smooth and tropical!"</p>
+          <span class="reviewer">— Sarah M., Toronto</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Bought the variety pack as a gift and everyone loved it. The quality is incredible for the price."</p>
+          <span class="reviewer">— James T., Vancouver</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Can't wait for Root Beer Rush! The Gold is my new go-to. Premium quality without the premium price tag."</p>
+          <span class="reviewer">— Emily R., Calgary</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" data-section="newsletter">
+    <div class="container">
+      <h2>Join the Zyra Collective ✨</h2>
+      <p>Get early access to new drops, exclusive recipes, and member-only discounts.</p>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Enter your email">
+        <button class="newsletter-submit">Subscribe</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER — 4-column -->
+  <footer data-section="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Zyra Vodka</h3>
+          <p>Premium artisanal craft vodkas, hand-distilled in Canada. Made for the bold, the curious, and the unforgettable moments.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/drinkzyra" class="social-btn">📷</a>
+            <a href="https://tiktok.com/@drinkzyra" class="social-btn">🎵</a>
+            <a href="https://facebook.com/drinkzyra" class="social-btn">👥</a>
+            <a href="https://twitter.com/drinkzyra" class="social-btn">🐦</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="/products/zyra-vodka-gold-750-ml">Zyra Gold</a></li>
+            <li><a href="/products/zyra-vodka-coco-mist-750-ml">Coco Mist</a></li>
+            <li><a href="/products/zyra-vodka-root-beer-rush-750-ml">Root Beer Rush</a></li>
+            <li><a href="/products/zyra-vodka-variety-pack-3-750-ml">Variety Pack</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/pages/our-story">Our Story</a></li>
+            <li><a href="/pages/events">Events</a></li>
+            <li><a href="/pages/faq">FAQs</a></li>
+            <li><a href="/pages/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/policies/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/policies/terms-of-service">Terms of Service</a></li>
+            <li><a href="/policies/refund-policy">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Zyra Vodka Inc. All rights reserved.</span>
+        <span>Please drink responsibly. Must be of legal drinking age.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

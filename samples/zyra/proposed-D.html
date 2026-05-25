@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:prototype
+  writtenAt:         2026-05-24T20:00:00Z
+  page:              home
+  variant:           D — "Ciroc-like: aspirational luxury"
+  dominantDimension: tokens (ultra-premium dark luxury reference)
+  pageUrl:           https://drinkzyra.com/
+  note:              Competitive reference design — NOT the recommendation. Included to make the delta from A to category "luxury premium" explicit. Uses deliberate anti-vibe tells (aspirational copy, premium-as-claim) to show the contrast.
+  stardustVersion:   0.2.0
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zyra — Elevated</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Ultra-premium luxury — Ciroc/Grey Goose register */
+    --display:      'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    --body:         'Jost', 'Helvetica Neue', Arial, sans-serif;
+    --bg:           #09080A;      /* deep near-black — darker than Zyra */
+    --bg-alt:       #0E0C0F;
+    --fg:           #F2EEE8;      /* warm white — slight cream warmth */
+    --fg-muted:     rgba(242,238,232,0.45);
+    --gold-foil:    #C9AA71;      /* lighter, more metallic gold */
+    --rule:         rgba(201,170,113,0.15);
+    --max-width:    1100px;
+    --pad:          clamp(24px, 4vw, 60px);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.02em;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--pad); }
+
+  /* ── NAV ── ultra-minimal */
+  nav.main-nav {
+    position: absolute; top: 0; left: 0; right: 0;
+    z-index: 10; padding: 28px 0;
+  }
+  .nav-row {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .nav-wordmark {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--fg);
+  }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-family: var(--body);
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--fg-muted);
+    transition: color 150ms;
+  }
+  .nav-links a:hover { color: var(--gold-foil); }
+
+  /* ── HERO — cinematic single product ── */
+  .hero {
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0;
+    position: relative;
+  }
+  .hero-left {
+    padding: 160px var(--pad) 100px;
+    display: flex; flex-direction: column;
+    justify-content: center;
+  }
+  .hero-eyebrow {
+    font-family: var(--body);
+    font-size: 10px; font-weight: 400;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold-foil);
+    margin-bottom: 48px;
+  }
+  .hero-headline {
+    font-family: var(--display);
+    font-size: clamp(48px, 6vw, 88px);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-bottom: 40px;
+  }
+  .hero-headline em {
+    display: block;
+    font-style: italic;
+    color: var(--gold-foil);
+  }
+  .hero-body {
+    font-size: 14px;
+    color: var(--fg-muted);
+    line-height: 1.8;
+    max-width: 360px;
+    margin-bottom: 56px;
+  }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--body);
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--fg);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 4px;
+    transition: border-color 150ms, color 150ms;
+  }
+  .hero-cta:hover { border-color: var(--gold-foil); color: var(--gold-foil); }
+  .hero-right {
+    position: relative;
+    height: 100svh;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #0E0C0F 0%, #15111A 50%, #0A0808 100%);
+    overflow: hidden;
+  }
+  .hero-right::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 70% at 50% 40%, rgba(201,170,113,0.06) 0%, transparent 70%);
+  }
+  .hero-bottle {
+    position: relative; z-index: 1;
+    width: 55%;
+    max-width: 300px;
+    filter: drop-shadow(0 40px 80px rgba(0,0,0,0.6));
+  }
+
+  /* ── RULE ── */
+  .hr-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--rule), transparent);
+    margin: 0;
+  }
+
+  /* ── CREDENTIALS ── */
+  .credentials {
+    padding: 64px 0;
+    background: var(--bg-alt);
+  }
+  .credentials-inner {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+  }
+  .credential {
+    background: var(--bg-alt);
+    padding: 40px 32px;
+    text-align: center;
+  }
+  .credential .num {
+    font-family: var(--display);
+    font-size: 48px; font-weight: 300;
+    color: var(--gold-foil);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .credential .label {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  /* ── COLLECTION ── */
+  .collection {
+    padding: 120px 0;
+  }
+  .collection-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .section-eyebrow {
+    font-size: 10px; font-weight: 400;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold-foil);
+    display: block; margin-bottom: 24px;
+  }
+  .collection-header h2 {
+    font-family: var(--display);
+    font-size: clamp(32px, 4vw, 56px);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+  .collection-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--rule);
+  }
+  .collection-item {
+    background: var(--bg);
+    padding: 60px 40px;
+    text-align: center;
+    transition: background 200ms;
+  }
+  .collection-item:hover { background: var(--bg-alt); }
+  .collection-item-img {
+    height: 280px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 40px;
+  }
+  .collection-item-img img { max-height: 240px; width: auto; object-fit: contain; filter: brightness(0.95); }
+  .collection-item h3 {
+    font-family: var(--display);
+    font-size: 22px; font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+  .collection-item p {
+    font-size: 13px; color: var(--fg-muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+  .item-price {
+    font-size: 13px; letter-spacing: 0.08em;
+    color: var(--fg-muted);
+    display: block; margin-bottom: 24px;
+  }
+  .item-cta {
+    display: inline-block;
+    font-size: 10px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    padding: 12px 28px;
+    border: 1px solid var(--rule);
+    transition: border-color 150ms, color 150ms;
+  }
+  .item-cta:hover { border-color: var(--gold-foil); color: var(--gold-foil); }
+  .item-coming {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-foil);
+  }
+
+  /* ── STATEMENT ── */
+  .statement {
+    padding: 140px 0;
+    text-align: center;
+  }
+  .statement blockquote {
+    font-family: var(--display);
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    max-width: 800px;
+    margin: 0 auto 48px;
+  }
+  .statement blockquote em { color: var(--gold-foil); font-style: normal; }
+  .statement cite {
+    display: block;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--fg-muted);
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 48px 0;
+  }
+  .footer-row {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-wordmark {
+    font-family: var(--display);
+    font-size: 15px; font-weight: 300;
+    letter-spacing: 0.25em; text-transform: uppercase;
+  }
+  .footer-links { display: flex; gap: 32px; list-style: none; }
+  .footer-links a { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-muted); transition: color 150ms; }
+  .footer-links a:hover { color: var(--gold-foil); }
+  .footer-legal { font-size: 11px; color: var(--fg-muted); }
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="main-nav" data-section="nav">
+    <div class="container">
+      <div class="nav-row">
+        <a href="/" class="nav-wordmark">Zyra</a>
+        <ul class="nav-links">
+          <li><a href="/collections/all">Collection</a></li>
+          <li><a href="/pages/our-story">Provenance</a></li>
+          <li><a href="/pages/recipe-gallery">Serve</a></li>
+          <li><a href="/collections/all" style="color:var(--gold-foil);">Shop</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" data-section="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Hand-distilled · Canada</p>
+      <h1 class="hero-headline">
+        The standard.<br>
+        <em>Elevated.</em>
+      </h1>
+      <p class="hero-body">30 times distilled to absolute clarity. Cold-infused with ingredients you can name. Three expressions, each one deliberate.</p>
+      <a href="/collections/all" class="hero-cta">Explore the collection →</a>
+    </div>
+    <div class="hero-right">
+      <img
+        src="https://drinkzyra.com/cdn/shop/files/root-beer-rush-front-bg.png?v=1754530834&width=400"
+        alt="Zyra Vodka"
+        class="hero-bottle"
+      >
+    </div>
+  </section>
+
+  <div class="hr-gold"></div>
+
+  <!-- CREDENTIALS -->
+  <section class="credentials" data-section="credentials">
+    <div class="container">
+      <div class="credentials-inner">
+        <div class="credential">
+          <span class="num">30×</span>
+          <span class="label">Distilled</span>
+        </div>
+        <div class="credential">
+          <span class="num">3</span>
+          <span class="label">Expressions</span>
+        </div>
+        <div class="credential">
+          <span class="num">1</span>
+          <span class="label">Root beer vodka<br>in North America</span>
+        </div>
+        <div class="credential">
+          <span class="num">Cold</span>
+          <span class="label">Infused — real sarsaparilla</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION -->
+  <section class="collection" data-section="collection">
+    <div class="container">
+      <div class="collection-header">
+        <span class="section-eyebrow">The collection</span>
+        <h2>Three expressions.<br>One distillery.</h2>
+      </div>
+      <div class="collection-grid">
+        <div class="collection-item">
+          <div class="collection-item-img">
+            <img src="https://drinkzyra.com/cdn/shop/files/gold-front-bg.png?v=1754530870&width=400" alt="Zyra Gold">
+          </div>
+          <h3>Zyra Gold</h3>
+          <p>The original expression. Grain base, crystal clarity, smooth enough to drink straight.</p>
+          <span class="item-price">$44.99 CAD · 750ml</span>
+          <a href="/products/zyra-vodka-gold-750-ml" class="item-cta">Add to cart</a>
+        </div>
+        <div class="collection-item">
+          <div class="collection-item-img">
+            <img src="https://drinkzyra.com/cdn/shop/files/coco-mist-front-bg.png?v=1754530857&width=400" alt="Coco Mist">
+          </div>
+          <h3>Coco Mist</h3>
+          <p>Pineapple and coconut, cold-infused. A single pour that needs no mixer.</p>
+          <span class="item-price">$44.99 CAD · 750ml</span>
+          <a href="/products/zyra-vodka-coco-mist-750-ml" class="item-cta">Add to cart</a>
+        </div>
+        <div class="collection-item">
+          <div class="collection-item-img">
+            <img src="https://drinkzyra.com/cdn/shop/files/root-beer-rush-front-bg.png?v=1754530834&width=400" alt="Root Beer Rush">
+          </div>
+          <h3>Root Beer Rush</h3>
+          <p>Triticale base. Real sarsaparilla and vanilla, cold-infused. North America's only craft root beer vodka.</p>
+          <span class="item-price" style="color:var(--gold-foil);">$44.99 CAD · 750ml</span>
+          <span class="item-coming">Available soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement" data-section="statement">
+    <div class="container">
+      <blockquote>
+        "It started as late-night flavour experiments.<br>
+        The question was never what vodka should taste like.<br>
+        It was why every vodka <em>tastes the same</em>."
+      </blockquote>
+      <cite>— The Zyra Collective</cite>
+    </div>
+  </section>
+
+  <div class="hr-gold"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-row" style="margin-bottom:24px;">
+        <span class="footer-wordmark">Zyra</span>
+        <ul class="footer-links">
+          <li><a href="https://instagram.com/drinkzyra">Instagram</a></li>
+          <li><a href="https://tiktok.com/@drinkzyra">TikTok</a></li>
+          <li><a href="/policies/privacy-policy">Privacy</a></li>
+        </ul>
+      </div>
+      <p class="footer-legal">© 2026 Zyra Vodka. Please drink responsibly. Must be of legal drinking age in your province or state.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

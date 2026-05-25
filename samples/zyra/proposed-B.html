@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- stardust:provenance
+  writtenBy:         stardust:prototype
+  writtenAt:         2026-05-24T20:00:00Z
+  page:              home
+  variant:           B — "The claim is the hero"
+  dominantDimension: ia (type-led, claim-first)
+  pageUrl:           https://drinkzyra.com/
+  againstDirection:  stardust/direction.md
+  divergenceSeed:    "2025-now × Enamel sign × Supermarket flyer × dark"
+  fontDeck:          retro-italian (Alfa Slab One + Hanken Grotesk)
+  stardustVersion:   0.2.0
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zyra Vodka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --heading-font-family: 'Alfa Slab One', Georgia, serif;
+    --body-font-family:    'Hanken Grotesk', Arial, sans-serif;
+    --heading-xxl: clamp(52px, 9vw, 112px);
+    --heading-xl:  clamp(36px, 5vw, 64px);
+    --heading-lg:  clamp(28px, 3.5vw, 44px);
+    --heading-md:  28px;
+    --body:        18px;
+    --body-sm:     15px;
+    --label:       11px;
+    --color-bottle:     #0A0907;
+    --color-distillate: #F5F5F3;
+    --color-gold:       #C49A3A;
+    --color-rush:       #2B1308;
+    --color-coconut:    #F5E2C0;
+    --color-grain:      #7A6E63;
+    --color-bg:     var(--color-bottle);
+    --color-fg:     var(--color-distillate);
+    --color-accent: var(--color-gold);
+    --spacing-xs:  4px;
+    --spacing-sm:  8px;
+    --spacing-md:  16px;
+    --spacing-lg:  24px;
+    --spacing-xl:  48px;
+    --spacing-2xl: 96px;
+    --section-padding: 80px;
+    --max-width: 1200px;
+    --radius: 2px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body-font-family);
+    font-size: var(--body);
+    line-height: 1.6;
+    background: var(--color-bottle);
+    color: var(--color-distillate);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-xl); }
+  .eyebrow {
+    font-size: var(--label); font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--color-grain);
+  }
+  .btn {
+    display: inline-block;
+    font-family: var(--body-font-family);
+    font-size: var(--body-sm); font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 14px 32px;
+    border-radius: var(--radius);
+    border: none; cursor: pointer;
+    transition: opacity 80ms ease;
+  }
+  .btn:hover { opacity: 0.88; }
+  .btn--gold { background: var(--color-gold); color: var(--color-bottle); }
+
+  /* ── NAV ─────────────────────────────────────────────────────── */
+  [data-section="nav"] {
+    position: absolute; top: 0; left: 0; right: 0;
+    z-index: 100; padding: 20px 0;
+    background: linear-gradient(180deg, rgba(10,9,7,0.85) 0%, rgba(10,9,7,0) 100%);
+  }
+  .nav-inner {
+    display: grid; grid-template-columns: 1fr auto 1fr;
+    align-items: center; gap: 24px;
+  }
+  .nav-left > ul, .nav-right > ul {
+    display: flex; list-style: none;
+    align-items: center; gap: 24px;
+  }
+  .nav-left a, .nav-right a {
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(245,245,243,0.7);
+    transition: color 80ms ease;
+  }
+  .nav-left a:hover, .nav-right a:hover { color: var(--color-distillate); }
+  .nav-logo-center { display: flex; justify-content: center; }
+  .nav-right { display: flex; align-items: center; justify-content: flex-end; }
+
+  /* ── HERO — type-led ─────────────────────────────────────────── */
+  [data-section="hero"] {
+    min-height: 100svh;
+    padding: 120px 0 80px;
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    background: var(--color-bottle);
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+  .hero-type {}
+  .hero-type .eyebrow { margin-bottom: var(--spacing-lg); }
+  .hero-claim {
+    font-family: var(--heading-font-family);
+    font-size: clamp(52px, 9vw, 112px);
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    color: var(--color-distillate);
+    margin-bottom: var(--spacing-xl);
+  }
+  .hero-claim em {
+    font-style: normal;
+    color: var(--color-gold);
+  }
+  .hero-sub {
+    font-size: var(--body);
+    color: rgba(245,245,243,0.6);
+    max-width: 480px;
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+  }
+  .hero-bottle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.55;
+    filter: brightness(0.9);
+  }
+  .hero-bottle img {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  /* ── CLAIM BAR ───────────────────────────────────────────────── */
+  [data-section="claim-bar"] {
+    border-top: 1px solid rgba(245,245,243,0.08);
+    border-bottom: 1px solid rgba(245,245,243,0.08);
+    padding: 20px 0;
+  }
+  .claim-bar-inner {
+    display: flex; gap: var(--spacing-2xl);
+    justify-content: center; align-items: center;
+  }
+  .claim-fact {
+    text-align: center;
+  }
+  .claim-fact strong {
+    display: block;
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-md);
+    color: var(--color-gold);
+    margin-bottom: 4px;
+  }
+  .claim-fact span {
+    font-size: var(--body-sm);
+    color: var(--color-grain);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── LINEUP ──────────────────────────────────────────────────── */
+  [data-section="lineup"] {
+    padding: var(--section-padding) 0;
+  }
+  .lineup-header {
+    margin-bottom: var(--spacing-2xl);
+  }
+  .lineup-header h2 {
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-xl);
+    line-height: 1.07;
+    margin-top: var(--spacing-md);
+    max-width: 640px;
+  }
+  .lineup-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid rgba(245,245,243,0.1);
+  }
+  .lineup-item {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    border-right: 1px solid rgba(245,245,243,0.1);
+    border-bottom: 1px solid rgba(245,245,243,0.1);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  .lineup-item:last-child { border-right: 0; }
+  .lineup-item-img {
+    height: 260px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  .lineup-item-img img { max-height: 220px; width: auto; object-fit: contain; }
+  .flavor-tag {
+    display: inline-block;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 3px 8px;
+    border: 1px solid rgba(245,245,243,0.15);
+    border-radius: 2px;
+    color: var(--color-grain);
+    margin-bottom: var(--spacing-md);
+  }
+  .lineup-item h3 {
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-md);
+    margin-bottom: var(--spacing-sm);
+  }
+  .lineup-item p {
+    font-size: var(--body-sm);
+    color: rgba(245,245,243,0.6);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+  }
+  .lineup-item-footer {
+    display: flex; justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(245,245,243,0.06);
+  }
+  .price {
+    font-size: var(--body-sm); font-weight: 600;
+    color: var(--color-distillate);
+  }
+  .coming-badge {
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--color-gold);
+  }
+
+  /* ── ORIGIN ──────────────────────────────────────────────────── */
+  [data-section="origin"] {
+    padding: var(--section-padding) 0;
+    border-top: 1px solid rgba(245,245,243,0.08);
+  }
+  .origin-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-2xl);
+    align-items: center;
+  }
+  .origin-content h2 {
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-lg);
+    line-height: 1.12; margin-bottom: var(--spacing-xl);
+  }
+  .origin-content p {
+    color: rgba(245,245,243,0.65); line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+  }
+  .origin-img img {
+    width: 100%; border-radius: var(--radius);
+    filter: brightness(0.8) contrast(1.05);
+  }
+
+  /* ── CTA BAND ────────────────────────────────────────────────── */
+  [data-section="cta-band"] {
+    padding: var(--section-padding) 0;
+    border-top: 1px solid rgba(245,245,243,0.08);
+    text-align: center;
+  }
+  [data-section="cta-band"] h2 {
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+  [data-section="cta-band"] p {
+    color: rgba(245,245,243,0.5);
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--body-sm);
+  }
+
+  /* ── FOOTER ──────────────────────────────────────────────────── */
+  footer {
+    border-top: 1px solid rgba(245,245,243,0.08);
+    padding: var(--spacing-xl) 0;
+  }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-inner p { font-size: 13px; color: var(--color-grain); }
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header data-section="nav" data-intent="wayfinding" data-layout="contained">
+    <div class="container">
+      <div class="nav-inner">
+        <nav class="nav-left">
+          <ul>
+            <li><a href="/collections/all">Shop</a></li>
+            <li><a href="/pages/recipe-gallery">Cocktails</a></li>
+          </ul>
+        </nav>
+        <a href="/" class="nav-logo-center">
+          <img src="https://drinkzyra.com/cdn/shop/files/zyra-vodka-horizontal-logo-inverted-rgb-900px-w-72ppi.png?height=36&v=1753484963" alt="Zyra Vodka" height="30">
+        </a>
+        <nav class="nav-right">
+          <ul>
+            <li><a href="/pages/our-story">Our Story</a></li>
+            <li><a href="/collections/all" style="background:var(--color-gold);color:var(--color-bottle);padding:8px 18px;border-radius:2px;font-weight:600;font-size:13px;">Shop Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO — TYPE-LED -->
+  <section data-section="hero" data-intent="establish claim, drive to shop" data-layout="type-led">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-type">
+          <p class="eyebrow">Zyra Vodka · Distilled in Canada</p>
+          <h1 class="hero-claim">
+            North America's<br>
+            only craft<br>
+            <em>root beer</em><br>
+            vodka.
+          </h1>
+          <p class="hero-sub">Hand-distilled. Triticale base. Cold-infused with real sarsaparilla root. This sentence belongs only to us.</p>
+          <a href="/collections/all" class="btn btn--gold">Shop the lineup</a>
+        </div>
+        <div class="hero-bottle">
+          <img src="https://drinkzyra.com/cdn/shop/files/root-beer-rush-front-bg.png?v=1754530834&width=400" alt="Root Beer Rush bottle">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLAIM BAR -->
+  <div data-section="claim-bar" data-intent="reinforce credibility">
+    <div class="container">
+      <div class="claim-bar-inner">
+        <div class="claim-fact">
+          <strong>30×</strong>
+          <span>Distilled</span>
+        </div>
+        <div class="claim-fact">
+          <strong>3</strong>
+          <span>Flavors</span>
+        </div>
+        <div class="claim-fact">
+          <strong>Triticale</strong>
+          <span>Grain base</span>
+        </div>
+        <div class="claim-fact">
+          <strong>Real sarsaparilla</strong>
+          <span>Cold-infused</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LINEUP -->
+  <section data-section="lineup" data-intent="show full range, drive selection">
+    <div class="container">
+      <div class="lineup-header">
+        <p class="eyebrow">The lineup</p>
+        <h2>Not one of them tastes like vodka.</h2>
+      </div>
+      <div class="lineup-grid">
+        <div class="lineup-item">
+          <div class="lineup-item-img">
+            <img src="https://drinkzyra.com/cdn/shop/files/gold-front-bg.png?v=1754530870&width=400" alt="Zyra Gold">
+          </div>
+          <div>
+            <span class="flavor-tag">Classic</span>
+            <h3>Zyra Gold</h3>
+            <p>Grain-based. Crystal clarity. The one that started it all — smooth enough to drink straight, versatile enough for anything.</p>
+          </div>
+          <div class="lineup-item-footer">
+            <span class="price">$44.99 CAD</span>
+            <a href="/products/zyra-vodka-gold-750-ml" class="btn btn--gold" style="padding:10px 20px;font-size:13px;">Add to cart</a>
+          </div>
+        </div>
+        <div class="lineup-item">
+          <div class="lineup-item-img">
+            <img src="https://drinkzyra.com/cdn/shop/files/coco-mist-front-bg.png?v=1754530857&width=400" alt="Coco Mist">
+          </div>
+          <div>
+            <span class="flavor-tag">Pineapple · Coconut</span>
+            <h3>Coco Mist</h3>
+            <p>Pineapple and coconut. Not a cocktail you make — a cocktail that already exists. One pour, no mixer needed.</p>
+          </div>
+          <div class="lineup-item-footer">
+            <span class="price">$44.99 CAD</span>
+            <a href="/products/zyra-vodka-coco-mist-750-ml" class="btn btn--gold" style="padding:10px 20px;font-size:13px;">Add to cart</a>
+          </div>
+        </div>
+        <div class="lineup-item">
+          <div class="lineup-item-img">
+            <img src="https://drinkzyra.com/cdn/shop/files/root-beer-rush-front-bg.png?v=1754530834&width=400" alt="Root Beer Rush">
+          </div>
+          <div>
+            <span class="flavor-tag" style="border-color:rgba(196,154,58,0.3);color:var(--color-gold);">Coming soon</span>
+            <h3>Root Beer Rush</h3>
+            <p>Cold-infused with real sarsaparilla root and vanilla. 30% ABV. Triticale base. North America's only craft root beer vodka.</p>
+          </div>
+          <div class="lineup-item-footer">
+            <span class="price">$44.99 CAD</span>
+            <span class="coming-badge">Notify me</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORIGIN -->
+  <section data-section="origin" data-intent="build trust, brand story">
+    <div class="container">
+      <div class="origin-inner">
+        <div class="origin-content">
+          <p class="eyebrow">Where it started</p>
+          <h2>Late-night flavour experiments.</h2>
+          <p>It started as late-night flavour experiments among friends. The question wasn't "what should a vodka taste like?" — it was "why does every vodka taste like every other vodka?"</p>
+          <p>Three years, one triticale grain base, and 30 distillation passes later: three vodkas that don't taste like vodka.</p>
+          <a href="/pages/our-story" style="color:var(--color-gold);font-size:var(--body-sm);font-weight:600;letter-spacing:0.04em;">Read the story →</a>
+        </div>
+        <div class="origin-img">
+          <img src="https://drinkzyra.com/cdn/shop/files/root-beer-rush-two.jpg?v=1753656998&width=800" alt="Zyra origin">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section data-section="cta-band" data-intent="final conversion push">
+    <div class="container">
+      <h2>Three vodkas. None of them boring.</h2>
+      <p>$44.99 each · $108.99 for the variety pack</p>
+      <a href="/collections/all" class="btn btn--gold">Shop the lineup</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 Zyra Vodka. Please drink responsibly.</p>
+        <div style="display:flex;gap:24px;">
+          <a href="https://instagram.com/drinkzyra" style="font-size:13px;color:var(--color-grain);">Instagram</a>
+          <a href="https://tiktok.com/@drinkzyra" style="font-size:13px;color:var(--color-grain);">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 2,
+  "slug": "zyra",
+  "title": "Zyra Vodka",
+  "tagline": "From Shopify DTC default to enamel-sign dark-ground with a single unarguable claim. Three stardust variants + Ciroc, Skyy, and mid-tier DTC as competitive reference designs.",
+
+  "source": {
+    "url": "https://drinkzyra.com/",
+    "register": "brand",
+    "category": "spirits · flavored vodka · DTC e-commerce",
+    "extractedAt": "2026-05-24"
+  },
+
+  "direction": {
+    "phrase": "Anti-Vibe Design Mandate — palette from the physical reality of the liquid and ingredients. Dark ground required (Bottle #0A0907). Every section passes specificity test: remove the brand name — could this belong to any other vodka brand? If yes, rewrite. The unarguable claim (North America's only craft root beer vodka) is the load-bearing sentence; everything else earns the scroll toward a single shop CTA.",
+    "movements": [
+      "ground: cream/white Shopify default → Bottle #0A0907 (dark near-black)",
+      "palette: Shopify default → brand-native role names derived from liquid color (Gold, Rush mahogany, Coconut cream, Distillate white)",
+      "typography: Shopify default → retro-italian deck (Alfa Slab One display + Hanken Grotesk body)",
+      "IA: generic hero → mood quiz → footer → buyer decision journey (Am I in the right place? → What can I get? → Why Root Beer Rush? → What do I make? → Who made this? → Buy it)",
+      "copy: party-starter generic → specificity-tested (every headline unique to Zyra)",
+      "components: card grid with hover translateY → editorial hairline grid, no shadows"
+    ],
+    "seed": {
+      "input": "Zyra Vodka|2026-05-24",
+      "decade": "2025-now",
+      "craft": "Enamel sign",
+      "register": "Supermarket flyer",
+      "groundFamily": "dark",
+      "pickedBy": "direction"
+    },
+    "fontDeck": {
+      "name": "retro-italian",
+      "value": "Alfa Slab One display + Hanken Grotesk body",
+      "pickedBy": "direction"
+    },
+    "palette": {
+      "name": "Zyra brand-native",
+      "source": "derived from liquid colors and ingredients",
+      "anchor": "#C49A3A",
+      "pickedBy": "direction",
+      "brandFaithfulInversions": [
+        "Bottle #0A0907 — looking through a spirit bottle's glass",
+        "Gold #C49A3A — the actual color of Zyra Gold liquid in the bottle",
+        "Rush #2B1308 — Root Beer Rush's sarsaparilla darkness",
+        "Coconut #F5E2C0 — Coco Mist product accent only, never section ground",
+        "Distillate #F5F5F3 — 30× filtered vodka; NOT cream (R−B=2)"
+      ]
+    },
+    "antiToolbox": { "hits": 0, "justified": 0 }
+  },
+
+  "originalCritique": "Drinkzyra.com is a Shopify DTC template that undersells the one thing Zyra actually owns: North America's only craft root beer vodka. The hero opens with 'your new party starter — tropical, bold, and made to turn heads' — a sentence that belongs to 400 other vodka brands. The mood quiz ('WHAT'S YOUR VODKA MOOD?') is a reflex interaction that delays the only goal: purchase. The design is cream-on-white with Shopify default typography; it reads like a brand that doesn't know what it is. <strong>The voice is already right in the product descriptions. The design's job is to catch up to it.</strong>",
+
+  "variants": [
+    {
+      "id": "A",
+      "name": "Anti-vibe primary",
+      "dominantDimension": "tokens",
+      "thesis": "Dark enamel-sign ground with one warm amber accent pulled directly from the liquid. Buyer decision journey IA. Every headline specificity-tested. Single shop CTA. No card grids, no hover translateY, no generic taglines. The bar-that-takes-spirits-seriously look.",
+      "fix": "<strong>Dark ground (Bottle #0A0907), amber accent (Gold #C49A3A), Alfa Slab One.</strong> IA rewritten around the buyer's actual decision path — specificity test applied to every headline. The flavor lineup is an editorial hairline grid, not a card grid. Root Beer Rush earns its own section with a spec sheet because 'North America's only craft root beer vodka' is the only sentence that belongs entirely to Zyra.",
+      "proposedFile": "proposed-A.html",
+      "isPrimary": true
+    },
+    {
+      "id": "B",
+      "name": "The claim is the hero",
+      "dominantDimension": "ia",
+      "thesis": "Lead with the unarguable claim at display scale. 'North America's only craft root beer vodka.' fills the viewport before the bottle appears. Typography IS the hero; the product photo is the evidence. Tests whether the copy, not the visual, is the stronger hook.",
+      "fix": "<strong>The claim at display scale — the bottle is the evidence, not the anchor.</strong> Same palette, same fonts. Hero devotes the full viewport to the sentence only Zyra can say, with the bottle entering from the right at 60% opacity as a secondary element. The question being tested: is 'North America's only craft root beer vodka' strong enough to be the first thing you read, or does it need the bottle to earn the belief?",
+      "proposedFile": "proposed-B.html"
+    },
+    {
+      "id": "C",
+      "name": "Three vodkas, immediately",
+      "dominantDimension": "ia",
+      "thesis": "All three SKUs above the fold. 'Three vodkas. None of them boring.' as the hero headline with the product trio front and center. Tests a commerce-first entry where the purchase decision starts in the first scroll.",
+      "fix": "<strong>The products are the hero — all three, immediately.</strong> Same palette, same fonts. Hero is a three-column bottle grid with 'Three vodkas. None of them boring.' as the single headline. The bet: showing the full range up front lets buyers self-select faster and reduces bounce from visitors who aren't root beer curious but would buy Gold or Coco Mist.",
+      "proposedFile": "proposed-C.html"
+    },
+    {
+      "id": "D",
+      "name": "Ciroc-like: aspirational luxury",
+      "dominantDimension": "tokens",
+      "thesis": "Reference design. The ultra-premium luxury approach — very dark ground, ultra-thin elegant serif, massive negative space, aspirational copy, one cinematic product shot. What Ciroc or Grey Goose would do. Deliberate use of 'premium' as aspiration, thin fonts, and editorial silence.",
+      "fix": "<strong>Luxury aspiration over specificity.</strong> Deep near-black, Cormorant Garamond (thin, high-contrast), gold-foil accent. Very minimal copy — 'The Standard. Elevated.' One bottle, perfectly lit, centered. Lots of negative space. This is what 'premium vodka design' looks like when it reaches for luxury fashion rather than bartender credibility. Useful as a contrast case to Variant A.",
+      "proposedFile": "proposed-D.html"
+    },
+    {
+      "id": "E",
+      "name": "Skyy-like: clean American modern",
+      "dominantDimension": "tokens",
+      "thesis": "Reference design. The clean modern American approach — deep navy, Skyy blue accent, geometric sans, direct bold language, very 'on the shelf' product photography. What a mainstream-premium American vodka brand would do.",
+      "fix": "<strong>Clean American on-shelf premium.</strong> Deep navy (#061422), Skyy blue (#2E6BE6), Montserrat geometric sans. Very direct language: 'Clarity. In every drop.' Studio-lit product photography. Multiple CTAs. This represents the 'accessible premium' register — not aspirational luxury, not anti-vibe editorial. The category mainstream position.",
+      "proposedFile": "proposed-E.html"
+    },
+    {
+      "id": "F",
+      "name": "Mid-tier DTC baseline",
+      "dominantDimension": "tokens",
+      "thesis": "Reference design — the anti-vibe control case. Off-white background, Inter, card grid with hover shadows, 'artisanal · crafted · premium' language, multiple CTAs, newsletter signup. What the generic DTC spirits brand looks like. Included so the difference between A and category-default is measurable.",
+      "fix": "<strong>The category default — everything Variant A is explicitly not.</strong> Off-white background, Inter, card grid with hover translateY, marketing adjectives, 'WHAT'S YOUR VODKA MOOD?', newsletter signup in footer. This is what you get when you install a Shopify theme and fill in the brand colors. Included as a calibration reference so the delta from A to F is explicit rather than implied.",
+      "proposedFile": "proposed-F.html"
+    }
+  ],
+
+  "brandReview": null,
+  "createdAt": "2026-05-24",
+  "stardustVersion": "0.2.0",
+  "submittedBy": "Remekie",
+  "license": "Apache-2.0",
+  "thumbnail": null
+}
