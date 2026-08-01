@@ -1,149 +1,203 @@
 <!DOCTYPE html>
 <!-- stardust:provenance
   variant: F — CATEGORY BASELINE / ANTI-VIBE CONTROL, not a stardust variant
-  thesis: the competent, unremarkable modern one-pager any decent template produces.
-  DELIBERATE TELLS — these are the experiment, not defects. Do not "fix" them:
-    · Inter (on the divergence toolkit reflex-reject list) used throughout
-    · centred hero + oversized sans + solid/outline CTA pair
-    · rounded cards with soft shadows in a 3-up feature grid
-    · light-grey wash ground, generous uniform padding
-    · abstract benefit headings rather than concrete claims
-  purpose: the control case. If A/B/C do not beat this on time-to-phone-call for a
-    foreman on a phone, their distinctiveness is decoration and F is the honest answer.
+  revision: 2 — rebuilt as *competent* generic after v1 was judged a straw man
+  thesis: the page a good designer produces working inside modern template conventions.
+    Undistinctive by construction, but well executed, and carrying the SAME concrete
+    content as A/B/C so the comparison isolates design rather than copywriting.
+  DELIBERATE, DO NOT "FIX":
+    · Inter throughout (on the divergence toolkit reflex-reject list)
+    · centred hero, oversized sans, solid + outline CTA pair, sticky translucent nav
+    · rounded cards, soft shadows, three-up grid, light-grey wash ground
+  v1 straw-man tells REMOVED so the control is a fair opponent:
+    · emoji used as iconography, ✨ badge, "Let's Build Something Together"
+    · abstract benefit headings ("Technical Excellence", "Team Player") replaced with
+      the same concrete claims A/B/C make
+  purpose: if A/B/C cannot beat THIS on time-to-phone-call, their distinctiveness is
+    decoration and F is the honest recommendation.
 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Achjuan Remekie-Hall | Skilled Trades Professional</title>
-<meta name="description" content="Steamfitter-Pipefitter apprentice based in Edmonton, Alberta. Safety certified, reliable, and available for industrial projects.">
+<title>Achjuan Remekie-Hall | Steamfitter-Pipefitter Apprentice, Edmonton AB</title>
+<meta name="description" content="AIT-tested Steamfitter-Pipefitter apprentice in Edmonton with four-plus years of construction site experience. Six current safety tickets, Class 5 licence, own truck. Available for Alberta shutdowns and turnarounds.">
+<meta property="og:title" content="Achjuan Remekie-Hall | Steamfitter-Pipefitter Apprentice">
+<meta property="og:description" content="Four-plus years on site, AIT-tested, six current tickets, own truck. Available for Fall 2026 turnaround.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F8FAFC;--card:#FFFFFF;--ink:#0F172A;--muted:#64748B;--brand:#2563EB;--line:#E2E8F0;--r:14px}
+:root{
+  --bg:#F8FAFC;--card:#FFFFFF;--ink:#0F172A;--body:#475569;--muted:#64748B;
+  --brand:#1D4ED8;--brand-soft:#EFF4FF;--line:#E2E8F0;--ok:#047857;--r:12px;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;
-  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;padding-bottom:74px}
-.container{max-width:1120px;margin:0 auto;padding:0 24px}
-h1,h2,h3{margin:0;letter-spacing:-.025em;line-height:1.15}
+body{margin:0;background:var(--bg);color:var(--body);font-family:'Inter',system-ui,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;padding-bottom:74px}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3{margin:0;color:var(--ink);letter-spacing:-.022em;line-height:1.2}
 a{color:inherit}
-nav{position:sticky;top:0;background:rgba(248,250,252,.86);backdrop-filter:blur(10px);
+nav{position:sticky;top:0;background:rgba(248,250,252,.88);backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);z-index:10}
-nav .container{display:flex;justify-content:space-between;align-items:center;padding-top:15px;padding-bottom:15px}
-nav b{font-weight:700}
-nav a.link{text-decoration:none;color:var(--muted);margin-left:26px;font-size:.94rem;font-weight:500}
-nav a.link:hover{color:var(--ink)}
-.hero{text-align:center;padding:88px 0 76px}
-.pill{display:inline-block;background:#DBEAFE;color:#1D4ED8;border-radius:999px;
-  padding:6px 15px;font-size:.83rem;font-weight:600;margin-bottom:22px}
-.hero h1{font-size:clamp(2.6rem,6.2vw,4.4rem);font-weight:800;max-width:16ch;margin:0 auto}
-.hero p{color:var(--muted);font-size:1.19rem;max-width:60ch;margin:22px auto 0}
-.cta{display:flex;gap:13px;justify-content:center;margin-top:34px;flex-wrap:wrap}
-.btn{text-decoration:none;padding:14px 30px;border-radius:10px;font-weight:600;font-size:1.02rem;
-  transition:transform .15s ease,box-shadow .15s ease}
-.btn-p{background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(37,99,235,.28)}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(37,99,235,.34)}
+nav .container{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+nav .brand{font-weight:700;color:var(--ink)}
+nav .brand small{display:block;font-weight:400;font-size:.76rem;color:var(--muted);letter-spacing:0}
+nav .links a{text-decoration:none;color:var(--muted);margin-left:24px;font-size:.93rem;font-weight:500}
+nav .links a:hover{color:var(--ink)}
+nav .links a.call{color:var(--brand);font-weight:600}
+
+.hero{text-align:center;padding:76px 0 60px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--brand-soft);color:var(--brand);
+  border-radius:6px;padding:6px 13px;font-size:.85rem;font-weight:600;margin-bottom:20px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.hero h1{font-size:clamp(2.4rem,5.6vw,3.9rem);font-weight:800;max-width:19ch;margin:0 auto}
+.hero .lead{font-size:1.16rem;max-width:62ch;margin:20px auto 0}
+.hero .lead b{color:var(--ink);font-weight:600}
+.cta{display:flex;gap:12px;justify-content:center;margin-top:30px;flex-wrap:wrap}
+.btn{text-decoration:none;padding:13px 27px;border-radius:9px;font-weight:600;font-size:1.01rem}
+.btn-p{background:var(--brand);color:#fff}
+.btn-p:hover{background:#1A45BE}
 .btn-s{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-.btn-s:hover{transform:translateY(-2px)}
+.btn-s:hover{border-color:#CBD5E1;background:#FCFDFE}
 .btn:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
-.hero-img{display:block;width:100%;max-width:1000px;margin:46px auto 0;border-radius:var(--r);
-  box-shadow:0 18px 42px rgba(15,23,42,.13)}
-section{padding:64px 0}
-.head{text-align:center;max-width:56ch;margin:0 auto 44px}
-.head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:700}
-.head p{color:var(--muted);margin-top:13px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(292px,1fr));gap:22px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:32px;
-  box-shadow:0 1px 3px rgba(15,23,42,.05);transition:transform .18s ease,box-shadow .18s ease}
-.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(15,23,42,.09)}
-.ico{width:47px;height:47px;border-radius:11px;background:#DBEAFE;display:flex;
-  align-items:center;justify-content:center;font-size:1.35rem;margin-bottom:17px}
-.card h3{font-size:1.16rem;font-weight:600;margin-bottom:8px}
-.card p{color:var(--muted);font-size:.97rem;margin:0}
-.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;
-  padding:9px 19px;font-size:.93rem;font-weight:500}
-.cta-band{background:var(--card);border:1px solid var(--line);border-radius:20px;
-  padding:56px 40px;text-align:center}
-.cta-band h2{font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:700;max-width:20ch;margin:0 auto}
-.cta-band p{color:var(--muted);max-width:52ch;margin:15px auto 0}
-footer{text-align:center;color:var(--muted);font-size:.9rem;padding:44px 0}
+.hero-img{display:block;width:100%;max-width:960px;margin:44px auto 0;border-radius:var(--r);
+  border:1px solid var(--line)}
+
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card)}
+.facts .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:0}
+.fact{padding:26px 0;text-align:center;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-size:1.95rem;font-weight:700;color:var(--ink);line-height:1.1}
+.fact span{font-size:.86rem;color:var(--muted)}
+
+section{padding:62px 0}
+.head{max-width:58ch;margin:0 auto 38px;text-align:center}
+.head h2{font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:700}
+.head p{margin-top:11px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.card h3{font-size:1.1rem;font-weight:600;margin-bottom:9px}
+.card p{margin:0;font-size:.96rem}
+.card ul{margin:10px 0 0;padding-left:19px;font-size:.96rem}
+.card li{margin-bottom:5px}
+.rule{width:34px;height:3px;border-radius:2px;background:var(--brand);margin-bottom:16px}
+
+.chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:7px;
+  padding:9px 17px;font-size:.94rem;font-weight:500;color:var(--ink)}
+
+.timeline{max-width:800px;margin:0 auto}
+.row{display:grid;grid-template-columns:158px 1fr;gap:24px;padding:19px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .when{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+.row b{display:block;color:var(--ink);font-weight:600}
+.row p{margin:5px 0 0;font-size:.95rem}
+
+.band{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:50px 36px;text-align:center}
+.band h2{font-size:clamp(1.6rem,3.1vw,2.2rem);font-weight:700;max-width:22ch;margin:0 auto}
+.band p{max-width:54ch;margin:13px auto 0}
+footer{text-align:center;color:var(--muted);font-size:.89rem;padding:40px 0;border-top:1px solid var(--line)}
 .callbar{position:fixed;left:0;right:0;bottom:0;display:none;background:var(--brand);color:#fff;
   text-decoration:none;text-align:center;padding:17px;font-weight:600;z-index:20}
-@media(max-width:760px){.hero{padding:56px 0 48px}nav a.link{display:none}.callbar{display:block}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+@media(max-width:780px){
+  .hero{padding:48px 0 40px}nav .links a:not(.call){display:none}
+  .fact{border-right:0;border-bottom:1px solid var(--line)}
+  .row{grid-template-columns:1fr;gap:4px}.callbar{display:block}
+}
 </style>
 </head>
 <body>
 
 <nav><div class="container">
-  <b>Achjuan Remekie-Hall</b>
-  <div><a class="link" href="#about">About</a><a class="link" href="#services">Skills</a>
-       <a class="link" href="#certs">Certifications</a><a class="link" href="#contact">Contact</a></div>
+  <span class="brand">Achjuan Remekie-Hall<small>Steamfitter-Pipefitter Apprentice</small></span>
+  <span class="links">
+    <a href="#skills">Skills</a><a href="#tickets">Tickets</a><a href="#experience">Experience</a>
+    <a class="call" href="tel:+16479074354">647-907-4354</a>
+  </span>
 </div></nav>
 
 <header class="hero"><div class="container">
-  <span class="pill">✨ Available for new opportunities</span>
-  <h1>Building Alberta, One Weld at a Time</h1>
-  <p>A dedicated skilled trades professional committed to safety, quality craftsmanship,
-    and delivering excellence on every project.</p>
+  <span class="eyebrow"><span class="dot"></span> Available immediately for Fall 2026 turnaround</span>
+  <h1>Four years on site, and now in the trade</h1>
+  <p class="lead">Steamfitter-Pipefitter apprentice based in Edmonton. <b>Four-plus years of
+    commercial construction experience</b> between 2020 and 2025, then NAIT Pipe Trades and a pass
+    on the <b>Alberta AIT first-year examination</b>. Six current tickets, Class 5 licence and
+    own truck. <b>Looking for an employer to sponsor apprenticeship hours.</b></p>
   <div class="cta">
-    <a class="btn btn-p" href="tel:+16479074354">Get in Touch</a>
-    <a class="btn btn-s" href="Achjuan-Remekie-Hall-Resume.docx" download>View Résumé</a>
+    <a class="btn btn-p" href="tel:+16479074354">Call 647-907-4354</a>
+    <a class="btn btn-s" href="Achjuan-Remekie-Hall-Resume.docx" download>Download résumé</a>
   </div>
   <img class="hero-img" src="weld-colour.png" width="1500" height="779" loading="lazy"
        alt="Gloved hands running a torch along a pipe seam on a fabrication rack, sparks coming off the weld pool.">
 </div></header>
 
-<section id="services"><div class="container">
-  <div class="head"><h2>What I Bring to the Table</h2>
-    <p>A comprehensive skill set built on years of hands-on experience across the construction industry.</p></div>
+<div class="facts"><div class="container">
+  <div class="fact"><b>4+</b><span>Years on construction sites</span></div>
+  <div class="fact"><b>6</b><span>Current safety tickets</span></div>
+  <div class="fact"><b>3</b><span>Provinces worked</span></div>
+  <div class="fact"><b>0</b><span>Notice required</span></div>
+</div></div>
+
+<section id="skills"><div class="container">
+  <div class="head"><h2>What he brings to a crew</h2>
+    <p>A first-period apprentice who already knows how a job site runs.</p></div>
   <div class="cards">
-    <div class="card"><div class="ico">🔧</div><h3>Technical Excellence</h3>
-      <p>Proficient in pipe fitting, welding and fabrication with a keen eye for precision and detail on every job.</p></div>
-    <div class="card"><div class="ico">🦺</div><h3>Safety First</h3>
-      <p>Fully certified and committed to maintaining the highest safety standards on every site, every day.</p></div>
-    <div class="card"><div class="ico">🤝</div><h3>Team Player</h3>
-      <p>A reliable, adaptable crew member who communicates clearly and works hard to keep projects moving forward.</p></div>
+    <div class="card"><div class="rule"></div><h3>Reads the drawings</h3>
+      <p>Pipe drawings, isometrics, weld details and fabrication layouts. Blueprint interpretation
+        is named across every role on his record, not just the trade training.</p></div>
+    <div class="card"><div class="rule"></div><h3>Trade skills</h3>
+      <ul><li>Spool fit-up, tacking, bevelling, joining</li>
+          <li>SMAW and GMAW welding, first period</li>
+          <li>Oxy-acetylene cutting, set-up and operation</li>
+          <li>Layout and precision measurement</li></ul></div>
+    <div class="card"><div class="rule"></div><h3>Site-ready</h3>
+      <ul><li>Class 5, clean abstract, own truck</li>
+          <li>Camp and FIFO ready, 6/1 and 24/4</li>
+          <li>Clean pre-access drug and alcohol</li>
+          <li>Works to FLHA and JHA procedure daily</li></ul></div>
   </div>
 </div></section>
 
-<section id="certs"><div class="container">
-  <div class="head"><h2>Certifications &amp; Training</h2>
-    <p>Industry-recognised credentials, kept current.</p></div>
+<section id="tickets"><div class="container">
+  <div class="head"><h2>Safety tickets</h2>
+    <p>All current, and verifiable on request.</p></div>
   <div class="chips">
     <span class="chip">H2S Alive</span><span class="chip">CSTS-20</span>
-    <span class="chip">Confined Space</span><span class="chip">Fall Protection</span>
+    <span class="chip">Confined Space Entry &amp; Monitor</span><span class="chip">Fall Protection</span>
     <span class="chip">MEWP</span><span class="chip">WHMIS</span>
-    <span class="chip">NAIT Pipe Trades</span><span class="chip">Alberta AIT Tested</span>
   </div>
 </div></section>
 
-<section id="about"><div class="container">
-  <div class="head"><h2>About Me</h2></div>
-  <div class="cards">
-    <div class="card"><div class="ico">🎓</div><h3>Trained &amp; Tested</h3>
-      <p>Completed NAIT Pipe Trades Common First Period and passed the Alberta AIT first-year examination.</p></div>
-    <div class="card"><div class="ico">🏗️</div><h3>Experienced</h3>
-      <p>Four-plus years across commercial construction, carpentry, renovation and industrial site support.</p></div>
-    <div class="card"><div class="ico">🚚</div><h3>Mobile &amp; Ready</h3>
-      <p>Class 5 licence and own truck. Camp and FIFO ready for projects anywhere in Alberta.</p></div>
+<section id="experience"><div class="container">
+  <div class="head"><h2>Experience</h2></div>
+  <div class="timeline">
+    <div class="row"><span class="when">May – Jun 2026</span><div><b>NAIT, Pipe Trades Common First Period</b>
+      <p>Edmonton, AB. SMAW and GMAW welding, oxy-acetylene cutting, spool fit-up, tack welding and trade safety. Passed the Alberta AIT first-year examination.</p></div></div>
+    <div class="row"><span class="when">Oct 2025 – Feb 2026</span><div><b>Fleet Optics Inc.</b>
+      <p>Mississauga, ON. Courier contractor through the relocation to Alberta.</p></div></div>
+    <div class="row"><span class="when">Mar 2024 – Sep 2025</span><div><b>MeadowBrook Construction</b>
+      <p>Mississauga, ON. Service handyman. Blueprint interpretation and layout measurement supporting commercial construction and maintenance, plus rigging support, material coordination and job hazard assessment compliance.</p></div></div>
+    <div class="row"><span class="when">Aug 2023 – Feb 2024</span><div><b>OddJobs HandyMen</b>
+      <p>Waterloo, ON. Sub-contractor. Renovation, repair and installation across concurrent sites.</p></div></div>
+    <div class="row"><span class="when">Aug 2020 – Dec 2022</span><div><b>Scoburgh Group Carpentry</b>
+      <p>Toronto, ON. Carpenter. Framing, concrete work, demolition, drywall and structural steel installation alongside journeypersons.</p></div></div>
   </div>
 </div></section>
 
-<section id="contact"><div class="container">
-  <div class="cta-band">
-    <h2>Let's Build Something Together</h2>
-    <p>Available immediately for shutdowns, turnarounds and industrial projects across Alberta.</p>
+<section><div class="container">
+  <div class="band">
+    <h2>Short a hand on your next shutdown?</h2>
+    <p>Edmonton, Nisku, Fort Saskatchewan, Sherwood Park and Leduc, or camp anywhere in Alberta.
+      Own truck, so an early start is not a problem.</p>
     <div class="cta">
       <a class="btn btn-p" href="tel:+16479074354">Call 647-907-4354</a>
-      <a class="btn btn-s" href="mailto:achjuankaribe@gmail.com">Send an Email</a>
+      <a class="btn btn-s" href="mailto:achjuankaribe@gmail.com">achjuankaribe@gmail.com</a>
     </div>
   </div>
 </div></section>
 
-<footer><div class="container">© 2026 Achjuan Remekie-Hall · Edmonton, Alberta</div></footer>
+<footer><div class="container">Achjuan Karibe Remekie-Hall · Edmonton, Alberta · 647-907-4354</div></footer>
 <a class="callbar" href="tel:+16479074354">Call 647-907-4354</a>
 </body>
 </html>
