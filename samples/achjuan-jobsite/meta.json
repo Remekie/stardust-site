@@ -67,7 +67,7 @@
       "id": "C",
       "name": "Mosaic tessellation",
       "dominantDimension": "palette",
-      "thesis": "What if the page showed the whole composite instead of apologising for it? Craft-dominant (mosaic tile). Five roles across three provinces, which the captured site stated in a prose paragraph and then flattened into a uniform 12-cell grid.",
+      "thesis": "What if the page showed the whole composite instead of apologising for it? Craft-dominant (mosaic tile). Five roles across two provinces, which the captured site stated in a prose paragraph and then flattened into a uniform 12-cell grid.",
       "fix": "Weighted tessellation where every trade, ticket and role is a tile sized by actual weight, so pipe trades reads large and courier work reads small. Cool slate ground (R-B = -7, verified non-cream). Range presented as the asset rather than the liability.",
       "proposedFile": "proposed-C.html",
       "isPrimary": false

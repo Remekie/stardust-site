@@ -84,7 +84,7 @@ Stakeholder pitch: *"hand a foreman the paperwork before he asks for it."*
 
 Ground: `monochrome-tint` — cool concrete slate.
 What if: *"the page showed the whole composite instead of apologising for it?"*
-Captured trait: multi-trade breadth (5 roles, 3 provinces, flattened to a uniform grid).
+Captured trait: multi-trade breadth (5 roles, 2 provinces, flattened to a uniform grid).
 Type deck: **Archivo Black** display, **Archivo** body, **Courier Prime** technical.
 Composition: weighted tessellation — every trade, ticket and role is a tile sized
 by actual weight rather than a uniform cell.
