@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 2,
+  "slug": "achjuan-jobsite",
+  "title": "Achjuan Remekie-Hall",
+  "tagline": "Steamfitter-Pipefitter apprentice jobsite, Edmonton AB. One page whose only job is getting a foreman to call.",
+  "source": {
+    "url": "file:///achjuan-jobsite/index.html",
+    "register": "brand",
+    "category": "Personal hiring surface / industrial trades",
+    "extractedAt": "2026-08-01"
+  },
+  "direction": {
+    "phrase": "run stardust against this site and get 3 new variations",
+    "mode": "free-directions (Mode A brand-faithful declined; captured identity was largely assistant-default moves)",
+    "movements": [
+      "density: 6rem uniform padding to 48-56px (conversion-verb CTA above fold)",
+      "distinctiveness: familiar to distinctive",
+      "audience: pinned to hiring foreman / shutdown coordinator on a phone, ~20 seconds",
+      "ia-fidelity: reimagined",
+      "constraints: no-fabricated-content (hard), IA-priority preservation (commercial-conversion trigger)"
+    ],
+    "seed": {
+      "input": "Achjuan Remekie-Hall|2026-08-01",
+      "md5": "8c59ed94735fb1b2f2efd42a6cef6b55",
+      "decade": "1920s",
+      "craft": "Mosaic tile",
+      "register": "Hospital discharge paperwork",
+      "groundByVariant": { "A": "dark", "B": "stark-white", "C": "monochrome-tint" },
+      "pickedBy": "deterministic",
+      "creamFamilyHits": 0
+    },
+    "fontDeck": {
+      "A": ["Bricolage Grotesque", "Martian Mono", "Hanken Grotesk"],
+      "B": ["IBM Plex Serif", "IBM Plex Mono", "IBM Plex Sans Condensed"],
+      "C": ["Archivo Black", "Archivo", "Courier Prime"],
+      "reflexRejectHits": 0
+    },
+    "palette": {
+      "A": { "Cyanotype": "#0B1B2E", "Chalk Line": "#E9EFF5", "Mill Scale": "#8A9CB2", "Torch": "#FF6A1A" },
+      "B": { "Bond": "#FFFFFF", "Carbon": "#14161A", "Pencil": "#5C6470", "Cleared": "#0B6E3B", "Stamp": "#A8231D" },
+      "C": { "Concrete": "#D9DDE0", "Tessera": "#23282D", "Grout": "#AEB5BA", "Glaze": "#0F5F66", "Kiln": "#B4471F" }
+    },
+    "antiToolbox": { "hits": 0, "justified": 0 }
+  },
+  "originalCritique": "The captured page had two problems that outranked any visual one. Its contact data was fabricated and self-contradictory: tel:+17800000000 was a placeholder, and the hero and footer carried two different email addresses. On a page whose single job is getting called, that is the entire funnel broken. And it listed nine safety tickets where the resume certifies six, presenting CSO, LOTO Procedures and FLHA Familiarity as held credentials. On an Alberta industrial site that is a claim a safety coordinator verifies and holds against the candidate. Visually, the identity was assembled largely from assistant-default moves: a grain scanline overlay, dark-by-reflex ground, uppercase-condensed display as the primary register, and Manrope body, four items sitting on the divergence toolkit's own default-moves and reflex-reject lists. Structurally, twelve identical skill tiles gave carpentry the same visual weight as SMAW/GMAW welding, so a foreman scanning for weld capability got a wall of nouns with no ranking. The .btn:hover rule was unscoped and turned the secondary button orange with white text at roughly 2.3:1, failing WCAG AA. No meta description and no Open Graph tags, so the link previewed as a bare URL, which is exactly how this page travels when texted to a hiring foreman. Finally, the two strongest hiring signals were absent: the resume sat unlinked in the project folder, and Class 5 licence plus own truck, a live dispatch asset for 5am Fort Saskatchewan calls, appeared nowhere in the markup.",
+  "marketResearch": "Alberta contractor postings (Stuart Olson, Jardeg/Woodland, Canoco, LSC Industrial, Alstar) screen on a consistent bundle: registered apprenticeship status, H2S Alive + CSO-or-CSTS + First Aid, Class 5 with clean abstract, and explicit blueprint/P&ID literacy. Advanced-year apprentices are in materially higher demand than first-years, so all three variants lead with four-plus years of prior construction site experience rather than with apprentice year. Contractor-facing vocabulary (bolt-up, torque patterns, hydro testing, isos) was added where honestly scoped, with trained-versus-site-hours distinguished explicitly rather than blurred. Open gap flagged to the candidate: First Aid is listed as required by multiple postings and is not currently held.",
+  "variants": [
+    {
+      "id": "A",
+      "name": "Cyanotype drafting sheet",
+      "dominantDimension": "tokens",
+      "thesis": "What if the page were the drawing he reads for a living? Decade-dominant (1920s). The resume names blueprint interpretation four separate times; the captured site rendered it as one tile among twelve.",
+      "fix": "Engineering title block carrying name, radius, transport, rotation and status. Authored isometric pipe-spool SVG. Competency depth encoded as dimension lines rather than numerals. The captured site's orphan 6px accent edge, used exactly once, becomes a corner registration mark system.",
+      "proposedFile": "proposed-A.html",
+      "isPrimary": true
+    },
+    {
+      "id": "B",
+      "name": "Clearance record",
+      "dominantDimension": "ia",
+      "thesis": "What if the page were his clearance record, not his life story? Register-dominant (hospital discharge paperwork). A discharge form certifies what a person is cleared for under what conditions, which is exactly what a safety-ticket sheet is.",
+      "fix": "Three ruled schedules (safety, competency, service) with scope columns and a rectangular CLEARED FOR SITE band, deliberately not a rotated circular stamp. Voice pivots from third-person CV prose to dispatch terseness. FLHA listed honestly as familiarity rather than padded into the ticket set.",
+      "proposedFile": "proposed-B.html",
+      "isPrimary": false
+    },
+    {
+      "id": "C",
+      "name": "Mosaic tessellation",
+      "dominantDimension": "palette",
+      "thesis": "What if the page showed the whole composite instead of apologising for it? Craft-dominant (mosaic tile). Five roles across three provinces, which the captured site stated in a prose paragraph and then flattened into a uniform 12-cell grid.",
+      "fix": "Weighted tessellation where every trade, ticket and role is a tile sized by actual weight, so pipe trades reads large and courier work reads small. Cool slate ground (R-B = -7, verified non-cream). Range presented as the asset rather than the liability.",
+      "proposedFile": "proposed-C.html",
+      "isPrimary": false
+    }
+  ],
+  "validation": {
+    "wcagAA": { "pairsTested": 15, "failures": 0, "lowest": "5.39:1" },
+    "variantDifferentiation": { "A_B": 4, "A_C": 4, "B_C": 4, "floor": 2 },
+    "fabricatedContent": "none; all copy ground-truthed to the candidate's resume, contact confirmed directly",
+    "imagery": "Firefly Image 5 via claude.ai connector. Cropped to remove the synthetic person's face before use: a photorealistic stand-in would read as the candidate on a hiring page."
+  },
+  "createdAt": "2026-08-01",
+  "stardustVersion": "0.12.0",
+  "submittedBy": "Remekie",
+  "license": "Apache-2.0"
+}

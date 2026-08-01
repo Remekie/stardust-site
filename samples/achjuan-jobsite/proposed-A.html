@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- stardust:provenance
+  writtenBy: stardust:uplift → prototype
+  variant: A — decade-dominant (1920s) · ground: dark (cyanotype)
+  seed: 8c59ed94735fb1b2f2efd42a6cef6b55
+  capturedTraitAmplified: blueprint interpretation (named 4× in résumé, 1 tile on captured site)
+  typeDeck: bauhaus-functional w/ reflex swap (Space Grotesk → Bricolage Grotesque)
+  reflexRejectHits: 0
+  contentSource: updated-resume-copy.txt (ground truth); contact confirmed by user
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achjuan Remekie-Hall — Steamfitter-Pipefitter Apprentice, Edmonton AB</title>
+<meta name="description" content="AIT-tested first-year Steamfitter-Pipefitter apprentice in Edmonton. H2S Alive, CSTS-20, Confined Space, Fall Protection, MEWP, WHMIS. Class 5 licence and own truck. Available for shutdowns across Edmonton, Nisku and Fort Saskatchewan.">
+<meta property="og:title" content="Achjuan Remekie-Hall — Steamfitter-Pipefitter Apprentice">
+<meta property="og:description" content="AIT-tested, ticketed, own truck. Available immediately for Alberta shutdowns and industrial work.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;700&family=Martian+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette roles named in the trade's own language — no Primary/Accent/Shadow */
+  --cyanotype:#0B1B2E;      /* the drawing ground */
+  --drafting-blue:#12293F;  /* raised sheet */
+  --chalk-line:#E9EFF5;     /* the drawn line, and the text */
+  --mill-scale:#8A9CB2;     /* oxidised surface — secondary information */
+  --torch:#FF6A1A;          /* the cutting flame — the one thing that acts */
+  --rule:rgba(233,239,245,.18);
+  --rule-strong:rgba(233,239,245,.42);
+  --sheet:56px;             /* density: 48–56px per direction.md */
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--cyanotype);color:var(--chalk-line);
+  font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;padding-bottom:76px;
+}
+/* Drafting grid — geometry, not a noise/grain overlay */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:linear-gradient(var(--rule) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--rule) 1px,transparent 1px);
+  background-size:64px 64px;
+}
+.sheet{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 var(--sheet)}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;margin:0;line-height:1.02;font-weight:800}
+a{color:inherit}
+.mono{font-family:'Martian Mono',ui-monospace,monospace;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mill-scale)}
+
+/* ── Title block: engineering drawings carry exactly this metadata ── */
+.titleblock{border:1px solid var(--rule-strong);margin-top:var(--sheet);display:grid;grid-template-columns:1.55fr .95fr}
+.tb-main{padding:38px 40px;border-right:1px solid var(--rule-strong)}
+.tb-main h1{font-size:clamp(2.7rem,6.2vw,4.6rem);letter-spacing:-.025em}
+.tb-main h1 span{display:block;color:var(--mill-scale);font-weight:400;font-size:.44em;letter-spacing:-.01em;margin-top:.35em}
+.tb-meta{display:grid;grid-template-rows:repeat(4,1fr)}
+.tb-cell{padding:14px 20px;border-bottom:1px solid var(--rule-strong);display:flex;flex-direction:column;justify-content:center}
+.tb-cell:last-child{border-bottom:0}
+.tb-cell strong{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;letter-spacing:-.01em}
+.tb-cell .mono{margin-bottom:3px}
+
+.lede{max-width:60ch;color:var(--mill-scale);margin:34px 0 0;font-size:1.08rem}
+.lede b{color:var(--chalk-line);font-weight:500}
+
+/* ── Drawing: authored isometric, not a raster ── */
+.drawing{border:1px solid var(--rule-strong);border-top:0;padding:26px 40px 20px;position:relative}
+.drawing svg{width:100%;height:auto;display:block;max-height:290px}
+.drawing figcaption{margin-top:10px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ── Actions ── */
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:34px 0 0}
+.btn{text-decoration:none;padding:15px 26px;font-weight:700;font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;border:1px solid transparent;transition:opacity .15s ease}
+.btn-torch{background:var(--torch);color:#0B1B2E}          /* 7.2:1 */
+.btn-line{border-color:var(--rule-strong);color:var(--chalk-line)}
+.btn-torch:hover{opacity:.86}
+.btn-line:hover{border-color:var(--chalk-line);background:rgba(233,239,245,.06)} /* scoped — captured build turned every button orange */
+.btn:focus-visible{outline:3px solid var(--torch);outline-offset:3px}
+
+/* ── Sections, ruled like sheet divisions ── */
+section{padding:var(--sheet) 0;border-top:1px solid var(--rule)}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:30px}
+.sec-head h2{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.02em;white-space:nowrap}
+.sec-head .fill{flex:1;height:1px;background:var(--rule-strong)}
+
+/* Clearances — dimensioned callouts, the amplified gesture as a system */
+.clear-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:0;border:1px solid var(--rule-strong)}
+/* Registration mark, not a side-tab: the captured 6px edge amplified into an
+   actual drafting device rather than replicated as a coloured card border. */
+.clear{padding:22px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);position:relative}
+.clear::before,.clear::after{content:"";position:absolute;left:9px;top:9px;background:var(--torch)}
+.clear::before{width:15px;height:1px}
+.clear::after{width:1px;height:15px}
+.clear h3{font-size:1.06rem;font-weight:700;letter-spacing:-.01em}
+.clear p{margin:5px 0 0;font-size:.86rem;color:var(--mill-scale);line-height:1.5}
+.note{margin-top:16px;font-size:.86rem;color:var(--mill-scale)}
+
+/* Competencies as a dimensioned list, ranked — not 12 equal tiles */
+.dims{display:grid;gap:0;border-top:1px solid var(--rule-strong);list-style:none;margin:0;padding:0;counter-reset:none}
+.dim{display:grid;grid-template-columns:74px 1fr auto;gap:20px;align-items:baseline;padding:14px 4px;border-bottom:1px solid var(--rule)}
+/* Depth encoded as a dimension line — the drawing's own way of stating magnitude */
+.bar{display:block;height:2px;background:var(--torch);width:var(--w);opacity:.9}
+.dim strong{font-family:'Bricolage Grotesque',sans-serif;font-size:1.12rem;font-weight:700;letter-spacing:-.01em}
+.dim em{font-style:normal;color:var(--mill-scale);font-size:.88rem;text-align:right}
+
+/* Revision table — drawings carry one; so does a work history */
+.rev{width:100%;border-collapse:collapse;font-size:.93rem}
+.rev caption{text-align:left;margin-bottom:12px}
+.rev th{text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid var(--rule-strong);font-family:'Martian Mono',monospace;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mill-scale);font-weight:600}
+.rev td{padding:14px 12px 14px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.rev td:first-child{font-family:'Martian Mono',monospace;font-size:.72rem;color:var(--torch);white-space:nowrap}
+.rev td strong{font-weight:700;display:block}
+.rev td span{color:var(--mill-scale);font-size:.86rem}
+
+/* Reference imagery, framed as a figure on the sheet */
+.shot{margin:26px 0 0;border:1px solid var(--rule-strong)}
+.shot img{width:100%;height:auto;display:block}
+.shot figcaption{padding:10px 15px;border-top:1px solid var(--rule)}
+
+footer{padding:var(--sheet) 0 70px;border-top:1px solid var(--rule-strong)}
+footer h2{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.025em;max-width:16ch}
+
+/* Sticky call bar — IA-priority preservation on the device this is read on */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;
+  background:var(--torch);color:#0B1B2E;text-decoration:none;font-weight:800;
+  font-family:'Bricolage Grotesque',sans-serif;text-align:center;padding:19px 16px;font-size:1.05rem}
+@media(max-width:860px){
+  :root{--sheet:26px}
+  .titleblock{grid-template-columns:1fr}
+  .tb-main{border-right:0;border-bottom:1px solid var(--rule-strong);padding:28px 24px}
+  .drawing{padding:20px 24px 16px}
+  .dim{grid-template-columns:60px 1fr;gap:12px}
+  .dim em{grid-column:2;text-align:left}
+  .callbar{display:block}
+  .rev td:nth-child(3){display:none}
+  .rev th:nth-child(3){display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <div class="titleblock">
+    <div class="tb-main">
+      <p class="mono">Drawing No. AKR-01 · Steamfitter-Pipefitter · First Period</p>
+      <h1>ACHJUAN<br>REMEKIE-HALL<span>Four years on site. AIT-tested. Ticketed. Own truck.</span></h1>
+      <p class="lede">
+        <b>Four-plus years on commercial construction sites</b> between 2020 and 2025:
+        framing, structural steel, concrete, demolition, layout and rigging. Then the trade:
+        <b>NAIT Pipe Trades Common First Period</b> and a pass on the
+        <b>Alberta AIT first-year examination</b>. Not a first-year who has never been
+        on a site. <b>Ready to be indentured</b> and available now for fall turnaround,
+        shutdown support and industrial labour across the Edmonton corridor.
+      </p>
+      <div class="actions">
+        <a class="btn btn-torch" href="tel:+16479074354">Call 647-907-4354</a>
+        <a class="btn btn-line" href="mailto:achjuankaribe@gmail.com">Email for availability</a>
+        <a class="btn btn-line" href="Achjuan-Remekie-Hall-Resume.docx" download>Download résumé</a>
+      </div>
+    </div>
+    <div class="tb-meta">
+      <div class="tb-cell"><span class="mono">Based</span><strong>Edmonton, Alberta</strong></div>
+      <div class="tb-cell"><span class="mono">Radius</span><strong>Nisku · Fort Saskatchewan · Sherwood Park · Leduc</strong></div>
+      <div class="tb-cell"><span class="mono">Transport</span><strong>Class 5, clean abstract · own truck · will train Class 1/3</strong></div>
+      <div class="tb-cell"><span class="mono">Rotation</span><strong>Camp and FIFO ready · 6/1 and 24/4 · clean D&amp;A</strong></div>
+      <div class="tb-cell"><span class="mono">Status</span><strong style="color:var(--torch)">Available immediately</strong></div>
+    </div>
+  </div>
+
+  <figure class="drawing">
+    <svg viewBox="0 0 900 250" role="img" aria-label="Isometric line drawing of a flanged pipe spool assembly with elbows and a gate valve.">
+      <defs>
+        <g id="flange">
+          <ellipse rx="7" ry="21" fill="none" stroke="#E9EFF5" stroke-width="1.5"/>
+          <ellipse rx="7" ry="21" transform="translate(9,0)" fill="none" stroke="#E9EFF5" stroke-width="1.5"/>
+          <line x1="0" y1="-21" x2="9" y2="-21" stroke="#E9EFF5" stroke-width="1.5"/>
+          <line x1="0" y1="21" x2="9" y2="21" stroke="#E9EFF5" stroke-width="1.5"/>
+        </g>
+      </defs>
+      <g fill="none" stroke="#E9EFF5" stroke-width="1.5" stroke-linecap="round">
+        <line x1="70" y1="96" x2="300" y2="96"/><line x1="70" y1="138" x2="300" y2="138"/>
+        <path d="M300 96 q46 0 46 46 v56"/><path d="M300 138 q4 0 4 4 v56"/>
+        <line x1="304" y1="198" x2="346" y2="198"/>
+        <line x1="346" y1="198" x2="560" y2="198"/><line x1="304" y1="198" x2="304" y2="198"/>
+        <path d="M560 198 q46 0 46 -46 v-56"/><path d="M518 198 q4 0 4 -4 v-56"/>
+        <line x1="522" y1="96" x2="606" y2="96"/>
+        <line x1="606" y1="96" x2="820" y2="96"/><line x1="522" y1="138" x2="820" y2="138"/>
+        <line x1="606" y1="96" x2="606" y2="138"/>
+      </g>
+      <g stroke="#E9EFF5" stroke-width="1.5" fill="none">
+        <use href="#flange" x="70" y="117"/><use href="#flange" x="811" y="117"/>
+        <rect x="392" y="176" width="76" height="44" fill="none"/>
+        <path d="M392 176 L468 220 M468 176 L392 220"/>
+        <line x1="430" y1="176" x2="430" y2="156"/><line x1="408" y1="156" x2="452" y2="156"/>
+      </g>
+      <g stroke="#FF6A1A" stroke-width="1.2" fill="none">
+        <line x1="70" y1="58" x2="820" y2="58"/>
+        <line x1="70" y1="50" x2="70" y2="66"/><line x1="820" y1="50" x2="820" y2="66"/>
+        <line x1="640" y1="198" x2="700" y2="238"/>
+      </g>
+      <text x="445" y="48" fill="#FF6A1A" font-family="'Martian Mono',monospace" font-size="11" text-anchor="middle">SPOOL · FIT-UP / TACK / FULL WELD</text>
+      <text x="706" y="242" fill="#FF6A1A" font-family="'Martian Mono',monospace" font-size="11">GATE VALVE</text>
+    </svg>
+    <figcaption>
+      <span class="mono">Fig. 1 · Spool assembly, isometric</span>
+      <span class="mono">Reading drawings is the job, not a line item</span>
+    </figcaption>
+  </figure>
+
+  <section aria-labelledby="clr">
+    <div class="sec-head"><h2 id="clr">Clearances</h2><span class="fill"></span><span class="mono">6 current</span></div>
+    <div class="clear-grid">
+      <div class="clear"><h3>H2S Alive®</h3><p>Sour-gas entry. Required across Alberta industrial sites.</p></div>
+      <div class="clear"><h3>CSTS-20</h3><p>Construction Safety Training System, 2020 revision.</p></div>
+      <div class="clear"><h3>Confined Space Entry &amp; Monitor</h3><p>Entrant and monitor roles both.</p></div>
+      <div class="clear"><h3>Fall Protection</h3><p>Harness, anchor and rescue-plan competency.</p></div>
+      <div class="clear"><h3>Mobile Elevated Work Platform</h3><p>MEWP operation certification.</p></div>
+      <div class="clear"><h3>WHMIS</h3><p>Hazardous materials handling and labelling.</p></div>
+    </div>
+    <p class="note">Also works to FLHA procedure daily: familiarity, not a ticket. Listed
+      honestly rather than padded into the set above.</p>
+  </section>
+
+  <section aria-labelledby="cmp">
+    <div class="sec-head"><h2 id="cmp">Competencies</h2><span class="fill"></span><span class="mono">Ranked by depth</span></div>
+    <ol class="dims">
+      <li class="dim"><span class="bar" style="--w:100%"></span><strong>Drawing &amp; print interpretation</strong><em>Pipe drawings · isos · weld details · fabrication layouts</em></li>
+      <li class="dim"><span class="bar" style="--w:92%"></span><strong>Layout &amp; measurement</strong><em>Precision layout across four years of active sites</em></li>
+      <li class="dim"><span class="bar" style="--w:84%"></span><strong>Rigging &amp; material handling</strong><em>Rigging support · equipment · site logistics</em></li>
+      <li class="dim"><span class="bar" style="--w:76%"></span><strong>Pipe fit-up &amp; tack</strong><em>Spool fit-up · tacking · bevelling · joining</em></li>
+      <li class="dim"><span class="bar" style="--w:66%"></span><strong>SMAW &amp; GMAW welding</strong><em>NAIT first period</em></li>
+      <li class="dim"><span class="bar" style="--w:58%"></span><strong>Oxy-acetylene cutting</strong><em>Set-up and operation</em></li>
+      <li class="dim"><span class="bar" style="--w:50%"></span><strong>Carpentry &amp; structural</strong><em>Framing · concrete · demolition · structural steel</em></li>
+      <li class="dim"><span class="bar" style="--w:34%"></span><strong>Bolt-up, torque &amp; hydro</strong><em>Trained, not yet site hours. Ready to run torque patterns under a journeyperson</em></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="rev">
+    <div class="sec-head"><h2 id="rev">Revisions</h2><span class="fill"></span><span class="mono">Work history</span></div>
+    <table class="rev">
+      <caption class="mono">Most recent first</caption>
+      <thead><tr><th>Dates</th><th>Position</th><th>Location</th></tr></thead>
+      <tbody>
+        <tr><td>2026.05 → 2026.06</td><td><strong>NAIT, Pipe Trades Common First Period</strong><span>SMAW/GMAW, oxy-acetylene, spool fit-up, tack welding, trade safety. Passed AIT first-year exam.</span></td><td><span>Edmonton, AB</span></td></tr>
+        <tr><td>2025.10 → 2026.02</td><td><strong>Fleet Optics Inc.</strong><span>Courier contractor. Time-sensitive logistics during the relocation to Alberta.</span></td><td><span>Mississauga, ON</span></td></tr>
+        <tr><td>2024.03 → 2025.09</td><td><strong>MeadowBrook Construction</strong><span>Service handyman. Blueprint interpretation and layout measurement supporting commercial construction and maintenance. Rigging support, material coordination, JHA compliance.</span></td><td><span>Mississauga, ON</span></td></tr>
+        <tr><td>2023.08 → 2024.02</td><td><strong>OddJobs HandyMen</strong><span>Sub-contractor. Renovation, repair and installation across multiple concurrent sites.</span></td><td><span>Waterloo, ON</span></td></tr>
+        <tr><td>2020.08 → 2022.12</td><td><strong>Scoburgh Group Carpentry</strong><span>Carpenter. Assisted journeypersons with framing, concrete, demolition, drywall and structural steel installation.</span></td><td><span>Toronto, ON</span></td></tr>
+      </tbody>
+    </table>
+    <figure class="shot">
+      <img src="weld-cyanotype.png" width="1500" height="780" loading="lazy"
+           alt="Gloved hands running a torch along a pipe seam on a fabrication rack, sparks coming off the weld pool.">
+      <figcaption class="mono">Fig. 2 · Fit-up, tack, full weld. Generated reference imagery, cropped to the work.</figcaption>
+    </figure>
+  </section>
+
+  <footer>
+    <p class="mono">Contact</p>
+    <h2>Need another set of hands on a shutdown?</h2>
+    <p class="lede">Edmonton · Nisku · Fort Saskatchewan · Sherwood Park · Leduc.
+      Own truck, so getting to site at 5am is not a problem.</p>
+    <div class="actions">
+      <a class="btn btn-torch" href="tel:+16479074354">Call 647-907-4354</a>
+      <a class="btn btn-line" href="mailto:achjuankaribe@gmail.com">achjuankaribe@gmail.com</a>
+    </div>
+  </footer>
+</main>
+<a class="callbar" href="tel:+16479074354">Call 647-907-4354 · available now</a>
+</body>
+</html>

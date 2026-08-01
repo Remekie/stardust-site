@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- stardust:provenance
+  writtenBy: stardust:uplift → prototype
+  variant: B · register-dominant (hospital discharge paperwork) · ground: stark-white
+  seed: 8c59ed94735fb1b2f2efd42a6cef6b55
+  capturedTraitAmplified: the ticket set (9 pills buried at the bottom of section 2)
+  typeDeck: bureaucratic (IBM Plex Serif / Mono / Sans Condensed; plain Plex Sans is reflex-rejected and unused)
+  reflexRejectHits: 0
+  refusedMoves: rotated circular CLEARED stamp (anti-toolbox motif move) → rectangular ruled clearance box
+  contentSource: updated-resume-copy.txt; contact confirmed by user
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achjuan Remekie-Hall · Worker Clearance Record · Edmonton AB</title>
+<meta name="description" content="Clearance record for Achjuan Remekie-Hall, AIT-tested first-year Steamfitter-Pipefitter apprentice, Edmonton. Six current safety tickets, Class 5 licence, own truck. Available for Alberta shutdowns.">
+<meta property="og:title" content="Achjuan Remekie-Hall · Worker Clearance Record">
+<meta property="og:description" content="Six current tickets, AIT-tested, own truck. Available immediately for Alberta shutdown and industrial work.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Roles named for the document this page is: a clearance record */
+  --bond:#FFFFFF;       /* the paper */
+  --onionskin:#F6F5F2;  /* the carbon copy underneath */
+  --carbon:#14161A;     /* the typed impression */
+  --pencil:#5C6470;     /* annotations, secondary */
+  --rule:#D6D9DE;       /* the form's ruled lines */
+  --cleared:#0B6E3B;    /* status: cleared */
+  --stamp:#A8231D;      /* status: attention */
+  --pad:52px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--onionskin);color:var(--carbon);
+  font-family:'IBM Plex Serif',Georgia,serif;font-size:16.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;padding:0 0 78px;
+}
+.form{max-width:1020px;margin:0 auto;background:var(--bond);border-left:1px solid var(--rule);border-right:1px solid var(--rule);min-height:100vh}
+.pad{padding:0 var(--pad)}
+a{color:inherit}
+.code{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;color:var(--pencil)}
+h1,h2{margin:0;font-family:'IBM Plex Sans Condensed',system-ui,sans-serif;font-weight:700;letter-spacing:-.005em}
+
+/* ── Form masthead ── */
+.masthead{border-bottom:2px solid var(--carbon);padding:26px var(--pad) 18px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.masthead h2{font-size:1.02rem;text-transform:uppercase;letter-spacing:.07em}
+.masthead .code{text-align:right}
+
+/* ── Holder block: the form's subject ── */
+.holder{display:grid;grid-template-columns:1.5fr 1fr;border-bottom:1px solid var(--rule)}
+.holder-id{padding:36px var(--pad) 34px;border-right:1px solid var(--rule)}
+.holder-id h1{font-size:clamp(2.2rem,5.2vw,3.5rem);line-height:1.02}
+.holder-id .role{font-family:'IBM Plex Serif',serif;font-weight:400;font-size:1.06rem;color:var(--pencil);margin:10px 0 0}
+.fields{display:grid}
+.field{padding:13px 26px;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:2px}
+.field:last-child{border-bottom:0}
+.field b{font-family:'IBM Plex Sans Condensed',sans-serif;font-size:1rem;font-weight:600}
+
+.summary{padding:30px var(--pad);border-bottom:1px solid var(--rule);max-width:76ch}
+.summary p{margin:0}
+.summary strong{font-weight:700}
+
+/* ── Schedules: ruled document rows, no cards, no pills ── */
+.schedule{padding:34px var(--pad) 40px;border-bottom:1px solid var(--rule)}
+.sched-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:2px solid var(--carbon);padding-bottom:9px;margin-bottom:0}
+.sched-head h2{font-size:.94rem;text-transform:uppercase;letter-spacing:.08em}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.63rem;letter-spacing:.05em;text-transform:uppercase;color:var(--pencil);font-weight:600;padding:11px 14px 11px 0;border-bottom:1px solid var(--rule)}
+td{padding:13px 14px 13px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--onionskin)}
+td.t-name{font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:600;font-size:1.02rem;white-space:nowrap}
+td.t-scope{color:var(--pencil);font-size:.92rem}
+td.t-status{text-align:right;white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em}
+.ok{color:var(--cleared);font-weight:600}
+.note{color:var(--stamp);font-weight:600}
+.foot-note{margin:16px 0 0;font-size:.88rem;color:var(--pencil);max-width:70ch}
+
+/* Rectangular ruled clearance box — deliberately NOT a rotated circular stamp */
+.clearbox{margin-top:26px;border:2px solid var(--cleared);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.clearbox strong{font-family:'IBM Plex Sans Condensed',sans-serif;font-size:1.16rem;letter-spacing:.05em;text-transform:uppercase;color:var(--cleared)}
+
+/* ── Service record ── */
+td.t-date{font-family:'IBM Plex Mono',monospace;font-size:.71rem;color:var(--pencil);white-space:nowrap}
+td.t-role strong{display:block;font-family:'IBM Plex Sans Condensed',sans-serif;font-size:1.04rem;font-weight:700}
+td.t-role span{color:var(--pencil);font-size:.92rem}
+
+/* ── Declaration + action ── */
+.declare{padding:36px var(--pad) 44px}
+.declare h2{font-size:clamp(1.4rem,3.4vw,2rem);max-width:22ch;letter-spacing:-.01em}
+.sign{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule)}
+.sign div{padding:16px 0;border-bottom:1px solid var(--rule)}
+.sign div:first-child{border-right:1px solid var(--rule);padding-right:24px}
+.sign div:last-child{padding-left:24px}
+.sign b{display:block;font-family:'IBM Plex Sans Condensed',sans-serif;font-size:1.14rem;font-weight:700}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}
+.btn{text-decoration:none;padding:14px 24px;font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;font-size:1rem;border:1.5px solid var(--carbon)}
+.btn-solid{background:var(--carbon);color:var(--bond)}
+.btn-solid:hover{background:#000}
+.btn-open{background:transparent;color:var(--carbon)}
+.btn-open:hover{background:var(--onionskin)}
+.btn:focus-visible{outline:3px solid var(--cleared);outline-offset:3px}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;background:var(--carbon);color:var(--bond);
+  text-decoration:none;font-family:'IBM Plex Sans Condensed',sans-serif;font-weight:700;text-align:center;padding:18px;font-size:1.05rem}
+@media(max-width:820px){
+  :root{--pad:22px}
+  .holder{grid-template-columns:1fr}
+  .holder-id{border-right:0;border-bottom:1px solid var(--rule);padding:28px var(--pad)}
+  .sign{grid-template-columns:1fr}
+  .sign div:first-child{border-right:0;padding-right:0}
+  .sign div:last-child{padding-left:0}
+  td.t-scope{display:none} th:nth-child(3){display:none}
+  .callbar{display:block}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="form">
+
+  <header class="masthead">
+    <h2>Worker Clearance Record</h2>
+    <span class="code">File AKR / Steamfitter-Pipefitter / First period<br>Issued 1 August 2026 · Holder-maintained</span>
+  </header>
+
+  <section class="holder">
+    <div class="holder-id">
+      <p class="code">Holder</p>
+      <h1>Achjuan Karibe<br>Remekie-Hall</h1>
+      <p class="role">Steamfitter-Pipefitter apprentice, first period, AIT-tested.
+        Four-plus years on commercial construction sites before the trade.
+        <strong>Ready to be indentured.</strong></p>
+    </div>
+    <div class="fields">
+      <div class="field"><span class="code">Telephone</span><b><a href="tel:+16479074354">647 907 4354</a></b></div>
+      <div class="field"><span class="code">Electronic mail</span><b><a href="mailto:achjuankaribe@gmail.com">achjuankaribe@gmail.com</a></b></div>
+      <div class="field"><span class="code">Based</span><b>Edmonton, Alberta</b></div>
+      <div class="field"><span class="code">Conveyance</span><b>Class 5, clean abstract, own truck</b></div>
+      <div class="field"><span class="code">Rotation</span><b>Camp and FIFO ready, 6/1 and 24/4, clean D&amp;A</b></div>
+      <div class="field"><span class="code">Availability</span><b style="color:var(--cleared)">Immediate</b></div>
+    </div>
+  </section>
+
+  <section class="summary">
+    <p><strong>Four-plus years on commercial construction sites between 2020 and 2025</strong>,
+      covering framing, structural steel, concrete, demolition, layout, rigging and blueprint
+      interpretation, before entering the trade. Then <strong>NAIT Patricia Campus</strong>,
+      pipe trades common first period: SMAW and GMAW welding, oxy-acetylene cutting, spool
+      fit-up, tack welding and trade safety procedure, followed by a pass on the Alberta AIT
+      first-year examination. This is a first-period apprentice who already knows how a job
+      site runs. Seeking an employer to sponsor apprenticeship hours; available immediately
+      for fall turnaround, shutdown, fabrication support and industrial labour.</p>
+  </section>
+
+  <section class="schedule">
+    <div class="sched-head"><h2>Schedule 1 · Safety clearances</h2><span class="code">6 current</span></div>
+    <table>
+      <thead><tr><th>Certification</th><th>Standard</th><th>Scope of clearance</th><th style="text-align:right">Status</th></tr></thead>
+      <tbody>
+        <tr><td class="t-name">H2S Alive</td><td class="code" style="color:var(--pencil)">Energy Safety Canada</td><td class="t-scope">Sour-gas environments; entry and self-rescue</td><td class="t-status ok">Cleared</td></tr>
+        <tr><td class="t-name">CSTS-20</td><td class="code" style="color:var(--pencil)">Construction Safety</td><td class="t-scope">General construction site orientation, 2020 revision</td><td class="t-status ok">Cleared</td></tr>
+        <tr><td class="t-name">Confined Space</td><td class="code" style="color:var(--pencil)">Entry &amp; monitor</td><td class="t-scope">Both entrant and monitor roles</td><td class="t-status ok">Cleared</td></tr>
+        <tr><td class="t-name">Fall Protection</td><td class="code" style="color:var(--pencil)">Alberta OHS</td><td class="t-scope">Harness, anchorage, rescue-plan competency</td><td class="t-status ok">Cleared</td></tr>
+        <tr><td class="t-name">MEWP</td><td class="code" style="color:var(--pencil)">CSA B354</td><td class="t-scope">Mobile elevated work platform operation</td><td class="t-status ok">Cleared</td></tr>
+        <tr><td class="t-name">WHMIS</td><td class="code" style="color:var(--pencil)">Federal</td><td class="t-scope">Hazardous materials handling and labelling</td><td class="t-status ok">Cleared</td></tr>
+        <tr><td class="t-name">FLHA</td><td class="code" style="color:var(--pencil)">Site procedure</td><td class="t-scope">Works to field-level hazard assessment daily</td><td class="t-status note">Familiarity</td></tr>
+      </tbody>
+    </table>
+    <p class="foot-note">The final row is listed as familiarity rather than certification because
+      it is a working procedure, not a ticket. Nothing on this schedule is claimed beyond what
+      is held.</p>
+    <div class="clearbox">
+      <strong>Cleared for site</strong>
+      <span class="code" style="color:var(--carbon)">Six current tickets · verifiable on request · no expired entries</span>
+    </div>
+  </section>
+
+  <section class="schedule">
+    <div class="sched-head"><h2>Schedule 2 · Trade competencies</h2><span class="code">Assessed</span></div>
+    <table>
+      <thead><tr><th>Competency</th><th>Standard</th><th>Scope of clearance</th><th style="text-align:right">Depth</th></tr></thead>
+      <tbody>
+        <tr><td class="t-name">Drawing interpretation</td><td class="code" style="color:var(--pencil)">Trade core</td><td class="t-scope">Pipe drawings, isos, weld details, fabrication layouts</td><td class="t-status ok">Primary</td></tr>
+        <tr><td class="t-name">Bolt-up, torque, hydro</td><td class="code" style="color:var(--pencil)">Trained</td><td class="t-scope">Trained, no site hours yet. Ready to run torque patterns under a journeyperson</td><td class="t-status note">Trained</td></tr>
+        <tr><td class="t-name">Pipe fit-up and tack</td><td class="code" style="color:var(--pencil)">Trade core</td><td class="t-scope">Spool fit-up, tacking, bevelling, joining</td><td class="t-status ok">Primary</td></tr>
+        <tr><td class="t-name">SMAW / GMAW welding</td><td class="code" style="color:var(--pencil)">NAIT trained</td><td class="t-scope">First-period practices</td><td class="t-status ok">Working</td></tr>
+        <tr><td class="t-name">Oxy-acetylene cutting</td><td class="code" style="color:var(--pencil)">NAIT trained</td><td class="t-scope">Set-up and operation</td><td class="t-status ok">Working</td></tr>
+        <tr><td class="t-name">Rigging and material handling</td><td class="code" style="color:var(--pencil)">Field</td><td class="t-scope">Rigging support, equipment, site logistics</td><td class="t-status ok">Working</td></tr>
+        <tr><td class="t-name">Layout and measurement</td><td class="code" style="color:var(--pencil)">Field</td><td class="t-scope">Precision layout on active sites</td><td class="t-status ok">Working</td></tr>
+        <tr><td class="t-name">Carpentry and structure</td><td class="code" style="color:var(--pencil)">Prior trade</td><td class="t-scope">Framing, concrete, demolition, structural steel</td><td class="t-status ok">Prior</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="schedule">
+    <div class="sched-head"><h2>Schedule 3 · Service record</h2><span class="code">Most recent first</span></div>
+    <table>
+      <thead><tr><th>Period</th><th colspan="2">Engagement</th><th style="text-align:right">Location</th></tr></thead>
+      <tbody>
+        <tr><td class="t-date">2026.05 / 2026.06</td><td class="t-role" colspan="2"><strong>NAIT, Pipe Trades Common First Period</strong><span>SMAW and GMAW, oxy-acetylene, spool fit-up, tack welding, trade safety. Passed the AIT first-year examination.</span></td><td class="t-status">Edmonton AB</td></tr>
+        <tr><td class="t-date">2025.10 / 2026.02</td><td class="t-role" colspan="2"><strong>Fleet Optics Inc.</strong><span>Courier contractor. Time-sensitive logistics through the relocation to Alberta.</span></td><td class="t-status">Mississauga ON</td></tr>
+        <tr><td class="t-date">2024.03 / 2025.09</td><td class="t-role" colspan="2"><strong>MeadowBrook Construction</strong><span>Service handyman. Blueprint interpretation and layout measurement supporting commercial construction and maintenance; rigging support, material coordination, job hazard assessment compliance.</span></td><td class="t-status">Mississauga ON</td></tr>
+        <tr><td class="t-date">2023.08 / 2024.02</td><td class="t-role" colspan="2"><strong>OddJobs HandyMen</strong><span>Sub-contractor. Renovation, repair and installation across concurrent sites.</span></td><td class="t-status">Waterloo ON</td></tr>
+        <tr><td class="t-date">2020.08 / 2022.12</td><td class="t-role" colspan="2"><strong>Scoburgh Group Carpentry</strong><span>Carpenter. Assisted journeypersons with framing, concrete, demolition, drywall and structural steel installation.</span></td><td class="t-status">Toronto ON</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="declare">
+    <p class="code">Declaration</p>
+    <h2>Available for dispatch. Bring the work.</h2>
+    <p style="max-width:62ch;color:var(--pencil);margin:12px 0 0">
+      Edmonton, Nisku, Fort Saskatchewan, Sherwood Park and Leduc. Own truck, so a
+      five o'clock start at Fort Saskatchewan is not a problem.</p>
+    <div class="sign">
+      <div><span class="code">Telephone</span><b><a href="tel:+16479074354">647 907 4354</a></b></div>
+      <div><span class="code">Electronic mail</span><b><a href="mailto:achjuankaribe@gmail.com">achjuankaribe@gmail.com</a></b></div>
+    </div>
+    <div class="actions">
+      <a class="btn btn-solid" href="tel:+16479074354">Call now</a>
+      <a class="btn btn-open" href="mailto:achjuankaribe@gmail.com">Request availability</a>
+      <a class="btn btn-open" href="Achjuan-Remekie-Hall-Resume.docx" download>Download résumé</a>
+    </div>
+  </section>
+</main>
+<a class="callbar" href="tel:+16479074354">Call 647 907 4354 · available now</a>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- stardust:provenance
+  writtenBy: stardust:uplift → prototype
+  variant: C · craft-dominant (mosaic tile) · ground: monochrome-tint (cool slate, R−B = −7, not cream)
+  seed: 8c59ed94735fb1b2f2efd42a6cef6b55
+  capturedTraitAmplified: multi-trade breadth (5 roles / 3 provinces, flattened to a uniform 12-cell grid on the captured site)
+  typeDeck: Archivo Black / Archivo / Courier Prime
+  reflexRejectHits: 0
+  cCliffCheck: not "B but more" — anchored to a different captured trait (breadth, not credentials)
+  contentSource: updated-resume-copy.txt; contact confirmed by user
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achjuan Remekie-Hall · Pipefitter Apprentice &amp; Multi-Trade Hand, Edmonton</title>
+<meta name="description" content="Steamfitter-Pipefitter apprentice in Edmonton with carpentry, rigging, layout and site-support depth behind it. Six current tickets, AIT-tested, Class 5 licence and own truck. Available for Alberta shutdowns.">
+<meta property="og:title" content="Achjuan Remekie-Hall · Pipefitter Apprentice &amp; Multi-Trade Hand">
+<meta property="og:description" content="Five trades, one hand. AIT-tested, ticketed, own truck. Available immediately across the Edmonton industrial corridor.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Roles from the craft the seed handed us: tile, grout, glaze, kiln */
+  --concrete:#D9DDE0;   /* the slab the mosaic is set into */
+  --tessera:#23282D;    /* a single dark tile, and the text */
+  --grout:#AEB5BA;      /* the line between tiles */
+  --glaze:#0F5F66;      /* kiln-fired teal */
+  --kiln:#B4471F;       /* fired clay, the acting colour */
+  --bone:#F2F4F5;       /* light tile face */
+  --gap:3px;            /* grout width */
+  --pad:52px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--concrete);color:var(--tessera);
+  font-family:'Archivo',system-ui,sans-serif;font-size:16.5px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;padding-bottom:78px;
+}
+.wrap{max-width:1160px;margin:0 auto;padding:var(--pad)}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:'Archivo Black',system-ui,sans-serif;font-weight:400;line-height:.98;letter-spacing:-.02em;text-transform:uppercase}
+.tag{font-family:'Courier Prime',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--glaze);font-weight:700}
+
+/* ── Hero ── */
+.hero h1{font-size:clamp(2.6rem,7.6vw,5.6rem)}
+.hero .sub{font-family:'Archivo',sans-serif;text-transform:none;font-size:clamp(1.05rem,2.2vw,1.32rem);
+  max-width:56ch;margin:20px 0 0;color:#454C53;line-height:1.55}
+.hero .sub b{color:var(--tessera);font-weight:600}
+
+/* ── The mosaic: tiles sized by actual weight, not a uniform grid ── */
+.mosaic{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--gap);margin-top:34px}
+.tile{background:var(--bone);padding:20px;display:flex;flex-direction:column;justify-content:flex-end;min-height:104px;text-decoration:none}
+.tile .tag{color:var(--grout)}
+.tile h3{font-size:1.02rem;margin-top:6px}
+.tile p{margin:7px 0 0;font-size:.86rem;color:#576068;line-height:1.45}
+.t-xl{grid-column:span 3;grid-row:span 2;background:var(--tessera);color:var(--bone);min-height:238px}
+.t-xl h3{font-size:clamp(1.5rem,3.4vw,2.15rem)}
+.t-xl .tag{color:#7FB7BC}
+.t-xl p{color:#AEB8BF;font-size:.96rem}
+.t-lg{grid-column:span 3;background:var(--glaze);color:var(--bone);min-height:116px}
+.t-lg .tag{color:#9FCBCF}
+.t-lg h3{font-size:1.42rem}
+.t-lg p{color:#CFE0E2}
+.t-md{grid-column:span 2}
+.t-sm{grid-column:span 2}
+.t-sm h3{font-size:.94rem}
+.t-kiln{background:var(--kiln);color:#FFF}
+.t-kiln .tag{color:#F3C9B8}
+.t-kiln p{color:#F0D3C8}
+
+/* ── Actions ── */
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:30px}
+.btn{text-decoration:none;padding:15px 26px;font-family:'Archivo',sans-serif;font-weight:600;font-size:1rem;border:2px solid var(--tessera)}
+.btn-kiln{background:var(--kiln);border-color:var(--kiln);color:#FFF}
+.btn-kiln:hover{background:#9C3C1A;border-color:#9C3C1A}
+.btn-out{background:transparent;color:var(--tessera)}
+.btn-out:hover{background:var(--bone)}
+.btn:focus-visible{outline:3px solid var(--glaze);outline-offset:3px}
+
+/* ── Sections ── */
+section{margin-top:64px}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(1.4rem,3vw,2rem)}
+.sec-head .tag{margin-left:auto}
+
+/* Ticket band: small uniform tesserae, because clearances genuinely are equal units */
+.band{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:var(--gap)}
+.chip{background:var(--bone);padding:16px 18px}
+.chip b{display:block;font-family:'Archivo Black',sans-serif;font-size:.94rem;text-transform:uppercase;letter-spacing:-.01em}
+.chip span{font-family:'Courier Prime',monospace;font-size:.68rem;color:var(--glaze);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.chip.familiar span{color:var(--kiln)}
+.caption{margin:14px 0 0;font-size:.9rem;color:#576068;max-width:72ch}
+
+/* Service record as stacked slabs */
+.slab{background:var(--bone);padding:22px 24px;margin-bottom:var(--gap);display:grid;grid-template-columns:158px 1fr;gap:24px;align-items:start}
+.slab .when{font-family:'Courier Prime',monospace;font-size:.76rem;color:var(--glaze);font-weight:700;padding-top:3px}
+.slab b{display:block;font-family:'Archivo Black',sans-serif;font-size:1.08rem;text-transform:uppercase;letter-spacing:-.01em}
+.slab p{margin:6px 0 0;font-size:.93rem;color:#576068;line-height:1.55}
+.slab .where{font-family:'Courier Prime',monospace;font-size:.7rem;color:var(--grout);text-transform:uppercase;letter-spacing:.05em;display:block;margin-top:7px}
+
+.shot{margin-top:var(--gap);background:var(--bone)}
+.shot img{width:100%;height:auto;display:block}
+.shot figcaption{padding:13px 24px;font-family:'Courier Prime',monospace;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:#576068}
+
+footer{margin-top:64px;background:var(--tessera);color:var(--bone);padding:48px var(--pad)}
+footer h2{font-size:clamp(1.8rem,4.4vw,3rem);max-width:15ch}
+footer p{color:#AEB8BF;max-width:52ch;margin:16px 0 0}
+footer .btn-out{border-color:var(--bone);color:var(--bone)}
+footer .btn-out:hover{background:rgba(242,244,245,.1)}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;background:var(--kiln);color:#FFF;
+  text-decoration:none;font-family:'Archivo',sans-serif;font-weight:600;text-align:center;padding:19px;font-size:1.05rem}
+@media(max-width:900px){
+  :root{--pad:22px}
+  .mosaic{grid-template-columns:repeat(2,1fr)}
+  .t-xl,.t-lg,.t-md,.t-sm{grid-column:span 2;grid-row:auto;min-height:0}
+  .t-xl{min-height:170px}
+  .slab{grid-template-columns:1fr;gap:8px}
+  .callbar{display:block}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="tag">Edmonton · Nisku · Fort Saskatchewan · Sherwood Park · Leduc</p>
+    <h1>Achjuan<br>Remekie-Hall</h1>
+    <p class="sub">Five trades set into one hand. <b>Four-plus years on construction sites</b>
+      between 2020 and 2025 — carpentry, structural steel, concrete, layout, rigging — and then
+      the trade: <b>NAIT Pipe Trades</b> and a pass on the Alberta AIT first-year exam.
+      <b>Class 5 with a clean abstract, own truck, camp and FIFO ready.</b> Available now for
+      fall turnaround and shutdown support.</p>
+
+    <div class="mosaic">
+      <div class="tile t-xl">
+        <span class="tag">Primary trade</span>
+        <h3>Pipe trades</h3>
+        <p>Spool fit-up, tacking, bevelling and joining. Blueprint and weld-detail
+          interpretation. NAIT Pipe Trades Common First Period, passed the Alberta AIT
+          first-year examination.</p>
+      </div>
+      <div class="tile t-lg">
+        <span class="tag">Reads the drawing</span>
+        <h3>Blueprint interpretation</h3>
+        <p>Pipe drawings, weld details, fabrication layouts.</p>
+      </div>
+      <div class="tile t-md"><span class="tag">Trained</span><h3>SMAW / GMAW</h3><p>Welding practice, first period.</p></div>
+      <div class="tile t-md t-kiln"><span class="tag">Status</span><h3>Ready to be indentured</h3><p>Camp and FIFO ready. 6/1 and 24/4. Clean D&amp;A and abstract.</p></div>
+      <div class="tile t-sm"><span class="tag">Field</span><h3>Rigging</h3></div>
+      <div class="tile t-sm"><span class="tag">Field</span><h3>Layout</h3></div>
+      <div class="tile t-sm"><span class="tag">Trained</span><h3>Oxy-acetylene cutting</h3></div>
+      <div class="tile t-sm"><span class="tag">Prior trade</span><h3>Carpentry</h3></div>
+      <div class="tile t-sm"><span class="tag">Prior trade</span><h3>Renovation</h3></div>
+      <div class="tile t-sm"><span class="tag">Prior</span><h3>Logistics</h3></div>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-kiln" href="tel:+16479074354">Call 647 907 4354</a>
+      <a class="btn btn-out" href="mailto:achjuankaribe@gmail.com">Email for availability</a>
+      <a class="btn btn-out" href="Achjuan-Remekie-Hall-Resume.docx" download>Download résumé</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head"><h2>Tickets</h2><span class="tag">6 current</span></div>
+    <div class="band">
+      <div class="chip"><span>Current</span><b>H2S Alive</b></div>
+      <div class="chip"><span>Current</span><b>CSTS-20</b></div>
+      <div class="chip"><span>Current</span><b>Confined Space</b></div>
+      <div class="chip"><span>Current</span><b>Fall Protection</b></div>
+      <div class="chip"><span>Current</span><b>MEWP</b></div>
+      <div class="chip"><span>Current</span><b>WHMIS</b></div>
+      <div class="chip familiar"><span>Familiarity</span><b>FLHA</b></div>
+    </div>
+    <p class="caption">The last tile is marked familiarity, not a ticket. It is a daily working
+      procedure rather than a certification, and it is listed that way on purpose.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Where the range came from</h2><span class="tag">Most recent first</span></div>
+    <div class="slab"><span class="when">2026.05 / 2026.06</span><div><b>NAIT, Pipe Trades Common First Period</b><p>SMAW and GMAW welding, oxy-acetylene cutting, spool fit-up, tack welding and trade safety. Passed the Alberta AIT first-year examination.</p><span class="where">Edmonton, Alberta</span></div></div>
+    <div class="slab"><span class="when">2025.10 / 2026.02</span><div><b>Fleet Optics Inc.</b><p>Courier contractor. Time-sensitive logistics and vehicle safety through the relocation to Alberta.</p><span class="where">Mississauga, Ontario</span></div></div>
+    <div class="slab"><span class="when">2024.03 / 2025.09</span><div><b>MeadowBrook Construction</b><p>Service handyman. Blueprint interpretation and layout measurement supporting commercial construction and maintenance, plus rigging support, material coordination and job hazard assessment compliance.</p><span class="where">Mississauga, Ontario</span></div></div>
+    <div class="slab"><span class="when">2023.08 / 2024.02</span><div><b>OddJobs HandyMen</b><p>Sub-contractor. Renovation, repair and installation across concurrent sites, independently and in crews.</p><span class="where">Waterloo, Ontario</span></div></div>
+    <div class="slab"><span class="when">2020.08 / 2022.12</span><div><b>Scoburgh Group Carpentry</b><p>Carpenter. Assisted journeypersons with framing, concrete work, demolition, drywall and structural steel installation.</p><span class="where">Toronto, Ontario</span></div></div>
+    <figure class="shot">
+      <img src="weld-slate.png" width="1500" height="780" loading="lazy"
+           alt="Gloved hands running a torch along a pipe seam on a fabrication rack, sparks coming off the weld pool.">
+      <figcaption>Generated reference imagery, cropped to the work</figcaption>
+    </figure>
+  </section>
+</div>
+
+<footer>
+  <p class="tag" style="color:#7FB7BC">Available for work</p>
+  <h2>Need another hand on a shutdown?</h2>
+  <p>Range is the point. Put him where the crew is short and he will be useful there.</p>
+  <div class="actions">
+    <a class="btn btn-kiln" href="tel:+16479074354">Call 647 907 4354</a>
+    <a class="btn btn-out" href="mailto:achjuankaribe@gmail.com">achjuankaribe@gmail.com</a>
+  </div>
+</footer>
+<a class="callbar" href="tel:+16479074354">Call 647 907 4354 · available now</a>
+</body>
+</html>
