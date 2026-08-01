@@ -71,8 +71,45 @@
       "fix": "Weighted tessellation where every trade, ticket and role is a tile sized by actual weight, so pipe trades reads large and courier work reads small. Cool slate ground (R-B = -7, verified non-cream). Range presented as the asset rather than the liability.",
       "proposedFile": "proposed-C.html",
       "isPrimary": false
+    },
+    {
+      "id": "D",
+      "name": "Contractor convention (reference)",
+      "dominantDimension": "voice",
+      "thesis": "Competitive reference, not a stardust variant. Achjuan presents in the exact format of the companies hiring him, with the role reversed. Grounded in a live Stuart Olson 2026 turnaround posting.",
+      "fix": "Mirrors documented Alberta contractor conventions: candidate-benefits-first ordering (My Offer to You before history), checkmark benefit lists, heavy bold scannables, ticket shorthand without expansion, navy and hi-vis. Adopts the sector's candour convention with a What I Can't Do Yet section, where stating limits openly reads as credibility rather than weakness.",
+      "proposedFile": "proposed-D.html",
+      "isPrimary": false,
+      "isReference": true
+    },
+    {
+      "id": "E",
+      "name": "Recruiter screen (reference)",
+      "dominantDimension": "ia",
+      "thesis": "Competitive reference, not a stardust variant. The job-board and ATS view: what a hiring foreman actually looks at most of the time. Zero decoration, everything load-bearing above the fold, prints to one clean page.",
+      "fix": "System font stack, dense two-column screening block, inline ticket chips, explicit keyword band for parser matching. Single-font is deliberate and correct for this reference; Indeed and LinkedIn use exactly one system face. If the designed variants cannot beat this on time-to-phone-call, their distinctiveness is decoration.",
+      "proposedFile": "proposed-E.html",
+      "isPrimary": false,
+      "isReference": true
+    },
+    {
+      "id": "F",
+      "name": "Category baseline (anti-vibe control)",
+      "dominantDimension": "tokens",
+      "thesis": "Control case, not a stardust variant. The competent, unremarkable modern one-pager any decent template produces. Deliberately embodies the AI-default aesthetic so A/B/C can be judged against something rather than admired in isolation.",
+      "fix": "Intentional tells, not defects: Inter throughout (on the reflex-reject list), centred oversized-sans hero, solid and outline CTA pair, rounded cards with hover lift, light-grey wash, abstract benefit headings (Technical Excellence, Safety First, Team Player) in place of concrete claims. The impeccable design hook flags this file for overused-font and single-font; both findings are the experiment working as designed.",
+      "proposedFile": "proposed-F.html",
+      "isPrimary": false,
+      "isReference": true
     }
   ],
+  "referenceSet": {
+    "convention": "A/B/C are stardust variants; D/E/F are reference points for comparison",
+    "D": "what the industry looks like",
+    "E": "what the screener actually sees",
+    "F": "what a normal template produces (control)",
+    "howToUse": "Show all six. If a variant cannot beat E on time-to-phone-call or beat F on memorability, it has not earned its distinctiveness."
+  },
   "validation": {
     "wcagAA": { "pairsTested": 15, "failures": 0, "lowest": "5.39:1" },
     "variantDifferentiation": { "A_B": 4, "A_C": 4, "B_C": 4, "floor": 2 },
